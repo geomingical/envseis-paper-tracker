@@ -1,29 +1,49 @@
+/* ═══════════════════════════════════════════════
+   EnvSeis Paper Tracker — Nord IDE Theme
+   Fonts: Sora (headings) + Public Sans (body) + JetBrains Mono (mono)
+   Palette: Nord-inspired with editorial warmth
+   ═══════════════════════════════════════════════ */
+
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #1a1a24;
-    --bg-card-hover: #22222e;
-    --text-primary: #f5f5f7;
-    --text-secondary: #a1a1aa;
-    --text-muted: #71717a;
-    --border-color: #27272a;
-    --border-hover: #3f3f46;
-    --accent: #6366f1;
+    --bg-primary: #2e3440;
+    --bg-secondary: #3b4252;
+    --bg-card: #434c5e;
+    --bg-card-hover: #4c566a;
+    --text-primary: #eceff4;
+    --text-secondary: #d8dee9;
+    --text-muted: #7b88a1;
+    --border-color: #4c566a;
+    --border-hover: #5e6b82;
+    --accent: #88c0d0;
+    --accent-hover: #8fbcbb;
+    --accent-alt: #81a1c1;
+    --highlight: #ebcb8b;
+    --danger: #bf616a;
+    --success: #a3be8c;
+
+    --font-heading: 'Sora', sans-serif;
+    --font-body: 'Public Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
     --transition-fast: 0.15s ease;
     --transition-normal: 0.25s ease;
-    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
     --radius-xl: 24px;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--bg-primary);
+    font-family: var(--font-body);
+    background:
+        radial-gradient(circle, rgba(136, 192, 208, 0.03) 1px, transparent 1px),
+        var(--bg-primary);
+    background-size: 24px 24px;
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
@@ -58,19 +78,21 @@ body {
 
 .logo-icon {
     font-size: 40px;
-    filter: drop-shadow(0 0 16px rgba(99, 102, 241, 0.4));
+    filter: drop-shadow(0 0 16px rgba(136, 192, 208, 0.35));
 }
 
 .logo-text h1 {
+    font-family: var(--font-heading);
     font-size: 24px;
     font-weight: 700;
-    background: linear-gradient(135deg, #f5f5f7 0%, #a1a1aa 100%);
+    background: linear-gradient(135deg, #eceff4 0%, #88c0d0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .tagline {
+    font-family: var(--font-body);
     color: var(--text-muted);
     font-size: 13px;
     margin-top: 2px;
@@ -101,7 +123,7 @@ body {
 .stat-value {
     font-size: 22px;
     font-weight: 700;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     color: var(--text-primary);
 }
 
@@ -110,6 +132,7 @@ body {
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-family: var(--font-body);
 }
 
 .stat-divider {
@@ -123,6 +146,7 @@ body {
     gap: 8px;
 }
 
+/* ─── Buttons ─── */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -135,7 +159,12 @@ body {
     transition: all var(--transition-fast);
     cursor: pointer;
     border: none;
-    font-family: inherit;
+    font-family: var(--font-body);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .btn-icon {
@@ -153,13 +182,14 @@ body {
 
 .btn-primary {
     background: var(--accent);
-    color: white;
+    color: #2e3440;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
-    background: #5558e3;
+    background: var(--accent-hover);
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+    box-shadow: 0 6px 16px rgba(136, 192, 208, 0.3);
 }
 
 .btn-secondary {
@@ -212,7 +242,7 @@ body {
     border-radius: var(--radius-sm);
     color: var(--text-secondary);
     font-size: 13px;
-    font-family: inherit;
+    font-family: var(--font-body);
     cursor: pointer;
     transition: all var(--transition-fast);
 }
@@ -220,6 +250,17 @@ body {
 .dropdown-item:hover {
     background: var(--bg-card);
     color: var(--text-primary);
+}
+
+.dropdown-item:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 4px 6px;
 }
 
 /* ─── Category Tabs ─── */
@@ -251,7 +292,12 @@ body {
     cursor: pointer;
     transition: all var(--transition-fast);
     white-space: nowrap;
-    font-family: inherit;
+    font-family: var(--font-body);
+}
+
+.tab:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
 }
 
 .tab:hover {
@@ -282,12 +328,12 @@ body {
     padding: 2px 8px;
     border-radius: 20px;
     font-size: 11px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
 }
 
 .tab.active .tab-count {
     background: var(--tab-color, var(--accent));
-    color: white;
+    color: #2e3440;
 }
 
 /* ─── Timeline ─── */
@@ -305,7 +351,7 @@ body {
     border-radius: var(--radius-md);
     color: var(--text-secondary);
     font-size: 13px;
-    font-family: inherit;
+    font-family: var(--font-body);
     cursor: pointer;
     transition: all var(--transition-fast);
 }
@@ -313,6 +359,11 @@ body {
 .timeline-toggle:hover {
     background: var(--bg-card);
     color: var(--text-primary);
+}
+
+.timeline-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .timeline-toggle .chevron {
@@ -381,7 +432,7 @@ body {
 
 .bar-year {
     font-size: 9px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     color: var(--text-muted);
     transform: rotate(-45deg);
     white-space: nowrap;
@@ -419,7 +470,7 @@ body {
     color: var(--text-muted);
     font-size: 12px;
     cursor: pointer;
-    font-family: inherit;
+    font-family: var(--font-body);
     transition: all var(--transition-fast);
 }
 
@@ -441,11 +492,11 @@ body {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 20px;
+    padding: 20px 48px 20px 20px;
     cursor: pointer;
     transition: all var(--transition-normal);
     overflow: hidden;
-    animation: fadeIn 0.4s ease forwards;
+    animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
 }
 
@@ -498,15 +549,16 @@ body {
 }
 
 .card-year {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 12px;
     color: var(--text-muted);
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.04);
     padding: 3px 8px;
     border-radius: var(--radius-sm);
 }
 
 .card-title {
+    font-family: var(--font-heading);
     font-size: 15px;
     font-weight: 600;
     line-height: 1.4;
@@ -565,6 +617,7 @@ body {
 .load-more-info {
     font-size: 12px;
     color: var(--text-muted);
+    font-family: var(--font-mono);
 }
 
 /* ─── Modal ─── */
@@ -589,8 +642,9 @@ body {
 .modal-backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(8px);
+    background: rgba(46, 52, 64, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .modal-content {
@@ -634,6 +688,11 @@ body {
     color: var(--text-primary);
 }
 
+.modal-close:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
 .modal-header {
     display: flex;
     align-items: center;
@@ -653,12 +712,13 @@ body {
 }
 
 .modal-year {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 13px;
     color: var(--text-muted);
 }
 
 .modal-title {
+    font-family: var(--font-heading);
     font-size: 22px;
     font-weight: 700;
     line-height: 1.3;
@@ -684,6 +744,7 @@ body {
 }
 
 .modal-section h3 {
+    font-family: var(--font-heading);
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 8px;
@@ -719,7 +780,7 @@ body {
     flex-shrink: 0;
 }
 
-/* ─── Paper Selection ─── */
+/* ─── Paper Selection (Checkbox) ─── */
 .card-checkbox {
     position: absolute;
     top: 16px;
@@ -743,14 +804,19 @@ body {
 
 .card-checkbox:hover {
     border-color: var(--accent);
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(136, 192, 208, 0.1);
+}
+
+.card-checkbox:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .card-checkbox.checked {
     background: var(--accent);
     border-color: var(--accent);
-    color: white;
-    box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+    color: #2e3440;
+    box-shadow: 0 0 8px rgba(136, 192, 208, 0.35);
 }
 
 .paper-card.selected {
@@ -760,11 +826,12 @@ body {
 
 .selection-count {
     background: var(--accent);
-    color: white;
+    color: #2e3440;
     padding: 2px 8px;
     border-radius: 20px;
     font-size: 11px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
+    font-weight: 600;
     margin-left: 4px;
     display: none;
 }
@@ -773,14 +840,9 @@ body {
     display: inline-flex;
 }
 
-.dropdown-divider {
-    height: 1px;
-    background: var(--border-color);
-    margin: 4px 6px;
-}
-
 /* ─── Footer ─── */
 .footer {
+    position: relative;
     text-align: center;
     padding: 32px 0;
     border-top: 1px solid var(--border-color);
@@ -788,16 +850,39 @@ body {
     font-size: 13px;
 }
 
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+    opacity: 0.5;
+}
+
 .footer-sub {
     font-size: 12px;
+    font-family: var(--font-mono);
     margin-top: 4px;
     opacity: 0.7;
 }
 
-/* ─── Animation ─── */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
+/* ─── Animations ─── */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Accessibility: Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* ─── Responsive ─── */
@@ -817,7 +902,7 @@ body {
     .tab-icon { font-size: 18px; }
 
     .bento-grid { grid-template-columns: 1fr; gap: 12px; }
-    .paper-card { padding: 16px; }
+    .paper-card { padding: 16px 44px 16px 16px; }
     .card-title { font-size: 14px; }
 
     .modal { padding: 0; }

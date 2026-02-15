@@ -180,7 +180,6 @@
         const authorsStr = paper.authors.slice(0, 3).join(', ')
             + (paper.authors.length > 3 ? ` +${paper.authors.length - 3}` : '');
 
-        const summaryText = paper.summary || '';
         const isChecked = selectedPapers.has(paper.id);
 
         card.innerHTML = `
@@ -191,7 +190,6 @@
             </div>
             <h3 class="card-title">${escapeHtml(paper.title)}</h3>
             <p class="card-authors">${escapeHtml(authorsStr)}</p>
-            ${summaryText ? `<p class="card-summary">${escapeHtml(summaryText)}</p>` : ''}
             <p class="card-journal">${escapeHtml(paper.journal)}</p>
         `;
 
@@ -265,7 +263,6 @@
         document.getElementById('modal-title').textContent = paper.title;
         document.getElementById('modal-authors').textContent = paper.authors.join(', ');
         document.getElementById('modal-journal').textContent = paper.journal;
-        document.getElementById('modal-abstract').textContent = paper.abstract || 'No abstract available.';
 
         const summarySection = document.getElementById('modal-summary-section');
         const summaryEl = document.getElementById('modal-summary');

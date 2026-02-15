@@ -6,18 +6,26 @@
     <title>EnvSeis Learning Mode</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .learn-app { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .learn-app { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         .learn-header {
             padding: 32px 0 24px;
             border-bottom: 1px solid var(--border-color);
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .learn-header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
         }
 
         .back-link {
@@ -33,14 +41,49 @@
         .back-link svg { width: 16px; height: 16px; }
 
         .learn-title {
+            font-family: var(--font-heading);
             font-size: 22px;
             font-weight: 700;
-            background: linear-gradient(135deg, #f5f5f7 0%, #a1a1aa 100%);
+            background: linear-gradient(135deg, #eceff4 0%, #88c0d0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
+        /* ─── Mode Switcher ─── */
+        .mode-switcher {
+            display: none;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 4px;
+            gap: 4px;
+        }
+        .mode-switcher.visible { display: inline-flex; }
+
+        .mode-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: transparent;
+            border: none;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            font-size: 13px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .mode-btn:hover { color: var(--text-secondary); }
+        .mode-btn.active {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+        .mode-btn svg { width: 16px; height: 16px; }
+
+        /* ─── Upload Zone ─── */
         .upload-zone {
             border: 2px dashed var(--border-color);
             border-radius: var(--radius-lg);
@@ -54,11 +97,282 @@
             border-color: var(--accent);
             background: color-mix(in srgb, var(--accent) 5%, transparent);
         }
-
         .upload-zone svg { width: 40px; height: 40px; color: var(--text-muted); margin-bottom: 12px; }
         .upload-zone p { color: var(--text-secondary); font-size: 14px; }
         .upload-zone .hint { color: var(--text-muted); font-size: 12px; margin-top: 8px; }
         .upload-zone input { display: none; }
+
+        /* ─── Browse Mode ─── */
+        .browse-section { display: none; }
+        .browse-section.active { display: block; }
+
+        .browse-toolbar {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .browse-tabs {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            overflow-x: auto;
+            scrollbar-width: none;
+            flex: 1;
+        }
+        .browse-tabs::-webkit-scrollbar { display: none; }
+
+        .browse-tab {
+            padding: 8px 14px;
+            background: transparent;
+            border: none;
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+            font-family: var(--font-body);
+        }
+        .browse-tab:hover { background: var(--bg-card); color: var(--text-primary); }
+        .browse-tab.active { background: var(--bg-card); color: var(--text-primary); }
+
+        .browse-count {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--text-muted);
+            padding: 8px 12px;
+            white-space: nowrap;
+        }
+
+        .browse-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 14px;
+            padding-bottom: 24px;
+        }
+
+        .browse-card {
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 18px;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            overflow: hidden;
+            animation: fadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .browse-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; bottom: 0;
+            width: 3px;
+            background: var(--card-color, var(--accent));
+            opacity: 0.6;
+            transition: opacity var(--transition-fast);
+        }
+        .browse-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .browse-card:hover::before { opacity: 1; }
+
+        .browse-card .bc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .browse-card .bc-cat {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 8px;
+            background: color-mix(in srgb, var(--card-color, var(--accent)) 12%, transparent);
+            border-radius: 16px;
+            font-size: 10px;
+            color: var(--card-color, var(--accent));
+            font-weight: 500;
+        }
+        .browse-card .bc-year {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        .browse-card .bc-title {
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .browse-card .bc-authors {
+            font-size: 11px;
+            color: var(--text-muted);
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+        .browse-card .bc-journal {
+            font-size: 10px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        .browse-card .bc-note-indicator {
+            display: none;
+            align-items: center;
+            gap: 4px;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid var(--border-color);
+            font-size: 11px;
+            color: var(--highlight);
+        }
+        .browse-card .bc-note-indicator.has-note { display: flex; }
+        .browse-card .bc-note-indicator svg { width: 12px; height: 12px; }
+
+        /* ─── Detail Modal (Browse) ─── */
+        .learn-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+        }
+        .learn-modal.open { opacity: 1; visibility: visible; }
+
+        .learn-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(46, 52, 64, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .learn-modal-content {
+            position: relative;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            max-width: 680px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            transform: translateY(20px) scale(0.95);
+            transition: transform var(--transition-normal);
+        }
+        .learn-modal.open .learn-modal-content {
+            transform: translateY(0) scale(1);
+        }
+
+        .learn-modal-close {
+            position: absolute;
+            top: 16px; right: 16px;
+            width: 36px; height: 36px;
+            border: none;
+            background: var(--bg-card);
+            border-radius: 50%;
+            font-size: 22px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .learn-modal-close:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+
+        .lm-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+        .lm-cat { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 16px; font-size: 11px; font-weight: 500; }
+        .lm-year { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+        .lm-title { font-family: var(--font-heading); font-size: 20px; font-weight: 700; line-height: 1.3; margin-bottom: 8px; padding-right: 40px; }
+        .lm-authors { color: var(--text-secondary); font-size: 13px; margin-bottom: 4px; }
+        .lm-journal { color: var(--text-muted); font-size: 12px; font-style: italic; margin-bottom: 16px; }
+
+        .lm-summary {
+            padding: 14px;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--accent);
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .lm-note-section h3 {
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--highlight);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .lm-note-section h3 svg { width: 14px; height: 14px; }
+
+        .lm-note-textarea {
+            width: 100%;
+            min-height: 120px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 13px;
+            line-height: 1.6;
+            resize: vertical;
+            transition: border-color var(--transition-fast);
+        }
+        .lm-note-textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .lm-note-textarea::placeholder { color: var(--text-muted); }
+
+        .lm-note-saved {
+            font-size: 11px;
+            color: var(--success);
+            margin-top: 6px;
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+        .lm-note-saved.visible { opacity: 1; }
+
+        .lm-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        /* ─── Flashcard Mode ─── */
+        .flashcard-section { display: none; }
+        .flashcard-section.active { display: block; }
 
         .learn-stats {
             display: flex;
@@ -72,13 +386,13 @@
             border-radius: var(--radius-md);
             padding: 14px 20px;
             flex: 1;
-            min-width: 120px;
+            min-width: 100px;
             text-align: center;
         }
         .learn-stat .val {
             font-size: 24px;
             font-weight: 700;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: var(--font-mono);
             color: var(--text-primary);
         }
         .learn-stat .lbl {
@@ -87,20 +401,18 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        .learn-stat.correct .val { color: #10b981; }
-        .learn-stat.wrong .val { color: #ef4444; }
+        .learn-stat.correct .val { color: var(--success); }
+        .learn-stat.wrong .val { color: var(--danger); }
 
         .flashcard-container {
             perspective: 1200px;
             margin-bottom: 24px;
-            display: none;
         }
-        .flashcard-container.active { display: block; }
 
         .flashcard {
             position: relative;
             width: 100%;
-            min-height: 300px;
+            min-height: 280px;
             cursor: pointer;
             transform-style: preserve-3d;
             transition: transform 0.6s ease;
@@ -127,6 +439,7 @@
         }
 
         .flashcard-label {
+            font-family: var(--font-heading);
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -135,6 +448,7 @@
         }
 
         .flashcard-front .card-q-title {
+            font-family: var(--font-heading);
             font-size: 20px;
             font-weight: 600;
             line-height: 1.4;
@@ -147,48 +461,67 @@
         }
 
         .flashcard-back .card-a-section {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
         .flashcard-back .card-a-section h4 {
-            font-size: 12px;
+            font-family: var(--font-heading);
+            font-size: 11px;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         .flashcard-back .card-a-section p {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.6;
             color: var(--text-primary);
         }
 
         .card-controls {
-            display: none;
+            display: flex;
             gap: 12px;
             justify-content: center;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
         }
-        .card-controls.active { display: flex; }
 
         .card-controls .btn {
             flex: 1;
-            max-width: 200px;
+            max-width: 180px;
             justify-content: center;
-            padding: 14px;
-            font-size: 14px;
+            padding: 12px;
+            font-size: 13px;
         }
-        .btn-know { background: #10b981; color: white; }
-        .btn-know:hover { background: #059669; }
-        .btn-dunno { background: #ef4444; color: white; }
-        .btn-dunno:hover { background: #dc2626; }
+        .btn-know { background: var(--success); color: #2e3440; font-weight: 600; }
+        .btn-know:hover { background: #8fae7e; }
+        .btn-dunno { background: var(--danger); color: white; font-weight: 600; }
+        .btn-dunno:hover { background: #a9545c; }
         .btn-skip { background: var(--bg-card); color: var(--text-secondary); border: 1px solid var(--border-color); }
         .btn-skip:hover { background: var(--bg-card-hover); color: var(--text-primary); }
 
         .card-nav {
             text-align: center;
-            font-size: 13px;
+            font-size: 12px;
+            font-family: var(--font-mono);
             color: var(--text-muted);
             margin-bottom: 12px;
+        }
+
+        .shuffle-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .shuffle-bar select {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            font-size: 12px;
+            font-family: var(--font-body);
         }
 
         .done-screen {
@@ -197,48 +530,52 @@
             padding: 48px 24px;
         }
         .done-screen.active { display: block; }
-        .done-screen h2 { font-size: 28px; margin-bottom: 12px; }
-        .done-screen p { color: var(--text-secondary); font-size: 15px; margin-bottom: 24px; }
+        .done-screen h2 { font-family: var(--font-heading); font-size: 28px; margin-bottom: 12px; }
+        .done-screen p { color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; }
 
-        .shuffle-bar {
-            display: none;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .shuffle-bar.active { display: flex; }
-
-        .shuffle-bar .btn { font-size: 12px; padding: 8px 14px; }
-        .shuffle-bar select {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            color: var(--text-primary);
-            padding: 8px 12px;
-            font-size: 12px;
-            font-family: inherit;
-        }
-
+        /* ─── Responsive ─── */
         @media (max-width: 768px) {
             .learn-app { padding: 0 14px; }
+            .learn-header { flex-direction: column; align-items: flex-start; }
             .flashcard-front .card-q-title { font-size: 17px; }
             .flashcard-face { padding: 24px; }
             .learn-stats { gap: 8px; }
-            .learn-stat { padding: 10px 14px; min-width: 90px; }
+            .learn-stat { padding: 10px 14px; min-width: 80px; }
             .learn-stat .val { font-size: 20px; }
+            .browse-grid { grid-template-columns: 1fr; }
+            .learn-modal { padding: 0; }
+            .learn-modal-content {
+                padding: 24px;
+                max-height: 100vh;
+                height: 100%;
+                border-radius: 0;
+            }
         }
     </style>
 </head>
 <body>
     <div class="learn-app">
         <div class="learn-header">
-            <a href="index.html" class="back-link">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-                Back to Tracker
-            </a>
-            <h1 class="learn-title">Learning Mode</h1>
+            <div class="learn-header-left">
+                <a href="index.html" class="back-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    Back
+                </a>
+                <h1 class="learn-title">Learning Mode</h1>
+            </div>
+            <div class="mode-switcher" id="mode-switcher">
+                <button class="mode-btn active" data-mode="browse">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    Browse
+                </button>
+                <button class="mode-btn" data-mode="flashcard">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    Flashcards
+                </button>
+            </div>
         </div>
 
+        <!-- Upload Zone -->
         <div class="upload-zone" id="upload-zone">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
             <p>Drop a JSON or CSV file here, or click to upload</p>
@@ -246,73 +583,111 @@
             <input type="file" id="file-input" accept=".json,.csv">
         </div>
 
-        <div class="shuffle-bar" id="shuffle-bar">
-            <select id="category-filter">
-                <option value="all">All Categories</option>
-            </select>
-            <button class="btn btn-secondary" id="shuffle-btn">Shuffle</button>
-            <button class="btn btn-secondary" id="restart-btn">Restart</button>
+        <!-- Browse Mode -->
+        <div class="browse-section" id="browse-section">
+            <div class="browse-toolbar">
+                <div class="browse-tabs" id="browse-tabs"></div>
+                <span class="browse-count" id="browse-count"></span>
+            </div>
+            <div class="browse-grid" id="browse-grid"></div>
         </div>
 
-        <div class="learn-stats" id="learn-stats" style="display:none">
-            <div class="learn-stat">
-                <div class="val" id="stat-current">0</div>
-                <div class="lbl">Current</div>
+        <!-- Flashcard Mode -->
+        <div class="flashcard-section" id="flashcard-section">
+            <div class="shuffle-bar">
+                <select id="fc-category-filter">
+                    <option value="all">All Categories</option>
+                </select>
+                <button class="btn btn-secondary" id="shuffle-btn">Shuffle</button>
+                <button class="btn btn-secondary" id="restart-btn">Restart</button>
             </div>
-            <div class="learn-stat">
-                <div class="val" id="stat-total">0</div>
-                <div class="lbl">Total</div>
-            </div>
-            <div class="learn-stat correct">
-                <div class="val" id="stat-correct">0</div>
-                <div class="lbl">Know</div>
-            </div>
-            <div class="learn-stat wrong">
-                <div class="val" id="stat-wrong">0</div>
-                <div class="lbl">Review</div>
-            </div>
-        </div>
 
-        <div class="card-nav" id="card-nav"></div>
-
-        <div class="flashcard-container" id="flashcard-container">
-            <div class="flashcard" id="flashcard">
-                <div class="flashcard-face flashcard-front">
-                    <div class="flashcard-label">Paper Title</div>
-                    <div class="card-q-title" id="fc-title"></div>
-                    <div class="card-q-meta" id="fc-meta"></div>
+            <div class="learn-stats">
+                <div class="learn-stat">
+                    <div class="val" id="stat-current">0</div>
+                    <div class="lbl">Current</div>
                 </div>
-                <div class="flashcard-face flashcard-back">
-                    <div class="card-a-section">
-                        <h4>Authors</h4>
-                        <p id="fc-authors"></p>
-                    </div>
-                    <div class="card-a-section">
-                        <h4>Journal</h4>
-                        <p id="fc-journal"></p>
-                    </div>
-                    <div class="card-a-section">
-                        <h4>Summary</h4>
-                        <p id="fc-summary"></p>
-                    </div>
-                    <div class="card-a-section">
-                        <h4>Abstract</h4>
-                        <p id="fc-abstract" style="font-size:13px; max-height:200px; overflow-y:auto;"></p>
-                    </div>
+                <div class="learn-stat">
+                    <div class="val" id="stat-total">0</div>
+                    <div class="lbl">Total</div>
+                </div>
+                <div class="learn-stat correct">
+                    <div class="val" id="stat-correct">0</div>
+                    <div class="lbl">Know</div>
+                </div>
+                <div class="learn-stat wrong">
+                    <div class="val" id="stat-wrong">0</div>
+                    <div class="lbl">Review</div>
                 </div>
             </div>
+
+            <div class="card-nav" id="card-nav"></div>
+
+            <div class="flashcard-container" id="flashcard-container">
+                <div class="flashcard" id="flashcard">
+                    <div class="flashcard-face flashcard-front">
+                        <div class="flashcard-label">Paper Title</div>
+                        <div class="card-q-title" id="fc-title"></div>
+                        <div class="card-q-meta" id="fc-meta"></div>
+                    </div>
+                    <div class="flashcard-face flashcard-back">
+                        <div class="card-a-section">
+                            <h4>Authors</h4>
+                            <p id="fc-authors"></p>
+                        </div>
+                        <div class="card-a-section">
+                            <h4>Journal</h4>
+                            <p id="fc-journal"></p>
+                        </div>
+                        <div class="card-a-section">
+                            <h4>Summary</h4>
+                            <p id="fc-summary"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-controls" id="card-controls">
+                <button class="btn btn-dunno" id="btn-dunno">Need Review</button>
+                <button class="btn btn-skip" id="btn-skip">Skip</button>
+                <button class="btn btn-know" id="btn-know">I Know This</button>
+            </div>
+
+            <div class="done-screen" id="done-screen">
+                <h2>Session Complete!</h2>
+                <p id="done-summary"></p>
+                <button class="btn btn-primary" id="review-wrong-btn" style="margin:0 auto">Review Missed Papers</button>
+            </div>
         </div>
 
-        <div class="card-controls" id="card-controls">
-            <button class="btn btn-dunno" id="btn-dunno">Need Review</button>
-            <button class="btn btn-skip" id="btn-skip">Skip</button>
-            <button class="btn btn-know" id="btn-know">I Know This</button>
-        </div>
-
-        <div class="done-screen" id="done-screen">
-            <h2>Session Complete!</h2>
-            <p id="done-summary"></p>
-            <button class="btn btn-primary" id="review-wrong-btn" style="margin:0 auto">Review Missed Papers</button>
+        <!-- Browse Detail Modal -->
+        <div class="learn-modal" id="learn-modal">
+            <div class="learn-modal-backdrop"></div>
+            <div class="learn-modal-content">
+                <button class="learn-modal-close" aria-label="Close">&times;</button>
+                <div class="lm-header">
+                    <span class="lm-cat" id="lm-cat"></span>
+                    <span class="lm-year" id="lm-year"></span>
+                </div>
+                <h2 class="lm-title" id="lm-title"></h2>
+                <p class="lm-authors" id="lm-authors"></p>
+                <p class="lm-journal" id="lm-journal"></p>
+                <div class="lm-summary" id="lm-summary" style="display:none"></div>
+                <div class="lm-note-section">
+                    <h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                        Reading Notes
+                    </h3>
+                    <textarea class="lm-note-textarea" id="lm-note" placeholder="Write your reading notes here... (auto-saved)"></textarea>
+                    <div class="lm-note-saved" id="lm-note-saved">Saved</div>
+                </div>
+                <div class="lm-actions">
+                    <a class="btn btn-primary" id="lm-doi-link" href="#" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        View Paper
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -320,16 +695,36 @@
     (function() {
         'use strict';
 
+        const CATEGORY_COLORS = {
+            'landslide': '#bf616a',
+            'debris-flow': '#d08770',
+            'glacier': '#88c0d0',
+            'river': '#81a1c1',
+            'hydrology': '#5e81ac',
+            'volcano': '#ebcb8b',
+            'methods': '#b48ead',
+            'other': '#7b88a1'
+        };
+
         let allPapers = [];
+        let currentMode = 'browse';
+        let browseCategory = 'all';
+
+        // Flashcard state
         let deck = [];
         let currentIndex = 0;
         let correctCount = 0;
         let wrongCount = 0;
         let wrongPapers = [];
 
+        // DOM
         const uploadZone = document.getElementById('upload-zone');
         const fileInput = document.getElementById('file-input');
+        const modeSwitcher = document.getElementById('mode-switcher');
+        const browseSection = document.getElementById('browse-section');
+        const flashcardSection = document.getElementById('flashcard-section');
 
+        // ─── Upload ───
         uploadZone.addEventListener('click', () => fileInput.click());
         uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('dragover'); });
         uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
@@ -347,8 +742,8 @@
             reader.onload = (e) => {
                 try {
                     if (file.name.endsWith('.json')) {
-                        allPapers = JSON.parse(e.target.result);
-                        if (!Array.isArray(allPapers)) allPapers = allPapers.papers || [];
+                        let parsed = JSON.parse(e.target.result);
+                        allPapers = Array.isArray(parsed) ? parsed : (parsed.papers || []);
                     } else if (file.name.endsWith('.csv')) {
                         allPapers = parseCSV(e.target.result);
                     }
@@ -356,8 +751,9 @@
                         alert('No papers found in file.');
                         return;
                     }
-                    populateCategoryFilter();
-                    startSession(allPapers);
+                    uploadZone.style.display = 'none';
+                    modeSwitcher.classList.add('visible');
+                    showMode('browse');
                 } catch (err) {
                     alert('Failed to parse file: ' + err.message);
                 }
@@ -375,11 +771,8 @@
                 const vals = parseCSVLine(lines[i]);
                 const obj = {};
                 headers.forEach((h, j) => { obj[h] = vals[j] || ''; });
-                if (obj.authors && typeof obj.authors === 'string') {
-                    obj.authors = obj.authors.split('; ');
-                }
+                if (obj.authors && typeof obj.authors === 'string') obj.authors = obj.authors.split('; ');
                 if (obj.year) obj.year = parseInt(obj.year);
-                if (obj.citationCount) obj.citationCount = parseInt(obj.citationCount);
                 papers.push(obj);
             }
             return papers;
@@ -405,14 +798,197 @@
             return result;
         }
 
-        function populateCategoryFilter() {
-            const sel = document.getElementById('category-filter');
+        // ─── Mode Switching ───
+        modeSwitcher.addEventListener('click', (e) => {
+            const btn = e.target.closest('.mode-btn');
+            if (!btn) return;
+            showMode(btn.dataset.mode);
+        });
+
+        function showMode(mode) {
+            currentMode = mode;
+            document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
+            browseSection.classList.toggle('active', mode === 'browse');
+            flashcardSection.classList.toggle('active', mode === 'flashcard');
+
+            if (mode === 'browse') {
+                renderBrowse();
+            } else {
+                setupFlashcards();
+            }
+        }
+
+        // ─── Browse Mode ───
+        function renderBrowse() {
+            renderBrowseTabs();
+            renderBrowseCards();
+        }
+
+        function renderBrowseTabs() {
+            const container = document.getElementById('browse-tabs');
+            const cats = new Map();
+            allPapers.forEach(p => {
+                const c = p.category || 'other';
+                cats.set(c, (cats.get(c) || 0) + 1);
+            });
+
+            let html = '<button class="browse-tab active" data-cat="all">All</button>';
+            cats.forEach((count, key) => {
+                html += '<button class="browse-tab" data-cat="' + key + '">' +
+                    key.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) +
+                    ' <span style="opacity:0.5;margin-left:4px;font-size:10px">' + count + '</span></button>';
+            });
+            container.innerHTML = html;
+
+            container.addEventListener('click', (e) => {
+                const tab = e.target.closest('.browse-tab');
+                if (!tab) return;
+                container.querySelectorAll('.browse-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                browseCategory = tab.dataset.cat;
+                renderBrowseCards();
+            });
+        }
+
+        function renderBrowseCards() {
+            const grid = document.getElementById('browse-grid');
+            const papers = browseCategory === 'all'
+                ? allPapers
+                : allPapers.filter(p => (p.category || 'other') === browseCategory);
+
+            document.getElementById('browse-count').textContent = papers.length + ' papers';
+
+            grid.innerHTML = '';
+            papers.forEach((paper, i) => {
+                const color = CATEGORY_COLORS[paper.category] || '#7b88a1';
+                const catName = (paper.category || 'other').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                const authors = Array.isArray(paper.authors)
+                    ? paper.authors.slice(0, 3).join(', ') + (paper.authors.length > 3 ? ' +' + (paper.authors.length - 3) : '')
+                    : (paper.authors || '');
+
+                const noteKey = 'envseis-notes-' + (paper.id || i);
+                const hasNote = !!localStorage.getItem(noteKey);
+
+                const card = document.createElement('div');
+                card.className = 'browse-card';
+                card.style.setProperty('--card-color', color);
+                card.style.animationDelay = Math.min(i * 0.02, 0.5) + 's';
+
+                card.innerHTML =
+                    '<div class="bc-header">' +
+                        '<span class="bc-cat">' + escapeHtml(catName) + '</span>' +
+                        '<span class="bc-year">' + (paper.year || '?') + '</span>' +
+                    '</div>' +
+                    '<div class="bc-title">' + escapeHtml(paper.title || 'Untitled') + '</div>' +
+                    '<div class="bc-authors">' + escapeHtml(authors) + '</div>' +
+                    '<div class="bc-journal">' + escapeHtml(paper.journal || '') + '</div>' +
+                    '<div class="bc-note-indicator' + (hasNote ? ' has-note' : '') + '">' +
+                        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>' +
+                        'Has notes' +
+                    '</div>';
+
+                card.addEventListener('click', () => openLearnModal(paper));
+                grid.appendChild(card);
+            });
+        }
+
+        // ─── Browse Detail Modal ───
+        let currentModalPaper = null;
+        let noteSaveTimer = null;
+
+        function openLearnModal(paper) {
+            currentModalPaper = paper;
+            const modal = document.getElementById('learn-modal');
+            const color = CATEGORY_COLORS[paper.category] || '#7b88a1';
+            const catName = (paper.category || 'other').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+
+            const catEl = document.getElementById('lm-cat');
+            catEl.textContent = catName;
+            catEl.style.background = 'color-mix(in srgb, ' + color + ' 15%, transparent)';
+            catEl.style.color = color;
+
+            document.getElementById('lm-year').textContent = paper.year || '';
+            document.getElementById('lm-title').textContent = paper.title || 'Untitled';
+            document.getElementById('lm-authors').textContent = Array.isArray(paper.authors) ? paper.authors.join(', ') : (paper.authors || '');
+            document.getElementById('lm-journal').textContent = paper.journal || '';
+
+            const summaryEl = document.getElementById('lm-summary');
+            if (paper.summary && paper.summary.trim()) {
+                summaryEl.textContent = paper.summary;
+                summaryEl.style.display = '';
+            } else {
+                summaryEl.style.display = 'none';
+            }
+
+            const doiLink = document.getElementById('lm-doi-link');
+            if (paper.url) {
+                doiLink.href = paper.url;
+                doiLink.style.display = '';
+            } else {
+                doiLink.style.display = 'none';
+            }
+
+            // Load note
+            const noteKey = 'envseis-notes-' + (paper.id || '');
+            const savedNote = localStorage.getItem(noteKey) || '';
+            let noteData = '';
+            try {
+                const parsed = JSON.parse(savedNote);
+                noteData = parsed.note || '';
+            } catch { noteData = savedNote; }
+            document.getElementById('lm-note').value = noteData;
+            document.getElementById('lm-note-saved').classList.remove('visible');
+
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLearnModal() {
+            document.getElementById('learn-modal').classList.remove('open');
+            document.body.style.overflow = '';
+            currentModalPaper = null;
+            // Refresh browse cards to update note indicators
+            if (currentMode === 'browse') renderBrowseCards();
+        }
+
+        document.querySelector('.learn-modal-close').addEventListener('click', closeLearnModal);
+        document.querySelector('.learn-modal-backdrop').addEventListener('click', closeLearnModal);
+
+        // Auto-save notes
+        document.getElementById('lm-note').addEventListener('input', () => {
+            clearTimeout(noteSaveTimer);
+            noteSaveTimer = setTimeout(() => {
+                if (!currentModalPaper) return;
+                const noteKey = 'envseis-notes-' + (currentModalPaper.id || '');
+                const noteVal = document.getElementById('lm-note').value.trim();
+                if (noteVal) {
+                    localStorage.setItem(noteKey, JSON.stringify({
+                        note: noteVal,
+                        updatedAt: new Date().toISOString()
+                    }));
+                } else {
+                    localStorage.removeItem(noteKey);
+                }
+                const savedEl = document.getElementById('lm-note-saved');
+                savedEl.classList.add('visible');
+                setTimeout(() => savedEl.classList.remove('visible'), 1500);
+            }, 500);
+        });
+
+        // ─── Flashcard Mode ───
+        function setupFlashcards() {
+            populateFCCategoryFilter();
+            startSession(allPapers);
+        }
+
+        function populateFCCategoryFilter() {
+            const sel = document.getElementById('fc-category-filter');
             sel.innerHTML = '<option value="all">All Categories</option>';
             const cats = new Set(allPapers.map(p => p.category).filter(Boolean));
             cats.forEach(c => {
                 const opt = document.createElement('option');
                 opt.value = c;
-                opt.textContent = c;
+                opt.textContent = c.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
                 sel.appendChild(opt);
             });
         }
@@ -433,13 +1009,9 @@
             wrongCount = 0;
             wrongPapers = [];
 
-            uploadZone.style.display = 'none';
-            document.getElementById('shuffle-bar').classList.add('active');
-            document.getElementById('learn-stats').style.display = 'flex';
-            document.getElementById('flashcard-container').classList.add('active');
-            document.getElementById('card-controls').classList.add('active');
+            document.getElementById('flashcard-container').style.display = '';
+            document.getElementById('card-controls').style.display = '';
             document.getElementById('done-screen').classList.remove('active');
-
             showCard();
         }
 
@@ -450,38 +1022,33 @@
             }
             const p = deck[currentIndex];
             document.getElementById('flashcard').classList.remove('flipped');
-
             document.getElementById('fc-title').textContent = p.title || 'Untitled';
             document.getElementById('fc-meta').textContent =
-                `${p.year || '?'} · ${p.category || ''} · ${p.citationCount || 0} citations`;
+                (p.year || '?') + ' · ' + (p.category || '').replace(/-/g, ' ');
 
             const authors = Array.isArray(p.authors) ? p.authors.join(', ') : (p.authors || '');
             document.getElementById('fc-authors').textContent = authors;
             document.getElementById('fc-journal').textContent = p.journal || '';
-            document.getElementById('fc-summary').textContent = p.summary || p.abstract || '';
-            document.getElementById('fc-abstract').textContent = p.abstract || '';
+            document.getElementById('fc-summary').textContent = p.summary || '';
 
             document.getElementById('stat-current').textContent = currentIndex + 1;
             document.getElementById('stat-total').textContent = deck.length;
             document.getElementById('stat-correct').textContent = correctCount;
             document.getElementById('stat-wrong').textContent = wrongCount;
-            document.getElementById('card-nav').textContent =
-                `Card ${currentIndex + 1} of ${deck.length}`;
+            document.getElementById('card-nav').textContent = 'Card ' + (currentIndex + 1) + ' of ' + deck.length;
         }
 
         function nextCard() { currentIndex++; showCard(); }
 
         function showDone() {
-            document.getElementById('flashcard-container').classList.remove('active');
-            document.getElementById('card-controls').classList.remove('active');
+            document.getElementById('flashcard-container').style.display = 'none';
+            document.getElementById('card-controls').style.display = 'none';
             document.getElementById('card-nav').textContent = '';
             const done = document.getElementById('done-screen');
             done.classList.add('active');
             document.getElementById('done-summary').textContent =
-                `You reviewed ${deck.length} papers. Know: ${correctCount}, Need Review: ${wrongCount}, Skipped: ${deck.length - correctCount - wrongCount}`;
-
-            const reviewBtn = document.getElementById('review-wrong-btn');
-            reviewBtn.style.display = wrongPapers.length > 0 ? '' : 'none';
+                'You reviewed ' + deck.length + ' papers. Know: ' + correctCount + ', Need Review: ' + wrongCount + ', Skipped: ' + (deck.length - correctCount - wrongCount);
+            document.getElementById('review-wrong-btn').style.display = wrongPapers.length > 0 ? '' : 'none';
         }
 
         document.getElementById('flashcard').addEventListener('click', () => {
@@ -497,21 +1064,18 @@
         document.getElementById('btn-skip').addEventListener('click', () => { nextCard(); });
 
         document.getElementById('shuffle-btn').addEventListener('click', () => {
-            deck = shuffle(deck);
-            currentIndex = 0;
-            correctCount = 0;
-            wrongCount = 0;
-            wrongPapers = [];
-            showCard();
-        });
-
-        document.getElementById('restart-btn').addEventListener('click', () => {
-            const cat = document.getElementById('category-filter').value;
+            const cat = document.getElementById('fc-category-filter').value;
             const papers = cat === 'all' ? allPapers : allPapers.filter(p => p.category === cat);
             startSession(papers);
         });
 
-        document.getElementById('category-filter').addEventListener('change', (e) => {
+        document.getElementById('restart-btn').addEventListener('click', () => {
+            const cat = document.getElementById('fc-category-filter').value;
+            const papers = cat === 'all' ? allPapers : allPapers.filter(p => p.category === cat);
+            startSession(papers);
+        });
+
+        document.getElementById('fc-category-filter').addEventListener('change', (e) => {
             const cat = e.target.value;
             const papers = cat === 'all' ? allPapers : allPapers.filter(p => p.category === cat);
             startSession(papers);
@@ -521,8 +1085,20 @@
             startSession(wrongPapers);
         });
 
+        // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
-            if (!document.getElementById('flashcard-container').classList.contains('active')) return;
+            // Close modal on Escape
+            if (e.key === 'Escape') {
+                if (document.getElementById('learn-modal').classList.contains('open')) {
+                    closeLearnModal();
+                    return;
+                }
+            }
+
+            // Flashcard keyboard
+            if (currentMode !== 'flashcard') return;
+            if (document.getElementById('flashcard-container').style.display === 'none') return;
+
             if (e.key === ' ' || e.key === 'Enter') {
                 e.preventDefault();
                 document.getElementById('flashcard').classList.toggle('flipped');
@@ -535,6 +1111,11 @@
             }
             if (e.key === 'ArrowDown' || e.key === '2') { nextCard(); }
         });
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
     })();
     </script>
 </body>
