@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnvSeis Learning Mode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .learn-app { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        .learn-header {
+            padding: 32px 0 24px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color var(--transition-fast);
+        }
+        .back-link:hover { color: var(--text-primary); }
+        .back-link svg { width: 16px; height: 16px; }
+
+        .learn-title {
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f5f5f7 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .upload-zone {
+            border: 2px dashed var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 48px 32px;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            margin-bottom: 32px;
+        }
+        .upload-zone:hover, .upload-zone.dragover {
+            border-color: var(--accent);
+            background: color-mix(in srgb, var(--accent) 5%, transparent);
+        }
+
+        .upload-zone svg { width: 40px; height: 40px; color: var(--text-muted); margin-bottom: 12px; }
+        .upload-zone p { color: var(--text-secondary); font-size: 14px; }
+        .upload-zone .hint { color: var(--text-muted); font-size: 12px; margin-top: 8px; }
+        .upload-zone input { display: none; }
+
+        .learn-stats {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .learn-stat {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 14px 20px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+        .learn-stat .val {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-primary);
+        }
+        .learn-stat .lbl {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .learn-stat.correct .val { color: #10b981; }
+        .learn-stat.wrong .val { color: #ef4444; }
+
+        .flashcard-container {
+            perspective: 1200px;
+            margin-bottom: 24px;
+            display: none;
+        }
+        .flashcard-container.active { display: block; }
+
+        .flashcard {
+            position: relative;
+            width: 100%;
+            min-height: 300px;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+        }
+        .flashcard.flipped { transform: rotateY(180deg); }
+
+        .flashcard-face {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flashcard-back {
+            transform: rotateY(180deg);
+            overflow-y: auto;
+            justify-content: flex-start;
+        }
+
+        .flashcard-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .flashcard-front .card-q-title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .flashcard-front .card-q-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .flashcard-back .card-a-section {
+            margin-bottom: 16px;
+        }
+        .flashcard-back .card-a-section h4 {
+            font-size: 12px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .flashcard-back .card-a-section p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .card-controls {
+            display: none;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        .card-controls.active { display: flex; }
+
+        .card-controls .btn {
+            flex: 1;
+            max-width: 200px;
+            justify-content: center;
+            padding: 14px;
+            font-size: 14px;
+        }
+        .btn-know { background: #10b981; color: white; }
+        .btn-know:hover { background: #059669; }
+        .btn-dunno { background: #ef4444; color: white; }
+        .btn-dunno:hover { background: #dc2626; }
+        .btn-skip { background: var(--bg-card); color: var(--text-secondary); border: 1px solid var(--border-color); }
+        .btn-skip:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+
+        .card-nav {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .done-screen {
+            display: none;
+            text-align: center;
+            padding: 48px 24px;
+        }
+        .done-screen.active { display: block; }
+        .done-screen h2 { font-size: 28px; margin-bottom: 12px; }
+        .done-screen p { color: var(--text-secondary); font-size: 15px; margin-bottom: 24px; }
+
+        .shuffle-bar {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .shuffle-bar.active { display: flex; }
+
+        .shuffle-bar .btn { font-size: 12px; padding: 8px 14px; }
+        .shuffle-bar select {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            font-size: 12px;
+            font-family: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .learn-app { padding: 0 14px; }
+            .flashcard-front .card-q-title { font-size: 17px; }
+            .flashcard-face { padding: 24px; }
+            .learn-stats { gap: 8px; }
+            .learn-stat { padding: 10px 14px; min-width: 90px; }
+            .learn-stat .val { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="learn-app">
+        <div class="learn-header">
+            <a href="index.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                Back to Tracker
+            </a>
+            <h1 class="learn-title">Learning Mode</h1>
+        </div>
+
+        <div class="upload-zone" id="upload-zone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <p>Drop a JSON or CSV file here, or click to upload</p>
+            <p class="hint">Use the Download button on the main page to export papers</p>
+            <input type="file" id="file-input" accept=".json,.csv">
+        </div>
+
+        <div class="shuffle-bar" id="shuffle-bar">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+            </select>
+            <button class="btn btn-secondary" id="shuffle-btn">Shuffle</button>
+            <button class="btn btn-secondary" id="restart-btn">Restart</button>
+        </div>
+
+        <div class="learn-stats" id="learn-stats" style="display:none">
+            <div class="learn-stat">
+                <div class="val" id="stat-current">0</div>
+                <div class="lbl">Current</div>
+            </div>
+            <div class="learn-stat">
+                <div class="val" id="stat-total">0</div>
+                <div class="lbl">Total</div>
+            </div>
+            <div class="learn-stat correct">
+                <div class="val" id="stat-correct">0</div>
+                <div class="lbl">Know</div>
+            </div>
+            <div class="learn-stat wrong">
+                <div class="val" id="stat-wrong">0</div>
+                <div class="lbl">Review</div>
+            </div>
+        </div>
+
+        <div class="card-nav" id="card-nav"></div>
+
+        <div class="flashcard-container" id="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-face flashcard-front">
+                    <div class="flashcard-label">Paper Title</div>
+                    <div class="card-q-title" id="fc-title"></div>
+                    <div class="card-q-meta" id="fc-meta"></div>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                    <div class="card-a-section">
+                        <h4>Authors</h4>
+                        <p id="fc-authors"></p>
+                    </div>
+                    <div class="card-a-section">
+                        <h4>Journal</h4>
+                        <p id="fc-journal"></p>
+                    </div>
+                    <div class="card-a-section">
+                        <h4>Summary</h4>
+                        <p id="fc-summary"></p>
+                    </div>
+                    <div class="card-a-section">
+                        <h4>Abstract</h4>
+                        <p id="fc-abstract" style="font-size:13px; max-height:200px; overflow-y:auto;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-controls" id="card-controls">
+            <button class="btn btn-dunno" id="btn-dunno">Need Review</button>
+            <button class="btn btn-skip" id="btn-skip">Skip</button>
+            <button class="btn btn-know" id="btn-know">I Know This</button>
+        </div>
+
+        <div class="done-screen" id="done-screen">
+            <h2>Session Complete!</h2>
+            <p id="done-summary"></p>
+            <button class="btn btn-primary" id="review-wrong-btn" style="margin:0 auto">Review Missed Papers</button>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        'use strict';
+
+        let allPapers = [];
+        let deck = [];
+        let currentIndex = 0;
+        let correctCount = 0;
+        let wrongCount = 0;
+        let wrongPapers = [];
+
+        const uploadZone = document.getElementById('upload-zone');
+        const fileInput = document.getElementById('file-input');
+
+        uploadZone.addEventListener('click', () => fileInput.click());
+        uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('dragover'); });
+        uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+        });
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length) handleFile(fileInput.files[0]);
+        });
+
+        function handleFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    if (file.name.endsWith('.json')) {
+                        allPapers = JSON.parse(e.target.result);
+                        if (!Array.isArray(allPapers)) allPapers = allPapers.papers || [];
+                    } else if (file.name.endsWith('.csv')) {
+                        allPapers = parseCSV(e.target.result);
+                    }
+                    if (allPapers.length === 0) {
+                        alert('No papers found in file.');
+                        return;
+                    }
+                    populateCategoryFilter();
+                    startSession(allPapers);
+                } catch (err) {
+                    alert('Failed to parse file: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function parseCSV(text) {
+            const lines = text.split('\n');
+            if (lines.length < 2) return [];
+            const headers = parseCSVLine(lines[0]);
+            const papers = [];
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
+                const vals = parseCSVLine(lines[i]);
+                const obj = {};
+                headers.forEach((h, j) => { obj[h] = vals[j] || ''; });
+                if (obj.authors && typeof obj.authors === 'string') {
+                    obj.authors = obj.authors.split('; ');
+                }
+                if (obj.year) obj.year = parseInt(obj.year);
+                if (obj.citationCount) obj.citationCount = parseInt(obj.citationCount);
+                papers.push(obj);
+            }
+            return papers;
+        }
+
+        function parseCSVLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            for (let i = 0; i < line.length; i++) {
+                const ch = line[i];
+                if (inQuotes) {
+                    if (ch === '"' && line[i + 1] === '"') { current += '"'; i++; }
+                    else if (ch === '"') { inQuotes = false; }
+                    else { current += ch; }
+                } else {
+                    if (ch === '"') { inQuotes = true; }
+                    else if (ch === ',') { result.push(current.trim()); current = ''; }
+                    else { current += ch; }
+                }
+            }
+            result.push(current.trim());
+            return result;
+        }
+
+        function populateCategoryFilter() {
+            const sel = document.getElementById('category-filter');
+            sel.innerHTML = '<option value="all">All Categories</option>';
+            const cats = new Set(allPapers.map(p => p.category).filter(Boolean));
+            cats.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                opt.textContent = c;
+                sel.appendChild(opt);
+            });
+        }
+
+        function shuffle(arr) {
+            const a = [...arr];
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        }
+
+        function startSession(papers) {
+            deck = shuffle(papers);
+            currentIndex = 0;
+            correctCount = 0;
+            wrongCount = 0;
+            wrongPapers = [];
+
+            uploadZone.style.display = 'none';
+            document.getElementById('shuffle-bar').classList.add('active');
+            document.getElementById('learn-stats').style.display = 'flex';
+            document.getElementById('flashcard-container').classList.add('active');
+            document.getElementById('card-controls').classList.add('active');
+            document.getElementById('done-screen').classList.remove('active');
+
+            showCard();
+        }
+
+        function showCard() {
+            if (currentIndex >= deck.length) {
+                showDone();
+                return;
+            }
+            const p = deck[currentIndex];
+            document.getElementById('flashcard').classList.remove('flipped');
+
+            document.getElementById('fc-title').textContent = p.title || 'Untitled';
+            document.getElementById('fc-meta').textContent =
+                `${p.year || '?'} · ${p.category || ''} · ${p.citationCount || 0} citations`;
+
+            const authors = Array.isArray(p.authors) ? p.authors.join(', ') : (p.authors || '');
+            document.getElementById('fc-authors').textContent = authors;
+            document.getElementById('fc-journal').textContent = p.journal || '';
+            document.getElementById('fc-summary').textContent = p.summary || p.abstract || '';
+            document.getElementById('fc-abstract').textContent = p.abstract || '';
+
+            document.getElementById('stat-current').textContent = currentIndex + 1;
+            document.getElementById('stat-total').textContent = deck.length;
+            document.getElementById('stat-correct').textContent = correctCount;
+            document.getElementById('stat-wrong').textContent = wrongCount;
+            document.getElementById('card-nav').textContent =
+                `Card ${currentIndex + 1} of ${deck.length}`;
+        }
+
+        function nextCard() { currentIndex++; showCard(); }
+
+        function showDone() {
+            document.getElementById('flashcard-container').classList.remove('active');
+            document.getElementById('card-controls').classList.remove('active');
+            document.getElementById('card-nav').textContent = '';
+            const done = document.getElementById('done-screen');
+            done.classList.add('active');
+            document.getElementById('done-summary').textContent =
+                `You reviewed ${deck.length} papers. Know: ${correctCount}, Need Review: ${wrongCount}, Skipped: ${deck.length - correctCount - wrongCount}`;
+
+            const reviewBtn = document.getElementById('review-wrong-btn');
+            reviewBtn.style.display = wrongPapers.length > 0 ? '' : 'none';
+        }
+
+        document.getElementById('flashcard').addEventListener('click', () => {
+            document.getElementById('flashcard').classList.toggle('flipped');
+        });
+
+        document.getElementById('btn-know').addEventListener('click', () => { correctCount++; nextCard(); });
+        document.getElementById('btn-dunno').addEventListener('click', () => {
+            wrongCount++;
+            wrongPapers.push(deck[currentIndex]);
+            nextCard();
+        });
+        document.getElementById('btn-skip').addEventListener('click', () => { nextCard(); });
+
+        document.getElementById('shuffle-btn').addEventListener('click', () => {
+            deck = shuffle(deck);
+            currentIndex = 0;
+            correctCount = 0;
+            wrongCount = 0;
+            wrongPapers = [];
+            showCard();
+        });
+
+        document.getElementById('restart-btn').addEventListener('click', () => {
+            const cat = document.getElementById('category-filter').value;
+            const papers = cat === 'all' ? allPapers : allPapers.filter(p => p.category === cat);
+            startSession(papers);
+        });
+
+        document.getElementById('category-filter').addEventListener('change', (e) => {
+            const cat = e.target.value;
+            const papers = cat === 'all' ? allPapers : allPapers.filter(p => p.category === cat);
+            startSession(papers);
+        });
+
+        document.getElementById('review-wrong-btn').addEventListener('click', () => {
+            startSession(wrongPapers);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('flashcard-container').classList.contains('active')) return;
+            if (e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+                document.getElementById('flashcard').classList.toggle('flipped');
+            }
+            if (e.key === 'ArrowRight' || e.key === '3') { correctCount++; nextCard(); }
+            if (e.key === 'ArrowLeft' || e.key === '1') {
+                wrongCount++;
+                wrongPapers.push(deck[currentIndex]);
+                nextCard();
+            }
+            if (e.key === 'ArrowDown' || e.key === '2') { nextCard(); }
+        });
+    })();
+    </script>
+</body>
+</html>
