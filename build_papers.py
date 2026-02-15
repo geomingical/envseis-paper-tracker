@@ -136,27 +136,27 @@ TOPIC_META = {
     "landslide": {
         "name": "Landslide & Mass Movement",
         "icon": "mountain",
-        "color": "#ef4444",
+        "color": "#c0613a",
     },
     "debris-flow": {
         "name": "Debris Flow & Lahar",
         "icon": "droplets",
-        "color": "#f97316",
+        "color": "#b5651d",
     },
     "glacier": {
         "name": "Glacier & Cryoseismology",
         "icon": "snowflake",
-        "color": "#06b6d4",
+        "color": "#5a7d8b",
     },
-    "river": {"name": "River & Bedload", "icon": "waves", "color": "#3b82f6"},
+    "river": {"name": "River & Bedload", "icon": "waves", "color": "#2e7d6e"},
     "hydrology": {
         "name": "Hydrology & Groundwater",
         "icon": "droplet",
-        "color": "#8b5cf6",
+        "color": "#4a6e8a",
     },
-    "volcano": {"name": "Volcano", "icon": "flame", "color": "#dc2626"},
-    "methods": {"name": "Seismic Methods & ML", "icon": "cpu", "color": "#10b981"},
-    "other": {"name": "Other", "icon": "globe", "color": "#6b7280"},
+    "volcano": {"name": "Volcano", "icon": "flame", "color": "#b33a3a"},
+    "methods": {"name": "Seismic Methods & ML", "icon": "cpu", "color": "#6b7e5e"},
+    "other": {"name": "Other", "icon": "globe", "color": "#8a7f72"},
 }
 
 

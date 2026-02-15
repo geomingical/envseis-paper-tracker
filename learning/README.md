@@ -15,31 +15,33 @@ This folder stores your personal paper collection and reading notes.
 ```
 learning/
 ├── papers.json          ← your paper collection (from Download)
-├── feng-2026.md         ← reading note for paper "feng-2026"
+├── chang-2025.md        ← reading note for paper "chang-2025"
 ├── cook-2021.md         ← reading note for paper "cook-2021"
 └── ...
 ```
 
 ## Paper IDs
 
-Each paper has a short ID like `feng-2026` (first-author-year). You can see the ID on each card in Learning Mode. Use this ID as the filename for your notes.
+Each paper has a short ID like `chang-2025` (first-author-year). You can see the ID on each card in Learning Mode. Use this ID as the filename for your notes.
 
 ## Note Format
 
-Notes are plain Markdown. Example `feng-2026.md`:
+Notes are plain Markdown. Example `chang-2025.md`:
 
 ```markdown
 # Key Findings
 
-- dv/v is a proxy for groundwater level
-- Soil moisture alone doesn't explain total water storage
+- Three distinct seismic events identified from spectrograms
+- Sliding direction from single-force inversion: 153.67°
+- Volume estimation: 557,118 m³ (close to geological survey result)
 
 ## Methods
-- Single-station cross-correlation
-- 10-year continuous seismic data
+- Spectrogram analysis (DFT + discrete Stockwell transform)
+- Single-force inversion for sliding direction and mass estimation
+- Geohazard location for source constraint
 
 ## Questions
-- How does this apply to tropical regions?
+- Can this workflow be generalized to other deep-seated landslide types?
 ```
 
 ## No `papers.json` yet?

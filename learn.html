@@ -44,7 +44,7 @@
             font-family: var(--font-heading);
             font-size: 22px;
             font-weight: 700;
-            background: linear-gradient(135deg, #eceff4 0%, #88c0d0 100%);
+            background: linear-gradient(135deg, #3d2e1f 0%, #c0613a 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -68,12 +68,12 @@
             font-family: var(--font-mono);
         }
         .source-badge.git {
-            background: color-mix(in srgb, #a3be8c 15%, transparent);
-            color: #a3be8c;
+            background: color-mix(in srgb, #5d7e5e 15%, transparent);
+            color: #5d7e5e;
         }
         .source-badge.upload {
-            background: color-mix(in srgb, #ebcb8b 15%, transparent);
-            color: #ebcb8b;
+            background: color-mix(in srgb, #c4933e 15%, transparent);
+            color: #c4933e;
         }
         .source-badge svg { width: 12px; height: 12px; }
 
@@ -184,7 +184,7 @@
             background: var(--bg-card-hover);
             border-color: var(--border-hover);
             transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 24px rgba(61, 46, 31, 0.12);
         }
         .browse-card:hover::before { opacity: 1; }
 
@@ -277,7 +277,7 @@
         .learn-modal-backdrop {
             position: absolute;
             inset: 0;
-            background: rgba(46, 52, 64, 0.85);
+            background: rgba(61, 46, 31, 0.4);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
@@ -517,14 +517,14 @@
         'use strict';
 
         const CATEGORY_COLORS = {
-            'landslide': '#bf616a',
-            'debris-flow': '#d08770',
-            'glacier': '#88c0d0',
-            'river': '#81a1c1',
-            'hydrology': '#5e81ac',
-            'volcano': '#ebcb8b',
-            'methods': '#b48ead',
-            'other': '#7b88a1'
+            'landslide': '#c0613a',
+            'debris-flow': '#b5651d',
+            'glacier': '#5a7d8b',
+            'river': '#2e7d6e',
+            'hydrology': '#4a6e8a',
+            'volcano': '#b33a3a',
+            'methods': '#6b7e5e',
+            'other': '#8a7f72'
         };
 
         let allPapers = [];
