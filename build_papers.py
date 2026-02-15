@@ -160,16 +160,18 @@ TOPIC_META = {
 }
 
 
-def classify(paper: dict) -> str:
-    """Return topic key for a paper based on title + abstract keywords."""
+def classify(paper: dict) -> list[str]:
+    """Return list of matching topic keys (first = primary). Always at least one."""
     text = ((paper.get("title") or "") + " " + (paper.get("abstract") or "")).lower()
+    matched = []
     for topic_key, keywords in TOPIC_RULES:
         if topic_key == "other":
-            return "other"
+            continue
         for kw in keywords:
             if kw in text:
-                return topic_key
-    return "other"
+                matched.append(topic_key)
+                break  # one match per category is enough
+    return matched if matched else ["other"]
 
 
 def make_id(paper: dict, seen: dict) -> str:
@@ -205,8 +207,7 @@ def build_doi_url(paper: dict) -> str:
     return paper.get("url") or ""
 
 
-def transform_paper(paper: dict, new_id: str, topic: str) -> dict:
-    """Transform a raw paper into the simplified output format."""
+def transform_paper(paper: dict, new_id: str, topics: list[str]) -> dict:
     authors = paper.get("authors") or []
     author_names = [
         a.get("name", "") if isinstance(a, dict) else str(a) for a in authors
@@ -225,7 +226,8 @@ def transform_paper(paper: dict, new_id: str, topic: str) -> dict:
         "title": paper.get("title") or "",
         "authors": author_names,
         "year": paper.get("year") or 0,
-        "category": topic,
+        "category": topics[0],
+        "categories": topics,
         "journal": journal_name,
         "doi": (paper.get("externalIds") or {}).get("DOI", ""),
         "url": build_doi_url(paper),
@@ -245,18 +247,20 @@ def main():
     seen_ids: dict[str, int] = {}
     output_papers = []
     topic_counts = Counter()
+    multi_count = 0
 
     for p in raw_papers:
-        topic = classify(p)
+        topics = classify(p)
         new_id = make_id(p, seen_ids)
-        transformed = transform_paper(p, new_id, topic)
+        transformed = transform_paper(p, new_id, topics)
         output_papers.append(transformed)
-        topic_counts[topic] += 1
+        for t in topics:
+            topic_counts[t] += 1
+        if len(topics) > 1:
+            multi_count += 1
 
-    # Sort by year (desc), then by title
     output_papers.sort(key=lambda x: (-x["year"], x["title"]))
 
-    # Build categories list
     categories = []
     for key, meta in TOPIC_META.items():
         categories.append(
@@ -286,8 +290,8 @@ def main():
         json.dump(result, f, ensure_ascii=False, indent=2)
 
     print(f"\nOutput: {OUTPUT}")
-    print(f"Total: {len(output_papers)} papers")
-    print("\nTopic distribution:")
+    print(f"Total: {len(output_papers)} papers ({multi_count} multi-tagged)")
+    print("\nTopic distribution (papers may appear in multiple categories):")
     for key, meta in TOPIC_META.items():
         print(f"  {meta['name']}: {topic_counts.get(key, 0)}")
 

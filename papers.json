@@ -5,7 +5,7 @@
       "name": "Landslide & Mass Movement",
       "icon": "mountain",
       "color": "#c0613a",
-      "count": 165
+      "count": 182
     },
     {
       "key": "debris-flow",
@@ -19,35 +19,35 @@
       "name": "Glacier & Cryoseismology",
       "icon": "snowflake",
       "color": "#5a7d8b",
-      "count": 148
+      "count": 195
     },
     {
       "key": "river",
       "name": "River & Bedload",
       "icon": "waves",
       "color": "#2e7d6e",
-      "count": 95
+      "count": 145
     },
     {
       "key": "hydrology",
       "name": "Hydrology & Groundwater",
       "icon": "droplet",
       "color": "#4a6e8a",
-      "count": 54
+      "count": 135
     },
     {
       "key": "volcano",
       "name": "Volcano",
       "icon": "flame",
       "color": "#b33a3a",
-      "count": 10
+      "count": 41
     },
     {
       "key": "methods",
       "name": "Seismic Methods & ML",
       "icon": "cpu",
       "color": "#6b7e5e",
-      "count": 33
+      "count": 150
     },
     {
       "key": "other",
@@ -69,6 +69,10 @@
       ],
       "year": 2026,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2024JB030689",
       "url": "https://doi.org/10.1029/2024JB030689",
@@ -93,6 +97,10 @@
       ],
       "year": 2026,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-20-647-2026",
       "url": "https://doi.org/10.5194/tc-20-647-2026",
@@ -118,6 +126,10 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2025GL115911",
       "url": "https://doi.org/10.1029/2025GL115911",
@@ -140,6 +152,9 @@
       ],
       "year": 2025,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Engineering Geology",
       "doi": "10.1016/j.enggeo.2025.108400",
       "url": "https://doi.org/10.1016/j.enggeo.2025.108400",
@@ -161,6 +176,9 @@
       ],
       "year": 2025,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2025JB031378",
       "url": "https://doi.org/10.1029/2025JB031378",
@@ -179,6 +197,10 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "methods"
+      ],
       "journal": "Geosciences",
       "doi": "10.3390/geosciences15080304",
       "url": "https://doi.org/10.3390/geosciences15080304",
@@ -201,6 +223,9 @@
       ],
       "year": 2025,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Earth, Planets and Space",
       "doi": "10.1186/s40623-025-02290-x",
       "url": "https://doi.org/10.1186/s40623-025-02290-x",
@@ -223,6 +248,9 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Science of Remote Sensing",
       "doi": "10.1016/j.srs.2024.100189",
       "url": "https://doi.org/10.1016/j.srs.2024.100189",
@@ -242,6 +270,9 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-13-1181-2025",
       "url": "https://doi.org/10.5194/esurf-13-1181-2025",
@@ -264,6 +295,10 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2025.10061",
       "url": "https://doi.org/10.1017/jog.2025.10061",
@@ -293,6 +328,10 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220250024",
       "url": "https://doi.org/10.1785/0220250024",
@@ -314,6 +353,10 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Comptes Rendus. Géoscience",
       "doi": "10.5802/crgeos.310",
       "url": "https://doi.org/10.5802/crgeos.310",
@@ -334,6 +377,9 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Arctic: Ecology and Economy",
       "doi": "10.25283/2223-4594-2025-3-137-148",
       "url": "https://doi.org/10.25283/2223-4594-2025-3-137-148",
@@ -356,6 +402,10 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
       "doi": "10.1109/JSTARS.2025.3567660",
       "url": "https://doi.org/10.1109/JSTARS.2025.3567660",
@@ -376,6 +426,10 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Geoscientific Model Development",
       "doi": "10.5194/gmd-18-8751-2025",
       "url": "https://doi.org/10.5194/gmd-18-8751-2025",
@@ -400,6 +454,9 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysics",
       "doi": "",
       "url": "",
@@ -419,6 +476,10 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.70208",
       "url": "https://doi.org/10.1002/esp.70208",
@@ -441,6 +502,11 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Scientific Reports",
       "doi": "10.1038/s41598-024-84067-y",
       "url": "https://doi.org/10.1038/s41598-024-84067-y",
@@ -461,6 +527,10 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "",
       "url": "",
@@ -479,6 +549,10 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2024GL110808",
       "url": "https://doi.org/10.1029/2024GL110808",
@@ -497,6 +571,9 @@
       ],
       "year": 2025,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220240469",
       "url": "https://doi.org/10.1785/0220240469",
@@ -516,6 +593,11 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Science",
       "doi": "10.1126/science.adr6139",
       "url": "https://doi.org/10.1126/science.adr6139",
@@ -534,6 +616,10 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Journal Of The Geological Society Of India",
       "doi": "10.17491/jgsi/2025/174275",
       "url": "https://doi.org/10.17491/jgsi/2025/174275",
@@ -553,6 +639,12 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2025.10115",
       "url": "https://doi.org/10.1017/jog.2025.10115",
@@ -575,6 +667,11 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2024JF008094",
       "url": "https://doi.org/10.1029/2024JF008094",
@@ -597,6 +694,9 @@
       ],
       "year": 2025,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Environmental Processes",
       "doi": "10.1007/s40710-025-00752-8",
       "url": "https://doi.org/10.1007/s40710-025-00752-8",
@@ -619,6 +719,9 @@
       ],
       "year": 2025,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2024JF007980",
       "url": "https://doi.org/10.1029/2024JF007980",
@@ -642,6 +745,11 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "hydrology"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.70059",
       "url": "https://doi.org/10.1002/esp.70059",
@@ -661,6 +769,10 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2025JF008506",
       "url": "https://doi.org/10.1029/2025JF008506",
@@ -682,6 +794,10 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2025.10062",
       "url": "https://doi.org/10.1017/jog.2025.10062",
@@ -701,6 +817,9 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-13-1059-2025",
       "url": "https://doi.org/10.5194/esurf-13-1059-2025",
@@ -720,6 +839,10 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "",
       "url": "",
@@ -743,6 +866,9 @@
       ],
       "year": 2025,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Journal of Volcanology and Geothermal Research",
       "doi": "10.1016/j.jvolgeores.2025.108283",
       "url": "https://doi.org/10.1016/j.jvolgeores.2025.108283",
@@ -764,6 +890,10 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2024JB029946",
       "url": "https://doi.org/10.1029/2024JB029946",
@@ -784,6 +914,10 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2025JF008354",
       "url": "https://doi.org/10.1029/2025JF008354",
@@ -805,6 +939,9 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2025GL117302",
       "url": "https://doi.org/10.1029/2025GL117302",
@@ -826,6 +963,10 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2025GL115201",
       "url": "https://doi.org/10.1029/2025GL115201",
@@ -846,6 +987,10 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Scientific Reports",
       "doi": "10.1038/s41598-025-19824-8",
       "url": "https://doi.org/10.1038/s41598-025-19824-8",
@@ -866,6 +1011,9 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2024GL113935",
       "url": "https://doi.org/10.1029/2024GL113935",
@@ -887,6 +1035,10 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2024JB030697",
       "url": "https://doi.org/10.1029/2024JB030697",
@@ -908,6 +1060,10 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2025JB032294",
       "url": "https://doi.org/10.1029/2025JB032294",
@@ -928,6 +1084,11 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggaf383",
       "url": "https://doi.org/10.1093/gji/ggaf383",
@@ -949,6 +1110,9 @@
       ],
       "year": 2025,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Journal of Applied Geophysics",
       "doi": "10.1016/j.jappgeo.2025.105966",
       "url": "https://doi.org/10.1016/j.jappgeo.2025.105966",
@@ -974,6 +1138,10 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "AGU Advances",
       "doi": "",
       "url": "",
@@ -995,6 +1163,9 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Engineering Geology",
       "doi": "",
       "url": "",
@@ -1023,6 +1194,9 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Nature Communications",
       "doi": "10.1038/s41467-025-67784-4",
       "url": "https://doi.org/10.1038/s41467-025-67784-4",
@@ -1048,6 +1222,10 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2025GL114852",
       "url": "https://doi.org/10.1029/2025GL114852",
@@ -1067,6 +1245,9 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Izvestiya, Physics of the Solid Earth",
       "doi": "10.1134/S1069351325700454",
       "url": "https://doi.org/10.1134/S1069351325700454",
@@ -1089,6 +1270,9 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Communications Earth &amp; Environment",
       "doi": "10.1038/s43247-025-02137-z",
       "url": "https://doi.org/10.1038/s43247-025-02137-z",
@@ -1112,6 +1296,9 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "The Review of scientific instruments",
       "doi": "10.1063/5.0242127",
       "url": "https://doi.org/10.1063/5.0242127",
@@ -1130,6 +1317,9 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Acta Geophysica",
       "doi": "",
       "url": "",
@@ -1153,6 +1343,11 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Water Resources Research",
       "doi": "10.1029/2024WR037706",
       "url": "https://doi.org/10.1029/2024WR037706",
@@ -1173,6 +1368,9 @@
       ],
       "year": 2025,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Nature Communications",
       "doi": "10.1038/s41467-025-57151-8",
       "url": "https://doi.org/10.1038/s41467-025-57151-8",
@@ -1194,6 +1392,9 @@
       ],
       "year": 2025,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "National Science Review",
       "doi": "10.1093/nsr/nwaf023",
       "url": "https://doi.org/10.1093/nsr/nwaf023",
@@ -1218,6 +1419,10 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-19-6341-2025",
       "url": "https://doi.org/10.5194/tc-19-6341-2025",
@@ -1238,6 +1443,11 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Russian Geology and Geophysics",
       "doi": "10.2113/rgg20244788",
       "url": "https://doi.org/10.2113/rgg20244788",
@@ -1256,6 +1466,11 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2024GL111352",
       "url": "https://doi.org/10.1029/2024GL111352",
@@ -1278,6 +1493,9 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2024JF008159",
       "url": "https://doi.org/10.1029/2024JF008159",
@@ -1300,6 +1518,10 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "hydrology"
+      ],
       "journal": "Journal of South American Earth Sciences",
       "doi": "10.1016/j.jsames.2025.105768",
       "url": "https://doi.org/10.1016/j.jsames.2025.105768",
@@ -1316,6 +1538,9 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Physics Today",
       "doi": "10.1063/pt.tlbj.ljtn",
       "url": "https://doi.org/10.1063/pt.tlbj.ljtn",
@@ -1340,6 +1565,9 @@
       ],
       "year": 2025,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Hydrogeology Journal",
       "doi": "10.1007/s10040-025-02934-y",
       "url": "https://doi.org/10.1007/s10040-025-02934-y",
@@ -1363,6 +1591,9 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "The Seismic Record",
       "doi": "",
       "url": "",
@@ -1383,6 +1614,10 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "volcano"
+      ],
       "journal": "Natural Hazards",
       "doi": "",
       "url": "",
@@ -1423,6 +1658,9 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Quaternary Science Reviews",
       "doi": "10.1016/j.quascirev.2025.109650",
       "url": "https://doi.org/10.1016/j.quascirev.2025.109650",
@@ -1443,6 +1681,12 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "hydrology",
+        "volcano"
+      ],
       "journal": "Journal of Geophysical Research: Machine Learning and Computation",
       "doi": "10.1029/2025jh000958",
       "url": "https://doi.org/10.1029/2025jh000958",
@@ -1464,6 +1708,11 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology",
+        "methods"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-19-1469-2025",
       "url": "https://doi.org/10.5194/tc-19-1469-2025",
@@ -1487,6 +1736,9 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2024GL113784",
       "url": "https://doi.org/10.1029/2024GL113784",
@@ -1508,6 +1760,11 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2024JB030027",
       "url": "https://doi.org/10.1029/2024JB030027",
@@ -1529,6 +1786,9 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2025JF008475",
       "url": "https://doi.org/10.1029/2025JF008475",
@@ -1551,6 +1811,11 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "river",
+        "hydrology"
+      ],
       "journal": "Water Resources Research",
       "doi": "10.1029/2025WR040786",
       "url": "https://doi.org/10.1029/2025WR040786",
@@ -1567,6 +1832,9 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2025GL118885",
       "url": "https://doi.org/10.1029/2025GL118885",
@@ -1585,6 +1853,9 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Landslides",
       "doi": "",
       "url": "",
@@ -1608,6 +1879,9 @@
       ],
       "year": 2025,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Tectonophysics",
       "doi": "10.1016/j.tecto.2024.230578",
       "url": "https://doi.org/10.1016/j.tecto.2024.230578",
@@ -1630,6 +1904,9 @@
       ],
       "year": 2025,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Natural hazards and earth system sciences",
       "doi": "",
       "url": "",
@@ -1653,6 +1930,10 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220250052",
       "url": "https://doi.org/10.1785/0220250052",
@@ -1672,6 +1953,10 @@
       ],
       "year": 2025,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Journal of Hydrology: Regional Studies",
       "doi": "10.1016/j.ejrh.2025.102267",
       "url": "https://doi.org/10.1016/j.ejrh.2025.102267",
@@ -1692,6 +1977,9 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2025.30",
       "url": "https://doi.org/10.1017/jog.2025.30",
@@ -1715,6 +2003,12 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "glacier",
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-13-1281-2025",
       "url": "https://doi.org/10.5194/esurf-13-1281-2025",
@@ -1736,6 +2030,9 @@
       ],
       "year": 2025,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Frontiers in Earth Science",
       "doi": "10.3389/feart.2025.1519353",
       "url": "https://doi.org/10.3389/feart.2025.1519353",
@@ -1758,6 +2055,9 @@
       ],
       "year": 2025,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Seismica",
       "doi": "10.26443/seismica.v4i1.1483",
       "url": "https://doi.org/10.26443/seismica.v4i1.1483",
@@ -1778,6 +2078,9 @@
       ],
       "year": 2025,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Marine Science and Engineering",
       "doi": "10.3390/jmse14010036",
       "url": "https://doi.org/10.3390/jmse14010036",
@@ -1802,6 +2105,9 @@
       ],
       "year": 2024,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Sustainability",
       "doi": "10.3390/su16041432",
       "url": "https://doi.org/10.3390/su16041432",
@@ -1885,6 +2191,10 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Science",
       "doi": "10.1126/science.adm9247",
       "url": "https://doi.org/10.1126/science.adm9247",
@@ -1906,6 +2216,11 @@
       ],
       "year": 2024,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2023JB027644",
       "url": "https://doi.org/10.1029/2023JB027644",
@@ -1923,6 +2238,9 @@
       ],
       "year": 2024,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "South African Journal of Science",
       "doi": "10.17159/sajs.2024/16366",
       "url": "https://doi.org/10.17159/sajs.2024/16366",
@@ -1943,6 +2261,11 @@
       ],
       "year": 2024,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "volcano",
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220240088",
       "url": "https://doi.org/10.1785/0220240088",
@@ -1959,6 +2282,9 @@
       ],
       "year": 2024,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-12-11-2024",
       "url": "https://doi.org/10.5194/esurf-12-11-2024",
@@ -1982,6 +2308,13 @@
       ],
       "year": 2024,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "glacier",
+        "river",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2024JF007691",
       "url": "https://doi.org/10.1029/2024JF007691",
@@ -2002,6 +2335,11 @@
       ],
       "year": 2024,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Frontiers in Earth Science",
       "doi": "10.3389/feart.2024.1334248",
       "url": "https://doi.org/10.3389/feart.2024.1334248",
@@ -2027,6 +2365,10 @@
       ],
       "year": 2024,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2023JF007527",
       "url": "https://doi.org/10.1029/2023JF007527",
@@ -2045,6 +2387,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2024JF007799",
       "url": "https://doi.org/10.1029/2024JF007799",
@@ -2062,6 +2407,9 @@
       ],
       "year": 2024,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Netherlands Journal of Geosciences",
       "doi": "10.1017/njg.2024.23",
       "url": "https://doi.org/10.1017/njg.2024.23",
@@ -2081,6 +2429,9 @@
       ],
       "year": 2024,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2024JB029023",
       "url": "https://doi.org/10.1029/2024JB029023",
@@ -2100,6 +2451,9 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Volcanology and Seismology",
       "doi": "10.1134/S0742046324700635",
       "url": "https://doi.org/10.1134/S0742046324700635",
@@ -2119,6 +2473,9 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Vulkanologiâ i sejsmologiâ",
       "doi": "10.31857/s0203030624040061",
       "url": "https://doi.org/10.31857/s0203030624040061",
@@ -2137,6 +2494,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2024GL110466",
       "url": "https://doi.org/10.1029/2024GL110466",
@@ -2158,6 +2518,10 @@
       ],
       "year": 2024,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "volcano"
+      ],
       "journal": "Natural Hazards",
       "doi": "10.1007/s11069-024-06926-1",
       "url": "https://doi.org/10.1007/s11069-024-06926-1",
@@ -2178,6 +2542,10 @@
       ],
       "year": 2024,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "volcano"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220240079",
       "url": "https://doi.org/10.1785/0220240079",
@@ -2200,6 +2568,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth and Space Science",
       "doi": "10.1029/2023EA003402",
       "url": "https://doi.org/10.1029/2023EA003402",
@@ -2223,6 +2594,9 @@
       ],
       "year": 2024,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Engineering Geology",
       "doi": "",
       "url": "",
@@ -2241,6 +2615,10 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "methods"
+      ],
       "journal": "Communications Earth & Environment",
       "doi": "",
       "url": "",
@@ -2265,6 +2643,11 @@
       ],
       "year": 2024,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2024GL108202",
       "url": "https://doi.org/10.1029/2024GL108202",
@@ -2285,6 +2668,9 @@
       ],
       "year": 2024,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "IEEE Access",
       "doi": "10.1109/ACCESS.2024.3505942",
       "url": "https://doi.org/10.1109/ACCESS.2024.3505942",
@@ -2309,6 +2695,10 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2024GL108933",
       "url": "https://doi.org/10.1029/2024GL108933",
@@ -2331,6 +2721,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geosciences",
       "doi": "10.3390/geosciences14020028",
       "url": "https://doi.org/10.3390/geosciences14020028",
@@ -2351,6 +2744,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Landslides",
       "doi": "10.1007/s10346-024-02268-y",
       "url": "https://doi.org/10.1007/s10346-024-02268-y",
@@ -2376,6 +2772,9 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2023GL105038",
       "url": "https://doi.org/10.1029/2023GL105038",
@@ -2398,6 +2797,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "",
       "url": "",
@@ -2424,6 +2826,10 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "methods"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-12-641-2024",
       "url": "https://doi.org/10.5194/esurf-12-641-2024",
@@ -2446,6 +2852,9 @@
       ],
       "year": 2024,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth and Space Science",
       "doi": "",
       "url": "",
@@ -2470,6 +2879,10 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Earth and Planetary Science Letters",
       "doi": "10.1016/j.epsl.2024.118922",
       "url": "https://doi.org/10.1016/j.epsl.2024.118922",
@@ -2493,6 +2906,11 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "hydrology"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-18-2939-2024",
       "url": "https://doi.org/10.5194/tc-18-2939-2024",
@@ -2515,6 +2933,9 @@
       ],
       "year": 2024,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Nature Communications",
       "doi": "10.1038/s41467-024-54094-4",
       "url": "https://doi.org/10.1038/s41467-024-54094-4",
@@ -2533,6 +2954,9 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "AGU Advances",
       "doi": "10.1029/2023AV001023",
       "url": "https://doi.org/10.1029/2023AV001023",
@@ -2554,6 +2978,9 @@
       ],
       "year": 2024,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-12-117-2024",
       "url": "https://doi.org/10.5194/esurf-12-117-2024",
@@ -2572,6 +2999,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Remote Sensing",
       "doi": "10.3390/rs16030534",
       "url": "https://doi.org/10.3390/rs16030534",
@@ -2591,6 +3021,11 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "river",
+        "methods"
+      ],
       "journal": "Environmental Sciences Europe",
       "doi": "10.1186/s12302-024-00985-8",
       "url": "https://doi.org/10.1186/s12302-024-00985-8",
@@ -2611,6 +3046,10 @@
       ],
       "year": 2024,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide"
+      ],
       "journal": "Structural integrity",
       "doi": "",
       "url": "",
@@ -2631,6 +3070,11 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220240201",
       "url": "https://doi.org/10.1785/0220240201",
@@ -2650,6 +3094,9 @@
       ],
       "year": 2024,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Engineering Geology",
       "doi": "10.1016/j.enggeo.2024.107768",
       "url": "https://doi.org/10.1016/j.enggeo.2024.107768",
@@ -2670,6 +3117,10 @@
       ],
       "year": 2024,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "volcano"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220240112",
       "url": "https://doi.org/10.1785/0220240112",
@@ -2694,6 +3145,11 @@
       ],
       "year": 2024,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "volcano",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2024JB029568",
       "url": "https://doi.org/10.1029/2024JB029568",
@@ -2715,6 +3171,9 @@
       ],
       "year": 2024,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2024JF007761",
       "url": "https://doi.org/10.1029/2024JF007761",
@@ -2736,6 +3195,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research Earth Surface",
       "doi": "",
       "url": "",
@@ -2758,6 +3220,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.5869",
       "url": "https://doi.org/10.1002/esp.5869",
@@ -2776,6 +3241,9 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-18-169-2024",
       "url": "https://doi.org/10.5194/tc-18-169-2024",
@@ -2792,6 +3260,9 @@
       ],
       "year": 2024,
       "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
       "journal": "Bulletin of Volcanology",
       "doi": "10.1007/s00445-024-01793-x",
       "url": "https://doi.org/10.1007/s00445-024-01793-x",
@@ -2811,6 +3282,10 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "volcano"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2024GL108958",
       "url": "https://doi.org/10.1029/2024GL108958",
@@ -2835,6 +3310,9 @@
       ],
       "year": 2024,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "",
       "url": "",
@@ -2855,6 +3333,9 @@
       ],
       "year": 2024,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.5774",
       "url": "https://doi.org/10.1002/esp.5774",
@@ -2875,6 +3356,9 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "",
       "url": "",
@@ -2892,6 +3376,10 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "The Seismic Record",
       "doi": "10.1785/0320230044",
       "url": "https://doi.org/10.1785/0320230044",
@@ -2911,6 +3399,12 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "hydrology",
+        "methods"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-18-2061-2024",
       "url": "https://doi.org/10.5194/tc-18-2061-2024",
@@ -2933,6 +3427,9 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-18-2081-2024",
       "url": "https://doi.org/10.5194/tc-18-2081-2024",
@@ -2957,6 +3454,9 @@
       ],
       "year": 2024,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220230348",
       "url": "https://doi.org/10.1785/0220230348",
@@ -2979,6 +3479,9 @@
       ],
       "year": 2024,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "IEEE Transactions on Geoscience and Remote Sensing",
       "doi": "10.1109/TGRS.2024.3484753",
       "url": "https://doi.org/10.1109/TGRS.2024.3484753",
@@ -2996,6 +3499,9 @@
       ],
       "year": 2024,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geosciences",
       "doi": "",
       "url": "",
@@ -3015,6 +3521,10 @@
       ],
       "year": 2024,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220230078",
       "url": "https://doi.org/10.1785/0220230078",
@@ -3039,6 +3549,9 @@
       ],
       "year": 2024,
       "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
       "journal": "Journal of Volcanology and Geothermal Research",
       "doi": "10.1016/j.jvolgeores.2024.108212",
       "url": "https://doi.org/10.1016/j.jvolgeores.2024.108212",
@@ -3058,6 +3571,10 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2022GL101254",
       "url": "https://doi.org/10.1029/2022GL101254",
@@ -3078,6 +3595,10 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220220372",
       "url": "https://doi.org/10.1785/0220220372",
@@ -3096,6 +3617,9 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2023GL103235",
       "url": "https://doi.org/10.1029/2023GL103235",
@@ -3119,6 +3643,9 @@
       ],
       "year": 2023,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2022JF007000",
       "url": "https://doi.org/10.1029/2022JF007000",
@@ -3139,6 +3666,10 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-17-4979-2023",
       "url": "https://doi.org/10.5194/tc-17-4979-2023",
@@ -3163,6 +3694,9 @@
       ],
       "year": 2023,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.5646",
       "url": "https://doi.org/10.1002/esp.5646",
@@ -3180,6 +3714,10 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-11-89-2023",
       "url": "https://doi.org/10.5194/esurf-11-89-2023",
@@ -3202,6 +3740,11 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Remote. Sens.",
       "doi": "10.3390/rs15020363",
       "url": "https://doi.org/10.3390/rs15020363",
@@ -3222,6 +3765,9 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2022JB025635",
       "url": "https://doi.org/10.1029/2022JB025635",
@@ -3240,6 +3786,9 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Water",
       "doi": "10.3390/w15101947",
       "url": "https://doi.org/10.3390/w15101947",
@@ -3263,6 +3812,10 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2023.30",
       "url": "https://doi.org/10.1017/jog.2023.30",
@@ -3282,6 +3835,10 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "methods"
+      ],
       "journal": "Iranian Journal of Science and Technology, Transactions of Civil Engineering",
       "doi": "10.1007/s40996-022-01016-3",
       "url": "https://doi.org/10.1007/s40996-022-01016-3",
@@ -3304,6 +3861,10 @@
       ],
       "year": 2023,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2022JF006962",
       "url": "https://doi.org/10.1029/2022JF006962",
@@ -3327,6 +3888,9 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Engineering Geology",
       "doi": "10.1016/j.enggeo.2023.107222",
       "url": "https://doi.org/10.1016/j.enggeo.2023.107222",
@@ -3349,6 +3913,9 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220230011",
       "url": "https://doi.org/10.1785/0220230011",
@@ -3370,6 +3937,11 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2023GL103673",
       "url": "https://doi.org/10.1029/2023GL103673",
@@ -3388,6 +3960,9 @@
       ],
       "year": 2023,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Seismica",
       "doi": "10.26443/seismica.v2i2.499",
       "url": "https://doi.org/10.26443/seismica.v2i2.499",
@@ -3409,6 +3984,11 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "volcano",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2022JB025738",
       "url": "https://doi.org/10.1029/2022JB025738",
@@ -3429,6 +4009,9 @@
       ],
       "year": 2023,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2022JF006715",
       "url": "https://doi.org/10.1029/2022JF006715",
@@ -3453,6 +4036,9 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Seismology",
       "doi": "",
       "url": "",
@@ -3471,6 +4057,10 @@
       ],
       "year": 2023,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.5640",
       "url": "https://doi.org/10.1002/esp.5640",
@@ -3490,6 +4080,10 @@
       ],
       "year": 2023,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "hydrology"
+      ],
       "journal": "Japanese Geotechnical Journal",
       "doi": "10.3208/jgs.18.407",
       "url": "https://doi.org/10.3208/jgs.18.407",
@@ -3511,6 +4105,9 @@
       ],
       "year": 2023,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Engineering Geology",
       "doi": "",
       "url": "",
@@ -3550,6 +4147,10 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2023GL106082",
       "url": "https://doi.org/10.1029/2023GL106082",
@@ -3569,6 +4170,10 @@
       ],
       "year": 2023,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "volcano"
+      ],
       "journal": "Revista Mexicana de Ciencias Geológicas",
       "doi": "10.22201/cgeo.20072902e.2023.1.1709",
       "url": "https://doi.org/10.22201/cgeo.20072902e.2023.1.1709",
@@ -3589,6 +4194,10 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Journal of Applied Geophysics",
       "doi": "10.1016/j.jappgeo.2023.105071",
       "url": "https://doi.org/10.1016/j.jappgeo.2023.105071",
@@ -3606,6 +4215,9 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Advances in geophysics",
       "doi": "",
       "url": "",
@@ -3624,6 +4236,10 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2022GL101298",
       "url": "https://doi.org/10.1029/2022GL101298",
@@ -3650,6 +4266,10 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2023JF007119",
       "url": "https://doi.org/10.1029/2023JF007119",
@@ -3679,6 +4299,11 @@
       ],
       "year": 2023,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggad160",
       "url": "https://doi.org/10.1093/gji/ggad160",
@@ -3707,6 +4332,10 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2023JF007280",
       "url": "https://doi.org/10.1029/2023JF007280",
@@ -3727,6 +4356,10 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2023GL103419",
       "url": "https://doi.org/10.1029/2023GL103419",
@@ -3750,6 +4383,10 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-17-4447-2023",
       "url": "https://doi.org/10.5194/tc-17-4447-2023",
@@ -3770,6 +4407,10 @@
       ],
       "year": 2023,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Water",
       "doi": "10.3390/w15142523",
       "url": "https://doi.org/10.3390/w15142523",
@@ -3789,6 +4430,10 @@
       ],
       "year": 2023,
       "category": "river",
+      "categories": [
+        "river",
+        "methods"
+      ],
       "journal": "Applied Sciences",
       "doi": "10.3390/app13085135",
       "url": "https://doi.org/10.3390/app13085135",
@@ -3808,6 +4453,9 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2023.4",
       "url": "https://doi.org/10.1017/jog.2023.4",
@@ -3827,6 +4475,10 @@
       ],
       "year": 2023,
       "category": "river",
+      "categories": [
+        "river",
+        "methods"
+      ],
       "journal": "Bulletin of the Seismological Society of America",
       "doi": "10.1785/0120220250",
       "url": "https://doi.org/10.1785/0120220250",
@@ -3844,6 +4496,10 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "The Journal of the Acoustical Society of America",
       "doi": "10.1121/10.0018663",
       "url": "https://doi.org/10.1121/10.0018663",
@@ -3867,6 +4523,11 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "volcano",
+        "methods"
+      ],
       "journal": "Solid Earth",
       "doi": "10.5194/se-14-529-2023",
       "url": "https://doi.org/10.5194/se-14-529-2023",
@@ -3888,6 +4549,10 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2023JF007091",
       "url": "https://doi.org/10.1029/2023JF007091",
@@ -3914,6 +4579,10 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "methods"
+      ],
       "journal": "Communications Earth &amp; Environment",
       "doi": "10.1038/s43247-023-00851-0",
       "url": "https://doi.org/10.1038/s43247-023-00851-0",
@@ -3938,6 +4607,10 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "methods"
+      ],
       "journal": "IEEE Transactions on Geoscience and Remote Sensing",
       "doi": "10.1109/TGRS.2023.3284008",
       "url": "https://doi.org/10.1109/TGRS.2023.3284008",
@@ -3955,6 +4628,9 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2023JB026759",
       "url": "https://doi.org/10.1029/2023JB026759",
@@ -3976,6 +4652,10 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2022GL100548",
       "url": "https://doi.org/10.1029/2022GL100548",
@@ -3998,6 +4678,10 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2022GL102007",
       "url": "https://doi.org/10.1029/2022GL102007",
@@ -4023,6 +4707,9 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical monograph",
       "doi": "",
       "url": "",
@@ -4047,6 +4734,9 @@
       ],
       "year": 2023,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Applied Geophysics",
       "doi": "10.1016/j.jappgeo.2023.105127",
       "url": "https://doi.org/10.1016/j.jappgeo.2023.105127",
@@ -4069,6 +4759,9 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Environmental Earth Sciences",
       "doi": "",
       "url": "",
@@ -4093,6 +4786,9 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2022JB024583",
       "url": "https://doi.org/10.1029/2022JB024583",
@@ -4112,6 +4808,9 @@
       ],
       "year": 2023,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Tectonophysics",
       "doi": "10.1016/j.tecto.2023.229887",
       "url": "https://doi.org/10.1016/j.tecto.2023.229887",
@@ -4137,6 +4836,9 @@
       ],
       "year": 2023,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Communications Earth &amp; Environment",
       "doi": "10.1038/s43247-023-01122-8",
       "url": "https://doi.org/10.1038/s43247-023-01122-8",
@@ -4153,6 +4855,9 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Terra Nova",
       "doi": "10.1111/ter.12686",
       "url": "https://doi.org/10.1111/ter.12686",
@@ -4177,6 +4882,11 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "hydrology"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-11-933-2023",
       "url": "https://doi.org/10.5194/esurf-11-933-2023",
@@ -4202,6 +4912,11 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Landslides",
       "doi": "10.1007/s10346-023-02179-4",
       "url": "https://doi.org/10.1007/s10346-023-02179-4",
@@ -4219,6 +4934,10 @@
       ],
       "year": 2023,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2022JB025553",
       "url": "https://doi.org/10.1029/2022JB025553",
@@ -4242,6 +4961,10 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2022JF006850",
       "url": "https://doi.org/10.1029/2022JF006850",
@@ -4264,6 +4987,9 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2023JF007172",
       "url": "https://doi.org/10.1029/2023JF007172",
@@ -4282,6 +5008,10 @@
       ],
       "year": 2023,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "volcano"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2022JB026114",
       "url": "https://doi.org/10.1029/2022JB026114",
@@ -4305,6 +5035,11 @@
       ],
       "year": 2023,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2022JB025505",
       "url": "https://doi.org/10.1029/2022JB025505",
@@ -4324,6 +5059,9 @@
       ],
       "year": 2023,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Prospecting",
       "doi": "10.1111/1365-2478.13425",
       "url": "https://doi.org/10.1111/1365-2478.13425",
@@ -4344,6 +5082,9 @@
       ],
       "year": 2022,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "",
       "url": "",
@@ -4365,6 +5106,10 @@
       ],
       "year": 2022,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "volcano"
+      ],
       "journal": "Landslides",
       "doi": "",
       "url": "",
@@ -4382,6 +5127,9 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surf. Dynam. Discuss. [preprint]",
       "doi": "",
       "url": "",
@@ -4398,6 +5146,11 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "river",
+        "hydrology"
+      ],
       "journal": "Progress in Physical Geography: Earth and Environment",
       "doi": "10.1177/03091333221111480",
       "url": "https://doi.org/10.1177/03091333221111480",
@@ -4418,6 +5171,10 @@
       ],
       "year": 2022,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Communications Earth &amp; Environment",
       "doi": "10.1038/s43247-022-00629-w",
       "url": "https://doi.org/10.1038/s43247-022-00629-w",
@@ -4437,6 +5194,9 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2021.135",
       "url": "https://doi.org/10.1017/jog.2021.135",
@@ -4454,6 +5214,9 @@
       ],
       "year": 2022,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "DYNA",
       "doi": "10.15446/dyna.v89n220.96966",
       "url": "https://doi.org/10.15446/dyna.v89n220.96966",
@@ -4473,6 +5236,10 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2022JF006909",
       "url": "https://doi.org/10.1029/2022JF006909",
@@ -4492,6 +5259,9 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Water Resources Research",
       "doi": "10.1029/2022WR032116",
       "url": "https://doi.org/10.1029/2022WR032116",
@@ -4517,6 +5287,9 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Landslides",
       "doi": "",
       "url": "",
@@ -4542,6 +5315,11 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "hydrology"
+      ],
       "journal": "Water Resources Research",
       "doi": "10.1029/2021WR031873",
       "url": "https://doi.org/10.1029/2021WR031873",
@@ -4563,6 +5341,9 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2022JB025096",
       "url": "https://doi.org/10.1029/2022JB025096",
@@ -4588,6 +5369,9 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-10-1165-2022",
       "url": "https://doi.org/10.5194/esurf-10-1165-2022",
@@ -4606,6 +5390,10 @@
       ],
       "year": 2022,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/nhess-22-1955-2022",
       "url": "https://doi.org/10.5194/nhess-22-1955-2022",
@@ -4624,6 +5412,10 @@
       ],
       "year": 2022,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "methods"
+      ],
       "journal": "Geomechanics and Tunnelling",
       "doi": "",
       "url": "",
@@ -4643,6 +5435,10 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2021GL095996",
       "url": "https://doi.org/10.1029/2021GL095996",
@@ -4665,6 +5461,9 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Landslides",
       "doi": "",
       "url": "",
@@ -4682,6 +5481,9 @@
       ],
       "year": 2022,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Brazilian Journal of Geophysics",
       "doi": "10.22564/brjg.v40i2.2152",
       "url": "https://doi.org/10.22564/brjg.v40i2.2152",
@@ -4703,6 +5505,9 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth's Future",
       "doi": "10.1029/2022EF002737",
       "url": "https://doi.org/10.1029/2022EF002737",
@@ -4724,6 +5529,9 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Hydraulic Research",
       "doi": "10.1080/00221686.2022.2059585",
       "url": "https://doi.org/10.1080/00221686.2022.2059585",
@@ -4746,6 +5554,11 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "hydrology"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2022.69",
       "url": "https://doi.org/10.1017/jog.2022.69",
@@ -4768,6 +5581,11 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Water Resources Research",
       "doi": "10.1029/2021WR030680",
       "url": "https://doi.org/10.1029/2021WR030680",
@@ -4789,6 +5607,10 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2022GL100286",
       "url": "https://doi.org/10.1029/2022GL100286",
@@ -4807,6 +5629,9 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2022GL097961",
       "url": "https://doi.org/10.1029/2022GL097961",
@@ -4827,6 +5652,9 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth and Space Science",
       "doi": "10.1029/2021EA001962",
       "url": "https://doi.org/10.1029/2021EA001962",
@@ -4847,6 +5675,10 @@
       ],
       "year": 2022,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2021JF006576",
       "url": "https://doi.org/10.1029/2021JF006576",
@@ -4869,6 +5701,9 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2021JB023444",
       "url": "https://doi.org/10.1029/2021JB023444",
@@ -4887,6 +5722,9 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Natural hazards and earth system sciences",
       "doi": "",
       "url": "",
@@ -4908,6 +5746,9 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Landslides",
       "doi": "",
       "url": "",
@@ -4930,6 +5771,9 @@
       ],
       "year": 2022,
       "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
       "journal": "Earth, Planets and Space",
       "doi": "10.1186/s40623-021-01561-7",
       "url": "https://doi.org/10.1186/s40623-021-01561-7",
@@ -4948,6 +5792,9 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-16-2025-2022",
       "url": "https://doi.org/10.5194/tc-16-2025-2022",
@@ -4971,6 +5818,10 @@
       ],
       "year": 2022,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide"
+      ],
       "journal": "Sensors (Basel, Switzerland)",
       "doi": "10.3390/s22239310",
       "url": "https://doi.org/10.3390/s22239310",
@@ -4991,6 +5842,9 @@
       ],
       "year": 2022,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2022GL101189",
       "url": "https://doi.org/10.1029/2022GL101189",
@@ -5015,6 +5869,9 @@
       ],
       "year": 2022,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2022GL098509",
       "url": "https://doi.org/10.1029/2022GL098509",
@@ -5034,6 +5891,10 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Geosciences",
       "doi": "10.3390/geosciences13010009",
       "url": "https://doi.org/10.3390/geosciences13010009",
@@ -5056,6 +5917,11 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/nhess-22-445-2022",
       "url": "https://doi.org/10.5194/nhess-22-445-2022",
@@ -5080,6 +5946,10 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2022.98",
       "url": "https://doi.org/10.1017/jog.2022.98",
@@ -5100,6 +5970,10 @@
       ],
       "year": 2022,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggac064",
       "url": "https://doi.org/10.1093/gji/ggac064",
@@ -5124,6 +5998,9 @@
       ],
       "year": 2022,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Scientific Reports",
       "doi": "10.1038/s41598-022-07491-y",
       "url": "https://doi.org/10.1038/s41598-022-07491-y",
@@ -5140,6 +6017,10 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2022JF006837",
       "url": "https://doi.org/10.1029/2022JF006837",
@@ -5164,6 +6045,10 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2021JF006256",
       "url": "https://doi.org/10.1029/2021JF006256",
@@ -5186,6 +6071,10 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2021JF006406",
       "url": "https://doi.org/10.1029/2021JF006406",
@@ -5204,6 +6093,9 @@
       ],
       "year": 2022,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Bulletin of the Seismological Society of America",
       "doi": "10.1785/0120220160",
       "url": "https://doi.org/10.1785/0120220160",
@@ -5226,6 +6118,10 @@
       ],
       "year": 2022,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2021JB023402",
       "url": "https://doi.org/10.1029/2021JB023402",
@@ -5250,6 +6146,9 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Engineering Geology",
       "doi": "",
       "url": "",
@@ -5267,6 +6166,9 @@
       ],
       "year": 2022,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Scientific Reports",
       "doi": "10.1038/s41598-022-22351-5",
       "url": "https://doi.org/10.1038/s41598-022-22351-5",
@@ -5284,6 +6186,10 @@
       ],
       "year": 2022,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "volcano"
+      ],
       "journal": "Journal of the Japan Landslide Society",
       "doi": "10.3313/jls.59.146",
       "url": "https://doi.org/10.3313/jls.59.146",
@@ -5306,6 +6212,11 @@
       ],
       "year": 2022,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "river"
+      ],
       "journal": "Bulletin of the Seismological Society of America",
       "doi": "10.1785/0120210271",
       "url": "https://doi.org/10.1785/0120210271",
@@ -5327,6 +6238,9 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2022GL100345",
       "url": "https://doi.org/10.1029/2022GL100345",
@@ -5346,6 +6260,10 @@
       ],
       "year": 2022,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Nature Communications",
       "doi": "10.1038/s41467-022-32194-3",
       "url": "https://doi.org/10.1038/s41467-022-32194-3",
@@ -5365,6 +6283,9 @@
       ],
       "year": 2022,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Earthquake Research Advances",
       "doi": "10.1016/j.eqrea.2022.100178",
       "url": "https://doi.org/10.1016/j.eqrea.2022.100178",
@@ -5390,6 +6311,10 @@
       ],
       "year": 2022,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Earth and Space Science",
       "doi": "10.1029/2021EA002065",
       "url": "https://doi.org/10.1029/2021EA002065",
@@ -5408,6 +6333,10 @@
       ],
       "year": 2022,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2023.34",
       "url": "https://doi.org/10.1017/aog.2023.34",
@@ -5428,6 +6357,9 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-2022-7",
       "url": "https://doi.org/10.5194/esurf-2022-7",
@@ -5448,6 +6380,9 @@
       ],
       "year": 2022,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "LHB",
       "doi": "10.1080/27678490.2022.2053314",
       "url": "https://doi.org/10.1080/27678490.2022.2053314",
@@ -5477,6 +6412,10 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220200280",
       "url": "https://doi.org/10.1785/0220200280",
@@ -5496,6 +6435,10 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2021JF006167",
       "url": "https://doi.org/10.1029/2021JF006167",
@@ -5514,6 +6457,9 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Engineering Geology",
       "doi": "",
       "url": "",
@@ -5533,6 +6479,11 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "methods"
+      ],
       "journal": "The Journal of the Acoustical Society of America",
       "doi": "10.1121/10.0006792",
       "url": "https://doi.org/10.1121/10.0006792",
@@ -5551,6 +6502,10 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Journal of Open Research Software",
       "doi": "10.5334/jors.365",
       "url": "https://doi.org/10.5334/jors.365",
@@ -5573,6 +6528,10 @@
       ],
       "year": 2021,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2021JB022755",
       "url": "https://doi.org/10.1029/2021JB022755",
@@ -5591,6 +6550,9 @@
       ],
       "year": 2021,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2022JB025050",
       "url": "https://doi.org/10.1029/2022JB025050",
@@ -5608,6 +6570,9 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Water Resources Research",
       "doi": "10.1029/2020WR027774",
       "url": "https://doi.org/10.1029/2020WR027774",
@@ -5635,6 +6600,10 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/nhess-2021-339",
       "url": "https://doi.org/10.5194/nhess-2021-339",
@@ -5659,6 +6628,9 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "CATENA",
       "doi": "",
       "url": "",
@@ -5675,6 +6647,9 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggab288",
       "url": "https://doi.org/10.1093/gji/ggab288",
@@ -5694,6 +6669,11 @@
       ],
       "year": 2021,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "volcano",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2021JB022650",
       "url": "https://doi.org/10.1029/2021JB022650",
@@ -5710,6 +6690,10 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "International Journal of Geosciences",
       "doi": "10.4236/IJG.2021.121002",
       "url": "https://doi.org/10.4236/IJG.2021.121002",
@@ -5729,6 +6713,11 @@
       ],
       "year": 2021,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.5168",
       "url": "https://doi.org/10.1002/esp.5168",
@@ -5758,6 +6747,10 @@
       ],
       "year": 2021,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide"
+      ],
       "journal": "Science",
       "doi": "10.1126/science.abj1227",
       "url": "https://doi.org/10.1126/science.abj1227",
@@ -5778,6 +6771,9 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Communications Earth & Environment",
       "doi": "10.1038/s43247-021-00279-4",
       "url": "https://doi.org/10.1038/s43247-021-00279-4",
@@ -5800,6 +6796,10 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Frontiers in Earth Science",
       "doi": "10.3389/feart.2021.626720",
       "url": "https://doi.org/10.3389/feart.2021.626720",
@@ -5820,6 +6820,9 @@
       ],
       "year": 2021,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/TC-2021-108",
       "url": "https://doi.org/10.5194/TC-2021-108",
@@ -5838,6 +6841,9 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.5117",
       "url": "https://doi.org/10.1002/esp.5117",
@@ -5859,6 +6865,9 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2021GL096043",
       "url": "https://doi.org/10.1029/2021GL096043",
@@ -5877,6 +6886,9 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.5304",
       "url": "https://doi.org/10.1002/esp.5304",
@@ -5898,6 +6910,9 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Water Resources Research",
       "doi": "10.1029/2020WR028700",
       "url": "https://doi.org/10.1029/2020WR028700",
@@ -5917,6 +6932,9 @@
       ],
       "year": 2021,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Earth, Planets and Space",
       "doi": "10.1186/s40623-021-01484-3",
       "url": "https://doi.org/10.1186/s40623-021-01484-3",
@@ -5937,6 +6955,9 @@
       ],
       "year": 2021,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2021GL093191",
       "url": "https://doi.org/10.1029/2021GL093191",
@@ -5956,6 +6977,10 @@
       ],
       "year": 2021,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Remote Sensing",
       "doi": "10.3390/rs13122421",
       "url": "https://doi.org/10.3390/rs13122421",
@@ -5977,6 +7002,10 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2021JF006384",
       "url": "https://doi.org/10.1029/2021JF006384",
@@ -5997,6 +7026,10 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "methods"
+      ],
       "journal": "Earth-Science Reviews",
       "doi": "10.1016/J.EARSCIREV.2021.103518",
       "url": "https://doi.org/10.1016/J.EARSCIREV.2021.103518",
@@ -6022,6 +7055,10 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "volcano"
+      ],
       "journal": "Journal of Geophysical Research Earth Surface",
       "doi": "",
       "url": "",
@@ -6042,6 +7079,9 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "",
       "url": "",
@@ -6063,6 +7103,10 @@
       ],
       "year": 2021,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2020GL090874",
       "url": "https://doi.org/10.1029/2020GL090874",
@@ -6085,6 +7129,10 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/TC-15-501-2021",
       "url": "https://doi.org/10.5194/TC-15-501-2021",
@@ -6107,6 +7155,9 @@
       ],
       "year": 2021,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggab389",
       "url": "https://doi.org/10.1093/gji/ggab389",
@@ -6127,6 +7178,12 @@
       ],
       "year": 2021,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "glacier",
+        "methods"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/NHESS-21-339-2021",
       "url": "https://doi.org/10.5194/NHESS-21-339-2021",
@@ -6151,6 +7208,10 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2020JF006001",
       "url": "https://doi.org/10.1029/2020JF006001",
@@ -6169,6 +7230,9 @@
       ],
       "year": 2021,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Pure and Applied Geophysics",
       "doi": "",
       "url": "",
@@ -6187,6 +7251,9 @@
       ],
       "year": 2021,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/GJI/GGAB140",
       "url": "https://doi.org/10.1093/GJI/GGAB140",
@@ -6206,6 +7273,10 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220200465",
       "url": "https://doi.org/10.1785/0220200465",
@@ -6225,6 +7296,10 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Nature Communications",
       "doi": "10.1038/s41467-021-24142-4",
       "url": "https://doi.org/10.1038/s41467-021-24142-4",
@@ -6247,6 +7322,10 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "volcano"
+      ],
       "journal": "Journal of Volcanology and Geothermal Research.",
       "doi": "10.31223/x58g94",
       "url": "https://doi.org/10.31223/x58g94",
@@ -6266,6 +7345,10 @@
       ],
       "year": 2021,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Remote Sensing",
       "doi": "10.3390/rs13142684",
       "url": "https://doi.org/10.3390/rs13142684",
@@ -6282,6 +7365,9 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2021.25",
       "url": "https://doi.org/10.1017/jog.2021.25",
@@ -6325,6 +7411,9 @@
       ],
       "year": 2021,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Bulletin of the Seismological Society of America",
       "doi": "10.1785/0120210123",
       "url": "https://doi.org/10.1785/0120210123",
@@ -6342,6 +7431,9 @@
       ],
       "year": 2021,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggab350",
       "url": "https://doi.org/10.1093/gji/ggab350",
@@ -6378,6 +7470,9 @@
       ],
       "year": 2021,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Bulletin of the Seismological Society of America",
       "doi": "10.1785/0120210056",
       "url": "https://doi.org/10.1785/0120210056",
@@ -6407,6 +7502,11 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Remote. Sens.",
       "doi": "10.3390/rs13142834",
       "url": "https://doi.org/10.3390/rs13142834",
@@ -6424,6 +7524,9 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Progress in Earth and Planetary Science",
       "doi": "",
       "url": "",
@@ -6443,6 +7546,10 @@
       ],
       "year": 2021,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/GJI/GGAB086",
       "url": "https://doi.org/10.1093/GJI/GGAB086",
@@ -6468,6 +7575,9 @@
       ],
       "year": 2021,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Frontiers in Earth Science",
       "doi": "",
       "url": "",
@@ -6493,6 +7603,9 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Noisy Oceans: Monitoring Seismic and Acoustic Signals in the Marine Environment",
       "doi": "",
       "url": "",
@@ -6516,6 +7629,9 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Landslides",
       "doi": "",
       "url": "",
@@ -6539,6 +7655,9 @@
       ],
       "year": 2021,
       "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
       "journal": "Bulletin of Volcanology",
       "doi": "10.1007/s00445-021-01474-z",
       "url": "https://doi.org/10.1007/s00445-021-01474-z",
@@ -6556,6 +7675,9 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geoheritage",
       "doi": "10.1007/s12371-021-00563-x",
       "url": "https://doi.org/10.1007/s12371-021-00563-x",
@@ -6577,6 +7699,9 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-2021-72",
       "url": "https://doi.org/10.5194/esurf-2021-72",
@@ -6597,6 +7722,9 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2020JF005741",
       "url": "https://doi.org/10.1029/2020JF005741",
@@ -6616,6 +7744,9 @@
       ],
       "year": 2021,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Journal of Petroleum Science and Engineering",
       "doi": "10.1016/J.PETROL.2021.109390",
       "url": "https://doi.org/10.1016/J.PETROL.2021.109390",
@@ -6637,6 +7768,10 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2021JF006104",
       "url": "https://doi.org/10.1029/2021JF006104",
@@ -6665,6 +7800,9 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220200291",
       "url": "https://doi.org/10.1785/0220200291",
@@ -6684,6 +7822,9 @@
       ],
       "year": 2021,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2021JB022588",
       "url": "https://doi.org/10.1029/2021JB022588",
@@ -6701,6 +7842,9 @@
       ],
       "year": 2021,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggab376",
       "url": "https://doi.org/10.1093/gji/ggab376",
@@ -6723,6 +7867,9 @@
       ],
       "year": 2021,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Volcanica",
       "doi": "",
       "url": "",
@@ -6742,6 +7889,10 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-9-1423-2021",
       "url": "https://doi.org/10.5194/esurf-9-1423-2021",
@@ -6761,6 +7912,10 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2021JB021716",
       "url": "https://doi.org/10.1029/2021JB021716",
@@ -6783,6 +7938,9 @@
       ],
       "year": 2021,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2020GL090696",
       "url": "https://doi.org/10.1029/2020GL090696",
@@ -6802,6 +7960,9 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Natural Hazards",
       "doi": "10.1007/s11069-021-05086-w",
       "url": "https://doi.org/10.1007/s11069-021-05086-w",
@@ -6820,6 +7981,10 @@
       ],
       "year": 2021,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2021JF006325",
       "url": "https://doi.org/10.1029/2021JF006325",
@@ -6840,6 +8005,10 @@
       ],
       "year": 2020,
       "category": "river",
+      "categories": [
+        "river",
+        "volcano"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2019JB018980",
       "url": "https://doi.org/10.1029/2019JB018980",
@@ -6860,6 +8029,10 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Landslides",
       "doi": "10.1007/s10346-020-01534-z",
       "url": "https://doi.org/10.1007/s10346-020-01534-z",
@@ -6879,6 +8052,9 @@
       ],
       "year": 2020,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "",
       "url": "",
@@ -6897,6 +8073,10 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Oceans",
       "doi": "10.1029/2020jc016492",
       "url": "https://doi.org/10.1029/2020jc016492",
@@ -6919,6 +8099,9 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2020GL088964",
       "url": "https://doi.org/10.1029/2020GL088964",
@@ -6937,6 +8120,9 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2020.17",
       "url": "https://doi.org/10.1017/jog.2020.17",
@@ -6955,6 +8141,9 @@
       ],
       "year": 2020,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Water",
       "doi": "10.3390/w12071875",
       "url": "https://doi.org/10.3390/w12071875",
@@ -6975,6 +8164,9 @@
       ],
       "year": 2020,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Sensors (Basel, Switzerland)",
       "doi": "10.3390/s20154089",
       "url": "https://doi.org/10.3390/s20154089",
@@ -6996,6 +8188,9 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2020GL090597",
       "url": "https://doi.org/10.1029/2020GL090597",
@@ -7021,6 +8216,10 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Frontiers in Earth Science",
       "doi": "10.3389/feart.2020.00139",
       "url": "https://doi.org/10.3389/feart.2020.00139",
@@ -7043,6 +8242,9 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggaa056",
       "url": "https://doi.org/10.1093/gji/ggaa056",
@@ -7068,6 +8270,11 @@
       ],
       "year": 2020,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Geomatics, Natural Hazards and Risk",
       "doi": "10.1080/19475705.2022.2041108",
       "url": "https://doi.org/10.1080/19475705.2022.2041108",
@@ -7086,6 +8293,9 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Engineering Geology",
       "doi": "10.1016/j.enggeo.2020.105696",
       "url": "https://doi.org/10.1016/j.enggeo.2020.105696",
@@ -7104,6 +8314,10 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research Earth Surface",
       "doi": "",
       "url": "",
@@ -7124,6 +8338,9 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geosciences",
       "doi": "10.3390/geosciences10030113",
       "url": "https://doi.org/10.3390/geosciences10030113",
@@ -7145,6 +8362,9 @@
       ],
       "year": 2020,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface (Dataset)",
       "doi": "10.1029/2019JF005416",
       "url": "https://doi.org/10.1029/2019JF005416",
@@ -7168,6 +8388,9 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "\"The Cryosphere\"",
       "doi": "10.5194/tc-2020-147",
       "url": "https://doi.org/10.5194/tc-2020-147",
@@ -7189,6 +8412,9 @@
       ],
       "year": 2020,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2019JB019169",
       "url": "https://doi.org/10.1029/2019JB019169",
@@ -7210,6 +8436,9 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2020JF005627",
       "url": "https://doi.org/10.1029/2020JF005627",
@@ -7228,6 +8457,10 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Geology",
       "doi": "10.1130/g46626.1",
       "url": "https://doi.org/10.1130/g46626.1",
@@ -7250,6 +8483,9 @@
       ],
       "year": 2020,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "",
       "url": "",
@@ -7270,6 +8506,11 @@
       ],
       "year": 2020,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river",
+        "volcano"
+      ],
       "journal": "Frontiers in Earth Science",
       "doi": "10.3389/feart.2020.542116",
       "url": "https://doi.org/10.3389/feart.2020.542116",
@@ -7291,6 +8532,9 @@
       ],
       "year": 2020,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Solid Earth",
       "doi": "10.5194/se-11-1597-2020",
       "url": "https://doi.org/10.5194/se-11-1597-2020",
@@ -7311,6 +8555,10 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggaa287",
       "url": "https://doi.org/10.1093/gji/ggaa287",
@@ -7332,6 +8580,10 @@
       ],
       "year": 2020,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2021JF006172",
       "url": "https://doi.org/10.1029/2021JF006172",
@@ -7353,6 +8605,9 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Engineering Geology",
       "doi": "",
       "url": "",
@@ -7376,6 +8631,9 @@
       ],
       "year": 2020,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Journal of Geophysical Research Earth Surface",
       "doi": "",
       "url": "",
@@ -7400,6 +8658,10 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggaa353",
       "url": "https://doi.org/10.1093/gji/ggaa353",
@@ -7419,6 +8681,10 @@
       ],
       "year": 2020,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "EarthArXiv",
       "doi": "10.31223/osf.io/sdegk",
       "url": "https://doi.org/10.31223/osf.io/sdegk",
@@ -7441,6 +8707,9 @@
       ],
       "year": 2020,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.4988",
       "url": "https://doi.org/10.1002/esp.4988",
@@ -7463,6 +8732,12 @@
       ],
       "year": 2020,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "glacier",
+        "river"
+      ],
       "journal": "Landslides",
       "doi": "10.1007/s10346-019-01332-2",
       "url": "https://doi.org/10.1007/s10346-019-01332-2",
@@ -7486,6 +8761,11 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "methods"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/TC-14-1139-2020",
       "url": "https://doi.org/10.5194/TC-14-1139-2020",
@@ -7505,6 +8785,9 @@
       ],
       "year": 2020,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2019JF005242",
       "url": "https://doi.org/10.1029/2019JF005242",
@@ -7525,6 +8808,10 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-2020-141",
       "url": "https://doi.org/10.5194/tc-2020-141",
@@ -7547,6 +8834,11 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "hydrology"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/tc-14-1475-2020",
       "url": "https://doi.org/10.5194/tc-14-1475-2020",
@@ -7567,6 +8859,11 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "volcano"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-2020-47",
       "url": "https://doi.org/10.5194/esurf-2020-47",
@@ -7588,6 +8885,9 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Mountain Science",
       "doi": "10.1007/s11629-020-6132-1",
       "url": "https://doi.org/10.1007/s11629-020-6132-1",
@@ -7616,6 +8916,9 @@
       ],
       "year": 2020,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Journal of Geophysical Research: Oceans",
       "doi": "10.1029/2019jc015709",
       "url": "https://doi.org/10.1029/2019jc015709",
@@ -7636,6 +8939,10 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2019JF005333",
       "url": "https://doi.org/10.1029/2019JF005333",
@@ -7661,6 +8968,9 @@
       ],
       "year": 2020,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Bulletin of the Seismological Society of America",
       "doi": "",
       "url": "",
@@ -7679,6 +8989,9 @@
       ],
       "year": 2020,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2020JB019524",
       "url": "https://doi.org/10.1029/2020JB019524",
@@ -7700,6 +9013,10 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggaa050",
       "url": "https://doi.org/10.1093/gji/ggaa050",
@@ -7727,6 +9044,11 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "methods"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2020.9",
       "url": "https://doi.org/10.1017/jog.2020.9",
@@ -7746,6 +9068,9 @@
       ],
       "year": 2020,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "",
       "url": "",
@@ -7766,6 +9091,12 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "hydrology",
+        "volcano"
+      ],
       "journal": "Nature Communications",
       "doi": "10.1038/s41467-020-15744-5",
       "url": "https://doi.org/10.1038/s41467-020-15744-5",
@@ -7788,6 +9119,12 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggaa097",
       "url": "https://doi.org/10.1093/gji/ggaa097",
@@ -7814,6 +9151,9 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Science Advances",
       "doi": "10.1126/sciadv.aba3645",
       "url": "https://doi.org/10.1126/sciadv.aba3645",
@@ -7837,6 +9177,9 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Landslides",
       "doi": "",
       "url": "",
@@ -7858,6 +9201,10 @@
       ],
       "year": 2020,
       "category": "volcano",
+      "categories": [
+        "volcano",
+        "methods"
+      ],
       "journal": "Bulletin of Volcanology",
       "doi": "10.1007/s00445-020-01380-w",
       "url": "https://doi.org/10.1007/s00445-020-01380-w",
@@ -7885,6 +9232,10 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "volcano"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2020JB019874",
       "url": "https://doi.org/10.1029/2020JB019874",
@@ -7904,6 +9255,12 @@
       ],
       "year": 2020,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology",
+        "volcano",
+        "methods"
+      ],
       "journal": "Earth, Planets and Space",
       "doi": "10.1186/s40623-020-01311-1",
       "url": "https://doi.org/10.1186/s40623-020-01311-1",
@@ -7926,6 +9283,9 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2020GL090528",
       "url": "https://doi.org/10.1029/2020GL090528",
@@ -7961,6 +9321,9 @@
       ],
       "year": 2020,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Planets",
       "doi": "10.1029/2020JE006545",
       "url": "https://doi.org/10.1029/2020JE006545",
@@ -7980,6 +9343,9 @@
       ],
       "year": 2020,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2020.48",
       "url": "https://doi.org/10.1017/jog.2020.48",
@@ -7999,6 +9365,11 @@
       ],
       "year": 2020,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "volcano",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2020JB020180",
       "url": "https://doi.org/10.1029/2020JB020180",
@@ -8015,6 +9386,10 @@
       ],
       "year": 2020,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2020GL086951",
       "url": "https://doi.org/10.1029/2020GL086951",
@@ -8034,6 +9409,9 @@
       ],
       "year": 2019,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "",
       "url": "",
@@ -8055,6 +9433,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2018.34",
       "url": "https://doi.org/10.1017/aog.2018.34",
@@ -8082,6 +9463,9 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "",
       "url": "",
@@ -8102,6 +9486,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2019.95",
       "url": "https://doi.org/10.1017/jog.2019.95",
@@ -8118,6 +9505,9 @@
       ],
       "year": 2019,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Petroleum Exploration and Production Technology",
       "doi": "10.1007/s13202-019-00809-z",
       "url": "https://doi.org/10.1007/s13202-019-00809-z",
@@ -8144,6 +9534,9 @@
       ],
       "year": 2019,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Planets",
       "doi": "",
       "url": "",
@@ -8163,6 +9556,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.18",
       "url": "https://doi.org/10.1017/aog.2019.18",
@@ -8180,6 +9576,9 @@
       ],
       "year": 2019,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Landslides",
       "doi": "10.1007/s10346-019-01258-9",
       "url": "https://doi.org/10.1007/s10346-019-01258-9",
@@ -8201,6 +9600,10 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/ESURF-7-491-2019",
       "url": "https://doi.org/10.5194/ESURF-7-491-2019",
@@ -8220,6 +9623,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.15",
       "url": "https://doi.org/10.1017/aog.2019.15",
@@ -8243,6 +9649,9 @@
       ],
       "year": 2019,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2018JB016608",
       "url": "https://doi.org/10.1029/2018JB016608",
@@ -8260,6 +9669,10 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2019JF005054",
       "url": "https://doi.org/10.1029/2019JF005054",
@@ -8281,6 +9694,11 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river",
+        "hydrology"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.19",
       "url": "https://doi.org/10.1017/aog.2019.19",
@@ -8299,6 +9717,9 @@
       ],
       "year": 2019,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Applied Acoustics",
       "doi": "10.1016/J.APACOUST.2019.06.019",
       "url": "https://doi.org/10.1016/J.APACOUST.2019.06.019",
@@ -8319,6 +9740,13 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/GJI/GGZ354",
       "url": "https://doi.org/10.1093/GJI/GGZ354",
@@ -8339,6 +9767,9 @@
       ],
       "year": 2019,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Pure and Applied Geophysics",
       "doi": "10.1007/s00024-019-02177-5",
       "url": "https://doi.org/10.1007/s00024-019-02177-5",
@@ -8361,6 +9792,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.24",
       "url": "https://doi.org/10.1017/aog.2019.24",
@@ -8380,6 +9814,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/TC-14-287-2020",
       "url": "https://doi.org/10.5194/TC-14-287-2020",
@@ -8397,6 +9834,10 @@
       ],
       "year": 2019,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2019GL084719",
       "url": "https://doi.org/10.1029/2019GL084719",
@@ -8415,6 +9856,10 @@
       ],
       "year": 2019,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "PLOS ONE",
       "doi": "10.1371/journal.pone.0223644",
       "url": "https://doi.org/10.1371/journal.pone.0223644",
@@ -8441,6 +9886,10 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Frontiers in Earth Science",
       "doi": "10.3389/feart.2019.00183",
       "url": "https://doi.org/10.3389/feart.2019.00183",
@@ -8458,6 +9907,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Arctic Evironmental Research",
       "doi": "10.3897/issn2541-8416.2019.19.3.123",
       "url": "https://doi.org/10.3897/issn2541-8416.2019.19.3.123",
@@ -8481,6 +9933,9 @@
       ],
       "year": 2019,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Journal of Geophysical Research Earth Surface",
       "doi": "",
       "url": "",
@@ -8497,6 +9952,11 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2019GL084286",
       "url": "https://doi.org/10.1029/2019GL084286",
@@ -8517,6 +9977,9 @@
       ],
       "year": 2019,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Water Resources Research",
       "doi": "10.1029/2019WR026072",
       "url": "https://doi.org/10.1029/2019WR026072",
@@ -8543,6 +10006,10 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.7",
       "url": "https://doi.org/10.1017/aog.2019.7",
@@ -8565,6 +10032,11 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Brazilian Journal of Geology",
       "doi": "10.1590/2317-4889201920180085",
       "url": "https://doi.org/10.1590/2317-4889201920180085",
@@ -8581,6 +10053,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.23",
       "url": "https://doi.org/10.1017/aog.2019.23",
@@ -8599,6 +10074,10 @@
       ],
       "year": 2019,
       "category": "river",
+      "categories": [
+        "river",
+        "methods"
+      ],
       "journal": "The Journal of the Acoustical Society of America",
       "doi": "10.1121/1.5125429",
       "url": "https://doi.org/10.1121/1.5125429",
@@ -8622,6 +10101,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Earth and Planetary Science Letters",
       "doi": "10.1016/J.EPSL.2018.12.008",
       "url": "https://doi.org/10.1016/J.EPSL.2018.12.008",
@@ -8642,6 +10124,9 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2019JF005258",
       "url": "https://doi.org/10.1029/2019JF005258",
@@ -8662,6 +10147,9 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Mountain Science",
       "doi": "10.1007/s11629-018-5286-6",
       "url": "https://doi.org/10.1007/s11629-018-5286-6",
@@ -8687,6 +10175,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2019GL084123",
       "url": "https://doi.org/10.1029/2019GL084123",
@@ -8707,6 +10198,9 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2019JF004999",
       "url": "https://doi.org/10.1029/2019JF004999",
@@ -8727,6 +10221,12 @@
       ],
       "year": 2019,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "river",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2018JF004683",
       "url": "https://doi.org/10.1029/2018JF004683",
@@ -8744,6 +10244,10 @@
       ],
       "year": 2019,
       "category": "river",
+      "categories": [
+        "river",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2019JB017695",
       "url": "https://doi.org/10.1029/2019JB017695",
@@ -8764,6 +10268,10 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2018JF004819",
       "url": "https://doi.org/10.1029/2018JF004819",
@@ -8783,6 +10291,11 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology",
+        "volcano"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-7-989-2019",
       "url": "https://doi.org/10.5194/esurf-7-989-2019",
@@ -8802,6 +10315,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.20",
       "url": "https://doi.org/10.1017/aog.2019.20",
@@ -8822,6 +10338,10 @@
       ],
       "year": 2019,
       "category": "river",
+      "categories": [
+        "river",
+        "methods"
+      ],
       "journal": "Engineering Geology",
       "doi": "10.1016/J.ENGGEO.2019.105197",
       "url": "https://doi.org/10.1016/J.ENGGEO.2019.105197",
@@ -8842,6 +10362,10 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/esurf-2019-61",
       "url": "https://doi.org/10.5194/esurf-2019-61",
@@ -8863,6 +10387,10 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.13",
       "url": "https://doi.org/10.1017/aog.2019.13",
@@ -8880,6 +10408,11 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Abstracts",
       "doi": "",
       "url": "https://www.semanticscholar.org/paper/268ebc18afb67b36030aa8da22e48e78a8e3c24f",
@@ -8899,6 +10432,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.26",
       "url": "https://doi.org/10.1017/aog.2019.26",
@@ -8918,6 +10454,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.14",
       "url": "https://doi.org/10.1017/aog.2019.14",
@@ -8936,6 +10475,9 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2019.25",
       "url": "https://doi.org/10.1017/aog.2019.25",
@@ -8957,6 +10499,11 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geofluids",
       "doi": "10.1155/2019/1426019",
       "url": "https://doi.org/10.1155/2019/1426019",
@@ -8974,6 +10521,11 @@
       ],
       "year": 2019,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "river"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/gji/ggz351",
       "url": "https://doi.org/10.1093/gji/ggz351",
@@ -8992,6 +10544,9 @@
       ],
       "year": 2019,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Natural Hazards",
       "doi": "10.1007/s11069-019-03813-y",
       "url": "https://doi.org/10.1007/s11069-019-03813-y",
@@ -9011,6 +10566,10 @@
       ],
       "year": 2019,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2018JF004848",
       "url": "https://doi.org/10.1029/2018JF004848",
@@ -9029,6 +10588,9 @@
       ],
       "year": 2019,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.4712",
       "url": "https://doi.org/10.1002/esp.4712",
@@ -9049,6 +10611,9 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "",
       "url": "",
@@ -9071,6 +10636,9 @@
       ],
       "year": 2018,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220170228",
       "url": "https://doi.org/10.1785/0220170228",
@@ -9092,6 +10660,9 @@
       ],
       "year": 2018,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2018.69",
       "url": "https://doi.org/10.1017/jog.2018.69",
@@ -9113,6 +10684,10 @@
       ],
       "year": 2018,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/TC-12-795-2018",
       "url": "https://doi.org/10.5194/TC-12-795-2018",
@@ -9133,6 +10708,13 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "hydrology",
+        "volcano",
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/GJI/GGY330",
       "url": "https://doi.org/10.1093/GJI/GGY330",
@@ -9153,6 +10735,9 @@
       ],
       "year": 2018,
       "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
       "journal": "Frontiers in Earth Science",
       "doi": "10.3389/feart.2018.00157",
       "url": "https://doi.org/10.3389/feart.2018.00157",
@@ -9172,6 +10757,10 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2018.25",
       "url": "https://doi.org/10.1017/aog.2018.25",
@@ -9188,6 +10777,9 @@
       ],
       "year": 2018,
       "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
       "journal": "Journal of Volcanology and Geothermal Research",
       "doi": "10.1016/J.JVOLGEORES.2017.12.012",
       "url": "https://doi.org/10.1016/J.JVOLGEORES.2017.12.012",
@@ -9205,6 +10797,10 @@
       ],
       "year": 2018,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "Canadian Journal of Earth Sciences",
       "doi": "10.1139/CJES-2018-0089",
       "url": "https://doi.org/10.1139/CJES-2018-0089",
@@ -9227,6 +10823,9 @@
       ],
       "year": 2018,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.1017/aog.2018.29",
       "url": "https://doi.org/10.1017/aog.2018.29",
@@ -9249,6 +10848,9 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "",
       "url": "",
@@ -9271,6 +10873,10 @@
       ],
       "year": 2018,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Geomorphology",
       "doi": "10.1016/J.GEOMORPH.2017.12.040",
       "url": "https://doi.org/10.1016/J.GEOMORPH.2017.12.040",
@@ -9293,6 +10899,10 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Natural hazards and earth system sciences",
       "doi": "",
       "url": "",
@@ -9313,6 +10923,12 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "river",
+        "hydrology"
+      ],
       "journal": "Science",
       "doi": "10.1126/science.aat4981",
       "url": "https://doi.org/10.1126/science.aat4981",
@@ -9330,6 +10946,10 @@
       ],
       "year": 2018,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2017JF004498",
       "url": "https://doi.org/10.1029/2017JF004498",
@@ -9346,6 +10966,10 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Oceans",
       "doi": "10.1029/2017JC013664",
       "url": "https://doi.org/10.1029/2017JC013664",
@@ -9371,6 +10995,9 @@
       ],
       "year": 2018,
       "category": "hydrology",
+      "categories": [
+        "hydrology"
+      ],
       "journal": "Scientific Reports",
       "doi": "10.1038/s41598-018-26970-9",
       "url": "https://doi.org/10.1038/s41598-018-26970-9",
@@ -9391,6 +11018,10 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/GJI/GGY394",
       "url": "https://doi.org/10.1093/GJI/GGY394",
@@ -9409,6 +11040,9 @@
       ],
       "year": 2018,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Seismological Research Letters",
       "doi": "10.1785/0220180027",
       "url": "https://doi.org/10.1785/0220180027",
@@ -9429,6 +11063,9 @@
       ],
       "year": 2018,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2018GL079653",
       "url": "https://doi.org/10.1029/2018GL079653",
@@ -9450,6 +11087,10 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2018JF004768",
       "url": "https://doi.org/10.1029/2018JF004768",
@@ -9480,6 +11121,10 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "volcano"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1029/2017JF004507",
       "url": "https://doi.org/10.1029/2017JF004507",
@@ -9500,6 +11145,9 @@
       ],
       "year": 2018,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.4495",
       "url": "https://doi.org/10.1002/esp.4495",
@@ -9523,6 +11171,10 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "volcano"
+      ],
       "journal": "Journal of Volcanology and Geothermal Research",
       "doi": "",
       "url": "",
@@ -9541,6 +11193,9 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/ESURF-6-955-2018",
       "url": "https://doi.org/10.5194/ESURF-6-955-2018",
@@ -9559,6 +11214,10 @@
       ],
       "year": 2018,
       "category": "river",
+      "categories": [
+        "river",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1029/2017JB014768",
       "url": "https://doi.org/10.1029/2017JB014768",
@@ -9579,6 +11238,10 @@
       ],
       "year": 2018,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2018GL077683",
       "url": "https://doi.org/10.1029/2018GL077683",
@@ -9610,6 +11273,9 @@
       ],
       "year": 2018,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/ESURF-6-1059-2018",
       "url": "https://doi.org/10.5194/ESURF-6-1059-2018",
@@ -9627,6 +11293,10 @@
       ],
       "year": 2018,
       "category": "hydrology",
+      "categories": [
+        "hydrology",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2018GL077706",
       "url": "https://doi.org/10.1029/2018GL077706",
@@ -9649,6 +11319,9 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Scientific Reports",
       "doi": "",
       "url": "",
@@ -9668,6 +11341,9 @@
       ],
       "year": 2017,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Water Resources Research",
       "doi": "10.1002/2016WR019726",
       "url": "https://doi.org/10.1002/2016WR019726",
@@ -9689,6 +11365,9 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical Research Abstracts",
       "doi": "",
       "url": "",
@@ -9707,6 +11386,9 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1002/2016GL070709",
       "url": "https://doi.org/10.1002/2016GL070709",
@@ -9727,6 +11409,11 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "methods"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/NHESS-18-383-2018",
       "url": "https://doi.org/10.5194/NHESS-18-383-2018",
@@ -9745,6 +11432,9 @@
       ],
       "year": 2017,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Natural Hazards",
       "doi": "10.1007/s11069-016-2707-0",
       "url": "https://doi.org/10.1007/s11069-016-2707-0",
@@ -9763,6 +11453,9 @@
       ],
       "year": 2017,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2017.25",
       "url": "https://doi.org/10.1017/jog.2017.25",
@@ -9785,6 +11478,9 @@
       ],
       "year": 2017,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1002/2016JF004062",
       "url": "https://doi.org/10.1002/2016JF004062",
@@ -9801,6 +11497,9 @@
       ],
       "year": 2017,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Gravel‐Bed Rivers",
       "doi": "10.1002/9781118971437.CH7",
       "url": "https://doi.org/10.1002/9781118971437.CH7",
@@ -9818,6 +11517,9 @@
       ],
       "year": 2017,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/ESURF-5-669-2017",
       "url": "https://doi.org/10.5194/ESURF-5-669-2017",
@@ -9839,6 +11541,9 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Mountain Science",
       "doi": "10.1007/s11629-016-4103-3",
       "url": "https://doi.org/10.1007/s11629-016-4103-3",
@@ -9857,6 +11562,10 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/ESURF-6-525-2018",
       "url": "https://doi.org/10.5194/ESURF-6-525-2018",
@@ -9874,6 +11583,9 @@
       ],
       "year": 2017,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Environ. Model. Softw.",
       "doi": "10.1016/j.envsoft.2017.01.012",
       "url": "https://doi.org/10.1016/j.envsoft.2017.01.012",
@@ -9893,6 +11605,10 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Advancing Culture of Living with Landslides",
       "doi": "10.1007/978-3-319-53487-9_18",
       "url": "https://doi.org/10.1007/978-3-319-53487-9_18",
@@ -9912,6 +11628,9 @@
       ],
       "year": 2017,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1002/2016GL072468",
       "url": "https://doi.org/10.1002/2016GL072468",
@@ -9932,6 +11651,10 @@
       ],
       "year": 2017,
       "category": "river",
+      "categories": [
+        "river",
+        "methods"
+      ],
       "journal": "Hydrology and Earth System Sciences",
       "doi": "10.5194/HESS-22-767-2018",
       "url": "https://doi.org/10.5194/HESS-22-767-2018",
@@ -9955,6 +11678,9 @@
       ],
       "year": 2017,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1002/2016JF004112",
       "url": "https://doi.org/10.1002/2016JF004112",
@@ -9971,6 +11697,10 @@
       ],
       "year": 2017,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.26686/wgtn.17065358.v1",
       "url": "https://doi.org/10.26686/wgtn.17065358.v1",
@@ -9992,6 +11722,9 @@
       ],
       "year": 2017,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Geology",
       "doi": "10.1130/G38639.1",
       "url": "https://doi.org/10.1130/G38639.1",
@@ -10018,6 +11751,9 @@
       ],
       "year": 2017,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Science Advances",
       "doi": "10.1126/sciadv.1603071",
       "url": "https://doi.org/10.1126/sciadv.1603071",
@@ -10038,6 +11774,9 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "",
       "url": "",
@@ -10060,6 +11799,9 @@
       ],
       "year": 2017,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "",
       "url": "",
@@ -10079,6 +11821,9 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "",
       "url": "",
@@ -10102,6 +11847,9 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/ESURF-5-283-2017",
       "url": "https://doi.org/10.5194/ESURF-5-283-2017",
@@ -10127,6 +11875,10 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "volcano"
+      ],
       "journal": "Journal of Volcanology and Geothermal Research",
       "doi": "10.1016/J.JVOLGEORES.2017.01.007",
       "url": "https://doi.org/10.1016/J.JVOLGEORES.2017.01.007",
@@ -10146,6 +11898,9 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "",
       "url": "",
@@ -10167,6 +11922,12 @@
       ],
       "year": 2017,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/NHESS-17-939-2017",
       "url": "https://doi.org/10.5194/NHESS-17-939-2017",
@@ -10185,6 +11946,9 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1002/2016JF004027",
       "url": "https://doi.org/10.1002/2016JF004027",
@@ -10205,6 +11969,11 @@
       ],
       "year": 2017,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "methods"
+      ],
       "journal": "Earth Surface Dynamics Discussions",
       "doi": "10.5194/ESURF-2017-12",
       "url": "https://doi.org/10.5194/ESURF-2017-12",
@@ -10226,6 +11995,9 @@
       ],
       "year": 2016,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research Earth Surface",
       "doi": "",
       "url": "",
@@ -10248,6 +12020,10 @@
       ],
       "year": 2016,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1002/2015GL066785",
       "url": "https://doi.org/10.1002/2015GL066785",
@@ -10265,6 +12041,10 @@
       ],
       "year": 2016,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Reviews of Geophysics",
       "doi": "10.1002/2016RG000526",
       "url": "https://doi.org/10.1002/2016RG000526",
@@ -10283,6 +12063,9 @@
       ],
       "year": 2016,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Cold Regions Science and Technology",
       "doi": "10.1016/J.COLDREGIONS.2016.09.014",
       "url": "https://doi.org/10.1016/J.COLDREGIONS.2016.09.014",
@@ -10304,6 +12087,9 @@
       ],
       "year": 2016,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Hydraulic Engineering",
       "doi": "10.1061/(ASCE)HY.1943-7900.0001090",
       "url": "https://doi.org/10.1061/(ASCE)HY.1943-7900.0001090",
@@ -10324,6 +12110,9 @@
       ],
       "year": 2016,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "International Journal of Erosion Control Engineering",
       "doi": "10.13101/IJECE.9.114",
       "url": "https://doi.org/10.13101/IJECE.9.114",
@@ -10345,6 +12134,12 @@
       ],
       "year": 2016,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river",
+        "hydrology",
+        "methods"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/nhess-2016-321",
       "url": "https://doi.org/10.5194/nhess-2016-321",
@@ -10370,6 +12165,10 @@
       ],
       "year": 2016,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "river"
+      ],
       "journal": "Geosphere",
       "doi": "10.1130/GES01265.1",
       "url": "https://doi.org/10.1130/GES01265.1",
@@ -10388,6 +12187,10 @@
       ],
       "year": 2016,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "hydrology"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.1017/jog.2016.3",
       "url": "https://doi.org/10.1017/jog.2016.3",
@@ -10413,6 +12216,9 @@
       ],
       "year": 2016,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research",
       "doi": "",
       "url": "",
@@ -10431,6 +12237,10 @@
       ],
       "year": 2016,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "river"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "10.5194/ESURF-4-285-2016",
       "url": "https://doi.org/10.5194/ESURF-4-285-2016",
@@ -10452,6 +12262,9 @@
       ],
       "year": 2016,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Scientific Reports",
       "doi": "",
       "url": "",
@@ -10472,6 +12285,10 @@
       ],
       "year": 2016,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "",
       "url": "",
@@ -10495,6 +12312,10 @@
       ],
       "year": 2016,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1002/2016GL067743",
       "url": "https://doi.org/10.1002/2016GL067743",
@@ -10515,6 +12336,9 @@
       ],
       "year": 2016,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "",
       "url": "",
@@ -10535,6 +12359,9 @@
       ],
       "year": 2015,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1002/2015JF003658",
       "url": "https://doi.org/10.1002/2015JF003658",
@@ -10554,6 +12381,9 @@
       ],
       "year": 2015,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1002/2014JF003288",
       "url": "https://doi.org/10.1002/2014JF003288",
@@ -10573,6 +12403,9 @@
       ],
       "year": 2015,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1002/2015GL063630",
       "url": "https://doi.org/10.1002/2015GL063630",
@@ -10598,6 +12431,9 @@
       ],
       "year": 2015,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research Solid Earth",
       "doi": "",
       "url": "",
@@ -10615,6 +12451,9 @@
       ],
       "year": 2015,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Engineering Geology",
       "doi": "10.1016/J.ENGGEO.2015.04.007",
       "url": "https://doi.org/10.1016/J.ENGGEO.2015.04.007",
@@ -10633,6 +12472,9 @@
       ],
       "year": 2015,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/NHESS-15-1265-2015",
       "url": "https://doi.org/10.5194/NHESS-15-1265-2015",
@@ -10660,6 +12502,9 @@
       ],
       "year": 2015,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Journal of Applied Geophysics",
       "doi": "10.1016/J.JAPPGEO.2015.02.001",
       "url": "https://doi.org/10.1016/J.JAPPGEO.2015.02.001",
@@ -10681,6 +12526,9 @@
       ],
       "year": 2015,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1002/2015GL064811",
       "url": "https://doi.org/10.1002/2015GL064811",
@@ -10698,6 +12546,9 @@
       ],
       "year": 2015,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Journal of Volcanology and Geothermal Research",
       "doi": "10.1016/J.JVOLGEORES.2015.03.015",
       "url": "https://doi.org/10.1016/J.JVOLGEORES.2015.03.015",
@@ -10718,6 +12569,9 @@
       ],
       "year": 2015,
       "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
       "journal": "Journal of Volcanology and Geothermal Research",
       "doi": "10.1016/J.JVOLGEORES.2015.08.002",
       "url": "https://doi.org/10.1016/J.JVOLGEORES.2015.08.002",
@@ -10741,6 +12595,9 @@
       ],
       "year": 2015,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "",
       "url": "",
@@ -10760,6 +12617,9 @@
       ],
       "year": 2015,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/NHESS-15-2545-2015",
       "url": "https://doi.org/10.5194/NHESS-15-2545-2015",
@@ -10780,6 +12640,9 @@
       ],
       "year": 2015,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1002/2014JF003289",
       "url": "https://doi.org/10.1002/2014JF003289",
@@ -10801,6 +12664,9 @@
       ],
       "year": 2015,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth and Planetary Science Letters",
       "doi": "",
       "url": "",
@@ -10827,6 +12693,9 @@
       ],
       "year": 2015,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Pure and Applied Geophysics",
       "doi": "10.1007/s00024-014-0852-5",
       "url": "https://doi.org/10.1007/s00024-014-0852-5",
@@ -10848,6 +12717,9 @@
       ],
       "year": 2015,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research Solid Earth",
       "doi": "",
       "url": "",
@@ -10868,6 +12740,10 @@
       ],
       "year": 2015,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier"
+      ],
       "journal": "Polar Research",
       "doi": "10.3402/polar.v34.26178",
       "url": "https://doi.org/10.3402/polar.v34.26178",
@@ -10887,6 +12763,10 @@
       ],
       "year": 2015,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Cold Regions Science and Technology",
       "doi": "10.1016/J.COLDREGIONS.2014.12.014",
       "url": "https://doi.org/10.1016/J.COLDREGIONS.2014.12.014",
@@ -10909,6 +12789,9 @@
       ],
       "year": 2015,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1002/2014JF003398",
       "url": "https://doi.org/10.1002/2014JF003398",
@@ -10929,6 +12812,12 @@
       ],
       "year": 2015,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "river",
+        "hydrology"
+      ],
       "journal": "Scientific Reports",
       "doi": "10.1038/srep08261",
       "url": "https://doi.org/10.1038/srep08261",
@@ -10952,6 +12841,9 @@
       ],
       "year": 2015,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "",
       "doi": "10.3997/2214-4609.201413666",
       "url": "https://doi.org/10.3997/2214-4609.201413666",
@@ -10973,6 +12865,9 @@
       ],
       "year": 2015,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "",
       "url": "",
@@ -10994,6 +12889,11 @@
       ],
       "year": 2015,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "glacier",
+        "methods"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1002/2014GL062859",
       "url": "https://doi.org/10.1002/2014GL062859",
@@ -11019,6 +12919,9 @@
       ],
       "year": 2015,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/GJI/GGV069",
       "url": "https://doi.org/10.1093/GJI/GGV069",
@@ -11037,6 +12940,9 @@
       ],
       "year": 2014,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research Earth Surface",
       "doi": "",
       "url": "",
@@ -11063,6 +12969,9 @@
       ],
       "year": 2014,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.3499",
       "url": "https://doi.org/10.1002/esp.3499",
@@ -11081,6 +12990,9 @@
       ],
       "year": 2014,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "",
       "url": "",
@@ -11100,6 +13012,9 @@
       ],
       "year": 2014,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1002/2014GL061254",
       "url": "https://doi.org/10.1002/2014GL061254",
@@ -11118,6 +13033,9 @@
       ],
       "year": 2014,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1002/2014GL060592",
       "url": "https://doi.org/10.1002/2014GL060592",
@@ -11139,6 +13057,9 @@
       ],
       "year": 2014,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth and Planetary Science Letters",
       "doi": "10.1016/J.EPSL.2014.07.019",
       "url": "https://doi.org/10.1016/J.EPSL.2014.07.019",
@@ -11166,6 +13087,10 @@
       ],
       "year": 2014,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/NHESS-15-905-2015",
       "url": "https://doi.org/10.5194/NHESS-15-905-2015",
@@ -11189,6 +13114,9 @@
       ],
       "year": 2014,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Antarctic Record",
       "doi": "",
       "url": "https://www.semanticscholar.org/paper/8b35788703fb77d4dde0da375e70d46edaec2eaa",
@@ -11206,6 +13134,9 @@
       ],
       "year": 2014,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.3189/2014JoG14J072",
       "url": "https://doi.org/10.3189/2014JoG14J072",
@@ -11227,6 +13158,9 @@
       ],
       "year": 2014,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "",
       "url": "https://www.semanticscholar.org/paper/8a5980a7a703f7a8f826fa4153cc5469f1e57c24",
@@ -11247,6 +13181,9 @@
       ],
       "year": 2014,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Seismo Blog: Updates and dispatches from the PNSN",
       "doi": "",
       "url": "",
@@ -11267,6 +13204,9 @@
       ],
       "year": 2014,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Earth Surface Dynamics",
       "doi": "",
       "url": "",
@@ -11287,6 +13227,9 @@
       ],
       "year": 2014,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Solid Earth",
       "doi": "10.1002/2014JB010955",
       "url": "https://doi.org/10.1002/2014JB010955",
@@ -11307,6 +13250,9 @@
       ],
       "year": 2014,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "10.1002/2013JF002849",
       "url": "https://doi.org/10.1002/2013JF002849",
@@ -11325,6 +13271,9 @@
       ],
       "year": 2014,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Hydraulic Research",
       "doi": "10.1080/00221686.2013.876454",
       "url": "https://doi.org/10.1080/00221686.2013.876454",
@@ -11347,6 +13296,9 @@
       ],
       "year": 2014,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.3189/2014JOG13J210",
       "url": "https://doi.org/10.3189/2014JOG13J210",
@@ -11368,6 +13320,9 @@
       ],
       "year": 2013,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.3189/2013AoG64A044",
       "url": "https://doi.org/10.3189/2013AoG64A044",
@@ -11392,6 +13347,9 @@
       ],
       "year": 2013,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "",
       "url": "",
@@ -11412,6 +13370,9 @@
       ],
       "year": 2013,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.3189/2013AoG64A074",
       "url": "https://doi.org/10.3189/2013AoG64A074",
@@ -11432,6 +13393,9 @@
       ],
       "year": 2013,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "",
       "url": "",
@@ -11452,6 +13416,9 @@
       ],
       "year": 2013,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "",
       "url": "",
@@ -11473,6 +13440,9 @@
       ],
       "year": 2013,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.3189/2013AoG64A032",
       "url": "https://doi.org/10.3189/2013AoG64A032",
@@ -11494,6 +13464,9 @@
       ],
       "year": 2013,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1093/GJI/GGT039",
       "url": "https://doi.org/10.1093/GJI/GGT039",
@@ -11511,6 +13484,9 @@
       ],
       "year": 2013,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Science",
       "doi": "10.1126/science.1232887",
       "url": "https://doi.org/10.1126/science.1232887",
@@ -11530,6 +13506,9 @@
       ],
       "year": 2013,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Annals of Glaciology",
       "doi": "10.3189/2013AoG64A203",
       "url": "https://doi.org/10.3189/2013AoG64A203",
@@ -11549,6 +13528,9 @@
       ],
       "year": 2012,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2011GL050255",
       "url": "https://doi.org/10.1029/2011GL050255",
@@ -11570,6 +13552,9 @@
       ],
       "year": 2012,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research Atmospheres",
       "doi": "",
       "url": "",
@@ -11590,6 +13575,9 @@
       ],
       "year": 2012,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.3225",
       "url": "https://doi.org/10.1002/esp.3225",
@@ -11611,6 +13599,10 @@
       ],
       "year": 2012,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "volcano"
+      ],
       "journal": "",
       "doi": "",
       "url": "",
@@ -11632,6 +13624,9 @@
       ],
       "year": 2012,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research",
       "doi": "10.1029/2011JF002259",
       "url": "https://doi.org/10.1029/2011JF002259",
@@ -11654,6 +13649,9 @@
       ],
       "year": 2012,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Geophysical Research",
       "doi": "10.1029/2011JF002106",
       "url": "https://doi.org/10.1029/2011JF002106",
@@ -11676,6 +13674,9 @@
       ],
       "year": 2012,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2012GL052511",
       "url": "https://doi.org/10.1029/2012GL052511",
@@ -11695,6 +13696,9 @@
       ],
       "year": 2012,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Earth Surface Processes and Landforms",
       "doi": "10.1002/esp.3206",
       "url": "https://doi.org/10.1002/esp.3206",
@@ -11719,6 +13723,12 @@
       ],
       "year": 2012,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow",
+        "landslide",
+        "river",
+        "volcano"
+      ],
       "journal": "Natural Hazards and Earth System Sciences",
       "doi": "10.5194/NHESS-12-1277-2012",
       "url": "https://doi.org/10.5194/NHESS-12-1277-2012",
@@ -11741,6 +13751,9 @@
       ],
       "year": 2012,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "The Cryosphere",
       "doi": "10.5194/TC-6-909-2012",
       "url": "https://doi.org/10.5194/TC-6-909-2012",
@@ -11760,6 +13773,9 @@
       ],
       "year": 2011,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Geophysical Research: Earth Surface",
       "doi": "",
       "url": "https://www.semanticscholar.org/paper/bafaf3fd144a7797b94dfc17683853cd75355cb6",
@@ -11778,6 +13794,9 @@
       ],
       "year": 2011,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Geophysical Research Letters",
       "doi": "10.1029/2011GL047759",
       "url": "https://doi.org/10.1029/2011GL047759",
@@ -11796,6 +13815,9 @@
       ],
       "year": 2011,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1111/J.1365-246X.2011.05046.X",
       "url": "https://doi.org/10.1111/J.1365-246X.2011.05046.X",
@@ -11815,6 +13837,9 @@
       ],
       "year": 2011,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research",
       "doi": "10.1029/2011JF002037",
       "url": "https://doi.org/10.1029/2011JF002037",
@@ -11832,6 +13857,9 @@
       ],
       "year": 2011,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Bulletin of the Seismological Society of America",
       "doi": "10.1785/0120100110",
       "url": "https://doi.org/10.1785/0120100110",
@@ -11851,6 +13879,9 @@
       ],
       "year": 2011,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research",
       "doi": "10.1029/2011JF002038",
       "url": "https://doi.org/10.1029/2011JF002038",
@@ -11869,6 +13900,9 @@
       ],
       "year": 2011,
       "category": "methods",
+      "categories": [
+        "methods"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1111/J.1365-246X.2010.04861.X",
       "url": "https://doi.org/10.1111/J.1365-246X.2010.04861.X",
@@ -11886,6 +13920,9 @@
       ],
       "year": 2010,
       "category": "river",
+      "categories": [
+        "river"
+      ],
       "journal": "Journal of Hydraulic Research",
       "doi": "",
       "url": "https://www.semanticscholar.org/paper/9adec4f2d30eaf23d63d01602cb97b3ab9ff9e65",
@@ -11907,6 +13944,9 @@
       ],
       "year": 2010,
       "category": "other",
+      "categories": [
+        "other"
+      ],
       "journal": "Journal of Geophysical Research Atmospheres",
       "doi": "",
       "url": "",
@@ -11928,6 +13968,10 @@
       ],
       "year": 2010,
       "category": "glacier",
+      "categories": [
+        "glacier",
+        "methods"
+      ],
       "journal": "Polar Research",
       "doi": "10.3402/polar.v29i3.6082",
       "url": "https://doi.org/10.3402/polar.v29i3.6082",
@@ -11945,6 +13989,10 @@
       ],
       "year": 2010,
       "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
       "journal": "Journal of Geophysical Research",
       "doi": "10.1029/2009JF001532",
       "url": "https://doi.org/10.1029/2009JF001532",
@@ -11966,6 +14014,9 @@
       ],
       "year": 2010,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "10.3189/2013JoG12J111",
       "url": "https://doi.org/10.3189/2013JoG12J111",
@@ -11987,6 +14038,9 @@
       ],
       "year": 2008,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Bulletin of the Seismological Society of America",
       "doi": "10.1785/0120070082",
       "url": "https://doi.org/10.1785/0120070082",
@@ -12007,6 +14061,9 @@
       ],
       "year": 2008,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research",
       "doi": "",
       "url": "",
@@ -12028,6 +14085,9 @@
       ],
       "year": 2008,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Natural hazards and earth system sciences",
       "doi": "",
       "url": "",
@@ -12044,6 +14104,10 @@
       ],
       "year": 2008,
       "category": "river",
+      "categories": [
+        "river",
+        "methods"
+      ],
       "journal": "Journal of Earthquake Engineering",
       "doi": "10.1080/13632460701457140",
       "url": "https://doi.org/10.1080/13632460701457140",
@@ -12065,6 +14129,9 @@
       ],
       "year": 2005,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Natural hazards and earth system sciences",
       "doi": "",
       "url": "",
@@ -12085,6 +14152,9 @@
       ],
       "year": 2003,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Surveys in Geophysics",
       "doi": "10.1023/B:GEOP.0000006076.38174.31",
       "url": "https://doi.org/10.1023/B:GEOP.0000006076.38174.31",
@@ -12101,6 +14171,9 @@
       ],
       "year": 2002,
       "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
       "journal": "Geophysical Journal International",
       "doi": "10.1046/J.1365-246X.2002.01608.X",
       "url": "https://doi.org/10.1046/J.1365-246X.2002.01608.X",
@@ -12119,6 +14192,10 @@
       ],
       "year": 2002,
       "category": "river",
+      "categories": [
+        "river",
+        "methods"
+      ],
       "journal": "Journal of Earthquake Engineering",
       "doi": "",
       "url": "https://www.semanticscholar.org/paper/b622f59b03a7d4f28cd64b3f6145881bdc7b7b0e",
@@ -12136,6 +14213,9 @@
       ],
       "year": 1997,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Natural Hazards",
       "doi": "10.1023/A:1007934815584",
       "url": "https://doi.org/10.1023/A:1007934815584",
@@ -12152,6 +14232,9 @@
       ],
       "year": 1989,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Journal of Geophysical Research",
       "doi": "10.1029/JB094IB09P12363",
       "url": "https://doi.org/10.1029/JB094IB09P12363",
@@ -12169,6 +14252,9 @@
       ],
       "year": 1987,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "Bulletin of the Seismological Society of America",
       "doi": "",
       "url": "https://www.semanticscholar.org/paper/2b6326997e575d31b1db828c39840ee5786b46ea",
@@ -12187,6 +14273,9 @@
       ],
       "year": 1982,
       "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
       "journal": "Journal of Geophysical Research",
       "doi": "10.1029/JB087IB10P08675",
       "url": "https://doi.org/10.1029/JB087IB10P08675",
@@ -12206,6 +14295,9 @@
       ],
       "year": 0,
       "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
       "journal": "Natural Hazards and Earth System Sciences.",
       "doi": "",
       "url": "",
@@ -12229,6 +14321,9 @@
       ],
       "year": 0,
       "category": "glacier",
+      "categories": [
+        "glacier"
+      ],
       "journal": "Journal of Glaciology",
       "doi": "",
       "url": "",
@@ -12251,6 +14346,9 @@
       ],
       "year": 0,
       "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
       "journal": "NHESS",
       "doi": "",
       "url": "",
@@ -12266,6 +14364,6 @@
       1982,
       2026
     ],
-    "generatedAt": "2026-02-15T16:29:50.704544"
+    "generatedAt": "2026-02-15T20:33:55.389534"
   }
 }

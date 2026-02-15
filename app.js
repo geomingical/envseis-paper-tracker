@@ -38,7 +38,9 @@
     function getFilteredPapers() {
         let papers = papersData.papers;
         if (currentCategory !== 'all') {
-            papers = papers.filter(p => p.category === currentCategory);
+            papers = papers.filter(p =>
+                (p.categories && p.categories.includes(currentCategory)) || p.category === currentCategory
+            );
         }
         if (currentYear !== null) {
             papers = papers.filter(p => p.year === currentYear);
@@ -105,7 +107,9 @@
 
         const papers = currentCategory === 'all'
             ? papersData.papers
-            : papersData.papers.filter(p => p.category === currentCategory);
+            : papersData.papers.filter(p =>
+                (p.categories && p.categories.includes(currentCategory)) || p.category === currentCategory
+            );
 
         papers.forEach(p => {
             if (!p.year) return;
@@ -182,11 +186,21 @@
 
         const isChecked = selectedPapers.has(paper.id);
 
+        const extraCats = (paper.categories || []).slice(1);
+        let extraBadge = '';
+        if (extraCats.length > 0) {
+            const extraNames = extraCats.map(k => {
+                const c = papersData.categories.find(x => x.key === k);
+                return c ? c.name : k;
+            }).join(', ');
+            extraBadge = `<span class="card-extra-tags" title="${escapeHtml(extraNames)}">+${extraCats.length}</span>`;
+        }
+
         card.innerHTML = `
             <button class="card-checkbox${isChecked ? ' checked' : ''}" aria-label="Select paper">✓</button>
             <div class="card-header">
                 <span class="card-category">${catIcon} ${catName}</span>
-                <span class="card-year">${paper.year}</span>
+                <div class="card-header-right">${extraBadge}<span class="card-year">${paper.year}</span></div>
             </div>
             <h3 class="card-title">${escapeHtml(paper.title)}</h3>
             <p class="card-authors">${escapeHtml(authorsStr)}</p>
@@ -258,6 +272,20 @@
         modalCat.innerHTML = `${catIcon} ${catName}`;
         modalCat.style.background = `color-mix(in srgb, ${color} 15%, transparent)`;
         modalCat.style.color = color;
+
+        const extraContainer = document.getElementById('modal-extra-categories');
+        const extraCats = (paper.categories || []).slice(1);
+        if (extraCats.length > 0) {
+            extraContainer.innerHTML = extraCats.map(k => {
+                const c = papersData.categories.find(x => x.key === k);
+                const ec = c ? c.color : '#6b7280';
+                const en = c ? c.name : k;
+                return `<span class="modal-extra-cat" style="background:color-mix(in srgb, ${ec} 12%, transparent);color:${ec}">${en}</span>`;
+            }).join('');
+            extraContainer.style.display = '';
+        } else {
+            extraContainer.style.display = 'none';
+        }
 
         document.getElementById('modal-year').textContent = paper.year;
         document.getElementById('modal-title').textContent = paper.title;

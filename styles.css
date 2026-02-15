@@ -573,6 +573,29 @@ body {
     border-radius: var(--radius-sm);
 }
 
+.card-header-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-extra-tags {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 2px 6px;
+    border-radius: 10px;
+    cursor: help;
+    transition: all var(--transition-fast);
+}
+.card-extra-tags:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
 .card-title {
     font-family: var(--font-heading);
     font-size: 15px;
@@ -725,6 +748,21 @@ body {
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 12px;
+    font-weight: 500;
+}
+
+.modal-extra-categories {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.modal-extra-cat {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 16px;
+    font-size: 11px;
     font-weight: 500;
 }
 

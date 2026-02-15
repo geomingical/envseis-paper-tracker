@@ -221,6 +221,17 @@
             font-size: 11px;
             color: var(--text-muted);
         }
+        .browse-card .bc-extra-tags {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 1px 5px;
+            border-radius: 8px;
+            cursor: help;
+        }
         .browse-card .bc-title {
             font-family: var(--font-heading);
             font-size: 14px;
@@ -489,6 +500,7 @@
                 <button class="learn-modal-close" aria-label="Close">&times;</button>
                 <div class="lm-header">
                     <span class="lm-cat" id="lm-cat"></span>
+                    <span class="lm-extra-cats" id="lm-extra-cats" style="display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap"></span>
                     <span class="lm-year" id="lm-year"></span>
                     <span class="lm-id" id="lm-id"></span>
                 </div>
@@ -647,8 +659,8 @@
             const container = document.getElementById('browse-tabs');
             const cats = new Map();
             allPapers.forEach(p => {
-                const c = p.category || 'other';
-                cats.set(c, (cats.get(c) || 0) + 1);
+                const tags = p.categories || [p.category || 'other'];
+                tags.forEach(c => cats.set(c, (cats.get(c) || 0) + 1));
             });
 
             let html = '<button class="browse-tab active" data-cat="all">All</button>';
@@ -673,7 +685,9 @@
             const grid = document.getElementById('browse-grid');
             const papers = browseCategory === 'all'
                 ? allPapers
-                : allPapers.filter(p => (p.category || 'other') === browseCategory);
+                : allPapers.filter(p =>
+                    (p.categories && p.categories.includes(browseCategory)) || (p.category || 'other') === browseCategory
+                );
 
             document.getElementById('browse-count').textContent = papers.length + ' papers';
 
@@ -688,6 +702,15 @@
                 const paperId = paper.id || '';
                 const hasNote = noteCache[paperId] && noteCache[paperId].status === 'found';
 
+                const extraCats = (paper.categories || []).slice(1);
+                let extraBadge = '';
+                if (extraCats.length > 0) {
+                    const extraNames = extraCats.map(k =>
+                        k.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+                    ).join(', ');
+                    extraBadge = '<span class="bc-extra-tags" title="' + escapeHtml(extraNames) + '">+' + extraCats.length + '</span>';
+                }
+
                 const card = document.createElement('div');
                 card.className = 'browse-card';
                 card.style.setProperty('--card-color', color);
@@ -697,6 +720,7 @@
                     '<div class="bc-header">' +
                         '<span class="bc-cat">' + escapeHtml(catName) + '</span>' +
                         '<div class="bc-meta">' +
+                            extraBadge +
                             '<span class="bc-id">' + escapeHtml(paperId) + '</span>' +
                             '<span class="bc-year">' + (paper.year || '?') + '</span>' +
                         '</div>' +
@@ -792,6 +816,19 @@
             catEl.textContent = catName;
             catEl.style.background = 'color-mix(in srgb, ' + color + ' 15%, transparent)';
             catEl.style.color = color;
+
+            const extraEl = document.getElementById('lm-extra-cats');
+            const extraCats = (paper.categories || []).slice(1);
+            if (extraCats.length > 0) {
+                extraEl.innerHTML = extraCats.map(k => {
+                    const ec = CATEGORY_COLORS[k] || '#7b88a1';
+                    const en = k.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    return '<span style="display:inline-block;padding:3px 10px;border-radius:16px;font-size:11px;font-weight:500;background:color-mix(in srgb, ' + ec + ' 12%, transparent);color:' + ec + '">' + escapeHtml(en) + '</span>';
+                }).join('');
+                extraEl.style.display = '';
+            } else {
+                extraEl.style.display = 'none';
+            }
 
             document.getElementById('lm-year').textContent = paper.year || '';
             document.getElementById('lm-id').textContent = paper.id || '';
