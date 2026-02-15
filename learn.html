@@ -50,62 +50,21 @@
             background-clip: text;
         }
 
-        /* ─── Mode Switcher ─── */
-        .mode-switcher {
-            display: none;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 4px;
-            gap: 4px;
-        }
-        .mode-switcher.visible { display: inline-flex; }
-
-        .mode-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
-            background: transparent;
-            border: none;
-            border-radius: var(--radius-sm);
+        .learn-subtitle {
+            font-size: 12px;
             color: var(--text-muted);
-            font-size: 13px;
-            font-family: var(--font-body);
-            font-weight: 500;
-            cursor: pointer;
-            transition: all var(--transition-fast);
+            font-family: var(--font-mono);
         }
-        .mode-btn:hover { color: var(--text-secondary); }
-        .mode-btn.active {
-            background: var(--bg-card);
-            color: var(--text-primary);
-        }
-        .mode-btn svg { width: 16px; height: 16px; }
 
-        /* ─── Upload Zone ─── */
-        .upload-zone {
-            border: 2px dashed var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 48px 32px;
+        /* Loading */
+        .loading-msg {
             text-align: center;
-            cursor: pointer;
-            transition: all var(--transition-normal);
-            margin-bottom: 32px;
+            padding: 48px 24px;
+            color: var(--text-muted);
+            font-size: 14px;
         }
-        .upload-zone:hover, .upload-zone.dragover {
-            border-color: var(--accent);
-            background: color-mix(in srgb, var(--accent) 5%, transparent);
-        }
-        .upload-zone svg { width: 40px; height: 40px; color: var(--text-muted); margin-bottom: 12px; }
-        .upload-zone p { color: var(--text-secondary); font-size: 14px; }
-        .upload-zone .hint { color: var(--text-muted); font-size: 12px; margin-top: 8px; }
-        .upload-zone input { display: none; }
 
-        /* ─── Browse Mode ─── */
-        .browse-section { display: none; }
-        .browse-section.active { display: block; }
-
+        /* Browse Mode */
         .browse-toolbar {
             display: flex;
             gap: 8px;
@@ -247,7 +206,7 @@
         .browse-card .bc-note-indicator.has-note { display: flex; }
         .browse-card .bc-note-indicator svg { width: 12px; height: 12px; }
 
-        /* ─── Detail Modal (Browse) ─── */
+        /* Detail Modal */
         .learn-modal {
             position: fixed;
             inset: 0;
@@ -370,178 +329,10 @@
             margin-top: 16px;
         }
 
-        /* ─── Flashcard Mode ─── */
-        .flashcard-section { display: none; }
-        .flashcard-section.active { display: block; }
-
-        .learn-stats {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
-        }
-        .learn-stat {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 14px 20px;
-            flex: 1;
-            min-width: 100px;
-            text-align: center;
-        }
-        .learn-stat .val {
-            font-size: 24px;
-            font-weight: 700;
-            font-family: var(--font-mono);
-            color: var(--text-primary);
-        }
-        .learn-stat .lbl {
-            font-size: 11px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .learn-stat.correct .val { color: var(--success); }
-        .learn-stat.wrong .val { color: var(--danger); }
-
-        .flashcard-container {
-            perspective: 1200px;
-            margin-bottom: 24px;
-        }
-
-        .flashcard {
-            position: relative;
-            width: 100%;
-            min-height: 280px;
-            cursor: pointer;
-            transform-style: preserve-3d;
-            transition: transform 0.6s ease;
-        }
-        .flashcard.flipped { transform: rotateY(180deg); }
-
-        .flashcard-face {
-            position: absolute;
-            inset: 0;
-            backface-visibility: hidden;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .flashcard-back {
-            transform: rotateY(180deg);
-            overflow-y: auto;
-            justify-content: flex-start;
-        }
-
-        .flashcard-label {
-            font-family: var(--font-heading);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        .flashcard-front .card-q-title {
-            font-family: var(--font-heading);
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 12px;
-        }
-
-        .flashcard-front .card-q-meta {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        .flashcard-back .card-a-section {
-            margin-bottom: 14px;
-        }
-        .flashcard-back .card-a-section h4 {
-            font-family: var(--font-heading);
-            font-size: 11px;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-        }
-        .flashcard-back .card-a-section p {
-            font-size: 13px;
-            line-height: 1.6;
-            color: var(--text-primary);
-        }
-
-        .card-controls {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            margin-bottom: 24px;
-        }
-
-        .card-controls .btn {
-            flex: 1;
-            max-width: 180px;
-            justify-content: center;
-            padding: 12px;
-            font-size: 13px;
-        }
-        .btn-know { background: var(--success); color: #2e3440; font-weight: 600; }
-        .btn-know:hover { background: #8fae7e; }
-        .btn-dunno { background: var(--danger); color: white; font-weight: 600; }
-        .btn-dunno:hover { background: #a9545c; }
-        .btn-skip { background: var(--bg-card); color: var(--text-secondary); border: 1px solid var(--border-color); }
-        .btn-skip:hover { background: var(--bg-card-hover); color: var(--text-primary); }
-
-        .card-nav {
-            text-align: center;
-            font-size: 12px;
-            font-family: var(--font-mono);
-            color: var(--text-muted);
-            margin-bottom: 12px;
-        }
-
-        .shuffle-bar {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .shuffle-bar select {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            color: var(--text-primary);
-            padding: 8px 12px;
-            font-size: 12px;
-            font-family: var(--font-body);
-        }
-
-        .done-screen {
-            display: none;
-            text-align: center;
-            padding: 48px 24px;
-        }
-        .done-screen.active { display: block; }
-        .done-screen h2 { font-family: var(--font-heading); font-size: 28px; margin-bottom: 12px; }
-        .done-screen p { color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; }
-
-        /* ─── Responsive ─── */
+        /* Responsive */
         @media (max-width: 768px) {
             .learn-app { padding: 0 14px; }
             .learn-header { flex-direction: column; align-items: flex-start; }
-            .flashcard-front .card-q-title { font-size: 17px; }
-            .flashcard-face { padding: 24px; }
-            .learn-stats { gap: 8px; }
-            .learn-stat { padding: 10px 14px; min-width: 80px; }
-            .learn-stat .val { font-size: 20px; }
             .browse-grid { grid-template-columns: 1fr; }
             .learn-modal { padding: 0; }
             .learn-modal-content {
@@ -563,28 +354,12 @@
                 </a>
                 <h1 class="learn-title">Learning Mode</h1>
             </div>
-            <div class="mode-switcher" id="mode-switcher">
-                <button class="mode-btn active" data-mode="browse">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                    Browse
-                </button>
-                <button class="mode-btn" data-mode="flashcard">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                    Flashcards
-                </button>
-            </div>
+            <span class="learn-subtitle" id="paper-count"></span>
         </div>
 
-        <!-- Upload Zone -->
-        <div class="upload-zone" id="upload-zone">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            <p>Drop a JSON or CSV file here, or click to upload</p>
-            <p class="hint">Use the Download button on the main page to export papers</p>
-            <input type="file" id="file-input" accept=".json,.csv">
-        </div>
+        <div class="loading-msg" id="loading-msg">Loading papers...</div>
 
-        <!-- Browse Mode -->
-        <div class="browse-section" id="browse-section">
+        <div id="browse-section" style="display:none">
             <div class="browse-toolbar">
                 <div class="browse-tabs" id="browse-tabs"></div>
                 <span class="browse-count" id="browse-count"></span>
@@ -592,75 +367,6 @@
             <div class="browse-grid" id="browse-grid"></div>
         </div>
 
-        <!-- Flashcard Mode -->
-        <div class="flashcard-section" id="flashcard-section">
-            <div class="shuffle-bar">
-                <select id="fc-category-filter">
-                    <option value="all">All Categories</option>
-                </select>
-                <button class="btn btn-secondary" id="shuffle-btn">Shuffle</button>
-                <button class="btn btn-secondary" id="restart-btn">Restart</button>
-            </div>
-
-            <div class="learn-stats">
-                <div class="learn-stat">
-                    <div class="val" id="stat-current">0</div>
-                    <div class="lbl">Current</div>
-                </div>
-                <div class="learn-stat">
-                    <div class="val" id="stat-total">0</div>
-                    <div class="lbl">Total</div>
-                </div>
-                <div class="learn-stat correct">
-                    <div class="val" id="stat-correct">0</div>
-                    <div class="lbl">Know</div>
-                </div>
-                <div class="learn-stat wrong">
-                    <div class="val" id="stat-wrong">0</div>
-                    <div class="lbl">Review</div>
-                </div>
-            </div>
-
-            <div class="card-nav" id="card-nav"></div>
-
-            <div class="flashcard-container" id="flashcard-container">
-                <div class="flashcard" id="flashcard">
-                    <div class="flashcard-face flashcard-front">
-                        <div class="flashcard-label">Paper Title</div>
-                        <div class="card-q-title" id="fc-title"></div>
-                        <div class="card-q-meta" id="fc-meta"></div>
-                    </div>
-                    <div class="flashcard-face flashcard-back">
-                        <div class="card-a-section">
-                            <h4>Authors</h4>
-                            <p id="fc-authors"></p>
-                        </div>
-                        <div class="card-a-section">
-                            <h4>Journal</h4>
-                            <p id="fc-journal"></p>
-                        </div>
-                        <div class="card-a-section">
-                            <h4>Summary</h4>
-                            <p id="fc-summary"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-controls" id="card-controls">
-                <button class="btn btn-dunno" id="btn-dunno">Need Review</button>
-                <button class="btn btn-skip" id="btn-skip">Skip</button>
-                <button class="btn btn-know" id="btn-know">I Know This</button>
-            </div>
-
-            <div class="done-screen" id="done-screen">
-                <h2>Session Complete!</h2>
-                <p id="done-summary"></p>
-                <button class="btn btn-primary" id="review-wrong-btn" style="margin:0 auto">Review Missed Papers</button>
-            </div>
-        </div>
-
-        <!-- Browse Detail Modal -->
         <div class="learn-modal" id="learn-modal">
             <div class="learn-modal-backdrop"></div>
             <div class="learn-modal-content">
@@ -678,7 +384,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
                         Reading Notes
                     </h3>
-                    <textarea class="lm-note-textarea" id="lm-note" placeholder="Write your reading notes here... (auto-saved)"></textarea>
+                    <textarea class="lm-note-textarea" id="lm-note" placeholder="Write your reading notes here... (auto-saved to browser)"></textarea>
                     <div class="lm-note-saved" id="lm-note-saved">Saved</div>
                 </div>
                 <div class="lm-actions">
@@ -707,118 +413,30 @@
         };
 
         let allPapers = [];
-        let currentMode = 'browse';
         let browseCategory = 'all';
 
-        // Flashcard state
-        let deck = [];
-        let currentIndex = 0;
-        let correctCount = 0;
-        let wrongCount = 0;
-        let wrongPapers = [];
-
-        // DOM
-        const uploadZone = document.getElementById('upload-zone');
-        const fileInput = document.getElementById('file-input');
-        const modeSwitcher = document.getElementById('mode-switcher');
-        const browseSection = document.getElementById('browse-section');
-        const flashcardSection = document.getElementById('flashcard-section');
-
-        // ─── Upload ───
-        uploadZone.addEventListener('click', () => fileInput.click());
-        uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('dragover'); });
-        uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
-        uploadZone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            uploadZone.classList.remove('dragover');
-            if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
-        });
-        fileInput.addEventListener('change', () => {
-            if (fileInput.files.length) handleFile(fileInput.files[0]);
-        });
-
-        function handleFile(file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                try {
-                    if (file.name.endsWith('.json')) {
-                        let parsed = JSON.parse(e.target.result);
-                        allPapers = Array.isArray(parsed) ? parsed : (parsed.papers || []);
-                    } else if (file.name.endsWith('.csv')) {
-                        allPapers = parseCSV(e.target.result);
-                    }
-                    if (allPapers.length === 0) {
-                        alert('No papers found in file.');
-                        return;
-                    }
-                    uploadZone.style.display = 'none';
-                    modeSwitcher.classList.add('visible');
-                    showMode('browse');
-                } catch (err) {
-                    alert('Failed to parse file: ' + err.message);
+        // Auto-load papers.json on page load
+        fetch('papers.json')
+            .then(res => {
+                if (!res.ok) throw new Error('Failed to load papers.json');
+                return res.json();
+            })
+            .then(data => {
+                allPapers = Array.isArray(data) ? data : (data.papers || []);
+                if (allPapers.length === 0) {
+                    document.getElementById('loading-msg').textContent = 'No papers found.';
+                    return;
                 }
-            };
-            reader.readAsText(file);
-        }
-
-        function parseCSV(text) {
-            const lines = text.split('\n');
-            if (lines.length < 2) return [];
-            const headers = parseCSVLine(lines[0]);
-            const papers = [];
-            for (let i = 1; i < lines.length; i++) {
-                if (!lines[i].trim()) continue;
-                const vals = parseCSVLine(lines[i]);
-                const obj = {};
-                headers.forEach((h, j) => { obj[h] = vals[j] || ''; });
-                if (obj.authors && typeof obj.authors === 'string') obj.authors = obj.authors.split('; ');
-                if (obj.year) obj.year = parseInt(obj.year);
-                papers.push(obj);
-            }
-            return papers;
-        }
-
-        function parseCSVLine(line) {
-            const result = [];
-            let current = '';
-            let inQuotes = false;
-            for (let i = 0; i < line.length; i++) {
-                const ch = line[i];
-                if (inQuotes) {
-                    if (ch === '"' && line[i + 1] === '"') { current += '"'; i++; }
-                    else if (ch === '"') { inQuotes = false; }
-                    else { current += ch; }
-                } else {
-                    if (ch === '"') { inQuotes = true; }
-                    else if (ch === ',') { result.push(current.trim()); current = ''; }
-                    else { current += ch; }
-                }
-            }
-            result.push(current.trim());
-            return result;
-        }
-
-        // ─── Mode Switching ───
-        modeSwitcher.addEventListener('click', (e) => {
-            const btn = e.target.closest('.mode-btn');
-            if (!btn) return;
-            showMode(btn.dataset.mode);
-        });
-
-        function showMode(mode) {
-            currentMode = mode;
-            document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
-            browseSection.classList.toggle('active', mode === 'browse');
-            flashcardSection.classList.toggle('active', mode === 'flashcard');
-
-            if (mode === 'browse') {
+                document.getElementById('loading-msg').style.display = 'none';
+                document.getElementById('browse-section').style.display = '';
+                document.getElementById('paper-count').textContent = allPapers.length + ' papers';
                 renderBrowse();
-            } else {
-                setupFlashcards();
-            }
-        }
+            })
+            .catch(err => {
+                document.getElementById('loading-msg').textContent = 'Error loading papers: ' + err.message;
+            });
 
-        // ─── Browse Mode ───
+        // Browse
         function renderBrowse() {
             renderBrowseTabs();
             renderBrowseCards();
@@ -892,7 +510,7 @@
             });
         }
 
-        // ─── Browse Detail Modal ───
+        // Detail Modal
         let currentModalPaper = null;
         let noteSaveTimer = null;
 
@@ -928,7 +546,7 @@
                 doiLink.style.display = 'none';
             }
 
-            // Load note
+            // Load note from localStorage
             const noteKey = 'envseis-notes-' + (paper.id || '');
             const savedNote = localStorage.getItem(noteKey) || '';
             let noteData = '';
@@ -947,14 +565,13 @@
             document.getElementById('learn-modal').classList.remove('open');
             document.body.style.overflow = '';
             currentModalPaper = null;
-            // Refresh browse cards to update note indicators
-            if (currentMode === 'browse') renderBrowseCards();
+            renderBrowseCards();
         }
 
         document.querySelector('.learn-modal-close').addEventListener('click', closeLearnModal);
         document.querySelector('.learn-modal-backdrop').addEventListener('click', closeLearnModal);
 
-        // Auto-save notes
+        // Auto-save notes to localStorage
         document.getElementById('lm-note').addEventListener('input', () => {
             clearTimeout(noteSaveTimer);
             noteSaveTimer = setTimeout(() => {
@@ -975,141 +592,11 @@
             }, 500);
         });
 
-        // ─── Flashcard Mode ───
-        function setupFlashcards() {
-            populateFCCategoryFilter();
-            startSession(allPapers);
-        }
-
-        function populateFCCategoryFilter() {
-            const sel = document.getElementById('fc-category-filter');
-            sel.innerHTML = '<option value="all">All Categories</option>';
-            const cats = new Set(allPapers.map(p => p.category).filter(Boolean));
-            cats.forEach(c => {
-                const opt = document.createElement('option');
-                opt.value = c;
-                opt.textContent = c.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                sel.appendChild(opt);
-            });
-        }
-
-        function shuffle(arr) {
-            const a = [...arr];
-            for (let i = a.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [a[i], a[j]] = [a[j], a[i]];
-            }
-            return a;
-        }
-
-        function startSession(papers) {
-            deck = shuffle(papers);
-            currentIndex = 0;
-            correctCount = 0;
-            wrongCount = 0;
-            wrongPapers = [];
-
-            document.getElementById('flashcard-container').style.display = '';
-            document.getElementById('card-controls').style.display = '';
-            document.getElementById('done-screen').classList.remove('active');
-            showCard();
-        }
-
-        function showCard() {
-            if (currentIndex >= deck.length) {
-                showDone();
-                return;
-            }
-            const p = deck[currentIndex];
-            document.getElementById('flashcard').classList.remove('flipped');
-            document.getElementById('fc-title').textContent = p.title || 'Untitled';
-            document.getElementById('fc-meta').textContent =
-                (p.year || '?') + ' · ' + (p.category || '').replace(/-/g, ' ');
-
-            const authors = Array.isArray(p.authors) ? p.authors.join(', ') : (p.authors || '');
-            document.getElementById('fc-authors').textContent = authors;
-            document.getElementById('fc-journal').textContent = p.journal || '';
-            document.getElementById('fc-summary').textContent = p.summary || '';
-
-            document.getElementById('stat-current').textContent = currentIndex + 1;
-            document.getElementById('stat-total').textContent = deck.length;
-            document.getElementById('stat-correct').textContent = correctCount;
-            document.getElementById('stat-wrong').textContent = wrongCount;
-            document.getElementById('card-nav').textContent = 'Card ' + (currentIndex + 1) + ' of ' + deck.length;
-        }
-
-        function nextCard() { currentIndex++; showCard(); }
-
-        function showDone() {
-            document.getElementById('flashcard-container').style.display = 'none';
-            document.getElementById('card-controls').style.display = 'none';
-            document.getElementById('card-nav').textContent = '';
-            const done = document.getElementById('done-screen');
-            done.classList.add('active');
-            document.getElementById('done-summary').textContent =
-                'You reviewed ' + deck.length + ' papers. Know: ' + correctCount + ', Need Review: ' + wrongCount + ', Skipped: ' + (deck.length - correctCount - wrongCount);
-            document.getElementById('review-wrong-btn').style.display = wrongPapers.length > 0 ? '' : 'none';
-        }
-
-        document.getElementById('flashcard').addEventListener('click', () => {
-            document.getElementById('flashcard').classList.toggle('flipped');
-        });
-
-        document.getElementById('btn-know').addEventListener('click', () => { correctCount++; nextCard(); });
-        document.getElementById('btn-dunno').addEventListener('click', () => {
-            wrongCount++;
-            wrongPapers.push(deck[currentIndex]);
-            nextCard();
-        });
-        document.getElementById('btn-skip').addEventListener('click', () => { nextCard(); });
-
-        document.getElementById('shuffle-btn').addEventListener('click', () => {
-            const cat = document.getElementById('fc-category-filter').value;
-            const papers = cat === 'all' ? allPapers : allPapers.filter(p => p.category === cat);
-            startSession(papers);
-        });
-
-        document.getElementById('restart-btn').addEventListener('click', () => {
-            const cat = document.getElementById('fc-category-filter').value;
-            const papers = cat === 'all' ? allPapers : allPapers.filter(p => p.category === cat);
-            startSession(papers);
-        });
-
-        document.getElementById('fc-category-filter').addEventListener('change', (e) => {
-            const cat = e.target.value;
-            const papers = cat === 'all' ? allPapers : allPapers.filter(p => p.category === cat);
-            startSession(papers);
-        });
-
-        document.getElementById('review-wrong-btn').addEventListener('click', () => {
-            startSession(wrongPapers);
-        });
-
-        // Keyboard shortcuts
+        // Escape to close modal
         document.addEventListener('keydown', (e) => {
-            // Close modal on Escape
-            if (e.key === 'Escape') {
-                if (document.getElementById('learn-modal').classList.contains('open')) {
-                    closeLearnModal();
-                    return;
-                }
+            if (e.key === 'Escape' && document.getElementById('learn-modal').classList.contains('open')) {
+                closeLearnModal();
             }
-
-            // Flashcard keyboard
-            if (currentMode !== 'flashcard') return;
-            if (document.getElementById('flashcard-container').style.display === 'none') return;
-
-            if (e.key === ' ' || e.key === 'Enter') {
-                e.preventDefault();
-                document.getElementById('flashcard').classList.toggle('flipped');
-            }
-            if (e.key === 'ArrowRight' || e.key === '3') { correctCount++; nextCard(); }
-            if (e.key === 'ArrowLeft' || e.key === '1') {
-                wrongCount++;
-                wrongPapers.push(deck[currentIndex]);
-                nextCard();
-            }
-            if (e.key === 'ArrowDown' || e.key === '2') { nextCard(); }
         });
 
         function escapeHtml(str) {
