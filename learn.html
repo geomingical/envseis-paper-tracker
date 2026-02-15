@@ -56,6 +56,48 @@
             font-family: var(--font-mono);
         }
 
+        /* Source indicator */
+        .source-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 11px;
+            font-weight: 500;
+            font-family: var(--font-mono);
+        }
+        .source-badge.git {
+            background: color-mix(in srgb, #a3be8c 15%, transparent);
+            color: #a3be8c;
+        }
+        .source-badge.upload {
+            background: color-mix(in srgb, #ebcb8b 15%, transparent);
+            color: #ebcb8b;
+        }
+        .source-badge svg { width: 12px; height: 12px; }
+
+        /* Upload Zone */
+        .upload-zone {
+            border: 2px dashed var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 64px 32px;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            background: var(--bg-secondary);
+            margin-bottom: 24px;
+        }
+        .upload-zone:hover,
+        .upload-zone.dragover {
+            border-color: var(--accent);
+            background: color-mix(in srgb, var(--accent) 5%, var(--bg-secondary));
+        }
+        .upload-zone svg { width: 48px; height: 48px; color: var(--text-muted); margin-bottom: 16px; }
+        .upload-zone p { color: var(--text-secondary); font-size: 14px; margin-bottom: 8px; }
+        .upload-zone .upload-hint { color: var(--text-muted); font-size: 12px; }
+        .upload-zone .upload-hint a { color: var(--accent); text-decoration: underline; }
+
         /* Loading */
         .loading-msg {
             text-align: center;
@@ -163,6 +205,17 @@
             color: var(--card-color, var(--accent));
             font-weight: 500;
         }
+        .browse-card .bc-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .browse-card .bc-id {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
         .browse-card .bc-year {
             font-family: var(--font-mono);
             font-size: 11px;
@@ -235,7 +288,7 @@
             border: 1px solid var(--border-color);
             border-radius: var(--radius-xl);
             padding: 32px;
-            max-width: 680px;
+            max-width: 720px;
             width: 100%;
             max-height: 85vh;
             overflow-y: auto;
@@ -266,20 +319,12 @@
         .lm-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
         .lm-cat { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 16px; font-size: 11px; font-weight: 500; }
         .lm-year { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+        .lm-id { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); opacity: 0.7; }
         .lm-title { font-family: var(--font-heading); font-size: 20px; font-weight: 700; line-height: 1.3; margin-bottom: 8px; padding-right: 40px; }
         .lm-authors { color: var(--text-secondary); font-size: 13px; margin-bottom: 4px; }
         .lm-journal { color: var(--text-muted); font-size: 12px; font-style: italic; margin-bottom: 16px; }
 
-        .lm-summary {
-            padding: 14px;
-            background: var(--bg-card);
-            border-radius: var(--radius-md);
-            border-left: 3px solid var(--accent);
-            font-size: 13px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
+        /* Note section */
         .lm-note-section h3 {
             font-family: var(--font-heading);
             font-size: 13px;
@@ -294,34 +339,92 @@
         }
         .lm-note-section h3 svg { width: 14px; height: 14px; }
 
-        .lm-note-textarea {
-            width: 100%;
-            min-height: 120px;
+        .lm-note-source {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-family: var(--font-mono);
+        }
+        .lm-note-source code {
+            background: var(--bg-card);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        /* Rendered markdown note */
+        .lm-note-rendered {
+            padding: 16px;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
-            padding: 14px;
-            color: var(--text-primary);
-            font-family: var(--font-body);
             font-size: 13px;
-            line-height: 1.6;
-            resize: vertical;
-            transition: border-color var(--transition-fast);
+            line-height: 1.7;
+            color: var(--text-secondary);
         }
-        .lm-note-textarea:focus {
-            outline: none;
-            border-color: var(--accent);
+        .lm-note-rendered h1, .lm-note-rendered h2, .lm-note-rendered h3 {
+            font-family: var(--font-heading);
+            color: var(--text-primary);
+            margin: 16px 0 8px;
+            line-height: 1.3;
         }
-        .lm-note-textarea::placeholder { color: var(--text-muted); }
+        .lm-note-rendered h1 { font-size: 18px; }
+        .lm-note-rendered h2 { font-size: 15px; }
+        .lm-note-rendered h3 { font-size: 13px; }
+        .lm-note-rendered h1:first-child, .lm-note-rendered h2:first-child, .lm-note-rendered h3:first-child {
+            margin-top: 0;
+        }
+        .lm-note-rendered p { margin: 8px 0; }
+        .lm-note-rendered ul, .lm-note-rendered ol { padding-left: 20px; margin: 8px 0; }
+        .lm-note-rendered li { margin: 4px 0; }
+        .lm-note-rendered code {
+            background: var(--bg-primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 12px;
+        }
+        .lm-note-rendered pre {
+            background: var(--bg-primary);
+            padding: 12px;
+            border-radius: var(--radius-md);
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .lm-note-rendered pre code { background: none; padding: 0; }
+        .lm-note-rendered blockquote {
+            border-left: 3px solid var(--accent);
+            padding-left: 12px;
+            color: var(--text-muted);
+            margin: 10px 0;
+        }
+        .lm-note-rendered strong { color: var(--text-primary); }
+        .lm-note-rendered a { color: var(--accent); text-decoration: underline; }
 
-        .lm-note-saved {
-            font-size: 11px;
-            color: var(--success);
-            margin-top: 6px;
-            opacity: 0;
-            transition: opacity var(--transition-fast);
+        .lm-note-empty {
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px dashed var(--border-color);
+            border-radius: var(--radius-md);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
         }
-        .lm-note-saved.visible { opacity: 1; }
+        .lm-note-empty code {
+            background: var(--bg-primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--accent);
+        }
+
+        .lm-note-loading {
+            padding: 16px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
 
         .lm-actions {
             display: flex;
@@ -354,10 +457,23 @@
                 </a>
                 <h1 class="learn-title">Learning Mode</h1>
             </div>
-            <span class="learn-subtitle" id="paper-count"></span>
+            <div style="display:flex;align-items:center;gap:12px">
+                <span class="source-badge" id="source-badge" style="display:none"></span>
+                <span class="learn-subtitle" id="paper-count"></span>
+            </div>
         </div>
 
-        <div class="loading-msg" id="loading-msg">Loading papers...</div>
+        <div class="loading-msg" id="loading-msg">Loading papers from repository...</div>
+
+        <div id="upload-zone" class="upload-zone" style="display:none">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <p>Drop a JSON or CSV file here, or click to upload</p>
+            <p class="upload-hint">
+                Tip: Add your papers to <code>learning/papers.json</code> in your fork for permanent access.<br>
+                <a href="learning/README.md" target="_blank">Learn more →</a>
+            </p>
+            <input type="file" id="file-input" accept=".json,.csv" style="display:none">
+        </div>
 
         <div id="browse-section" style="display:none">
             <div class="browse-toolbar">
@@ -374,18 +490,17 @@
                 <div class="lm-header">
                     <span class="lm-cat" id="lm-cat"></span>
                     <span class="lm-year" id="lm-year"></span>
+                    <span class="lm-id" id="lm-id"></span>
                 </div>
                 <h2 class="lm-title" id="lm-title"></h2>
                 <p class="lm-authors" id="lm-authors"></p>
                 <p class="lm-journal" id="lm-journal"></p>
-                <div class="lm-summary" id="lm-summary" style="display:none"></div>
-                <div class="lm-note-section">
+                <div class="lm-note-section" id="lm-note-section">
                     <h3>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
                         Reading Notes
                     </h3>
-                    <textarea class="lm-note-textarea" id="lm-note" placeholder="Write your reading notes here... (auto-saved to browser)"></textarea>
-                    <div class="lm-note-saved" id="lm-note-saved">Saved</div>
+                    <div id="lm-note-content"></div>
                 </div>
                 <div class="lm-actions">
                     <a class="btn btn-primary" id="lm-doi-link" href="#" target="_blank" rel="noopener">
@@ -414,29 +529,115 @@
 
         let allPapers = [];
         let browseCategory = 'all';
+        let dataSource = null; // 'git' or 'upload'
+        // Cache of fetched .md notes: paperId -> { content, status }
+        const noteCache = {};
 
-        // Auto-load papers.json on page load
-        fetch('papers.json')
-            .then(res => {
-                if (!res.ok) throw new Error('Failed to load papers.json');
-                return res.json();
-            })
-            .then(data => {
-                allPapers = Array.isArray(data) ? data : (data.papers || []);
-                if (allPapers.length === 0) {
-                    document.getElementById('loading-msg').textContent = 'No papers found.';
-                    return;
-                }
-                document.getElementById('loading-msg').style.display = 'none';
-                document.getElementById('browse-section').style.display = '';
-                document.getElementById('paper-count').textContent = allPapers.length + ' papers';
-                renderBrowse();
-            })
-            .catch(err => {
-                document.getElementById('loading-msg').textContent = 'Error loading papers: ' + err.message;
+        // ---- Init: try git-first, then show upload fallback ----
+        init();
+
+        function init() {
+            fetch('learning/papers.json')
+                .then(res => {
+                    if (!res.ok) throw new Error('not found');
+                    return res.json();
+                })
+                .then(data => {
+                    allPapers = Array.isArray(data) ? data : (data.papers || []);
+                    if (allPapers.length === 0) throw new Error('empty');
+                    dataSource = 'git';
+                    showPapers();
+                })
+                .catch(() => {
+                    // No learning/papers.json — show upload zone
+                    document.getElementById('loading-msg').style.display = 'none';
+                    document.getElementById('upload-zone').style.display = '';
+                    setupUpload();
+                });
+        }
+
+        function showPapers() {
+            document.getElementById('loading-msg').style.display = 'none';
+            document.getElementById('upload-zone').style.display = 'none';
+            document.getElementById('browse-section').style.display = '';
+            document.getElementById('paper-count').textContent = allPapers.length + ' papers';
+
+            // Source badge
+            const badge = document.getElementById('source-badge');
+            if (dataSource === 'git') {
+                badge.className = 'source-badge git';
+                badge.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg> repo';
+            } else {
+                badge.className = 'source-badge upload';
+                badge.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> uploaded';
+            }
+            badge.style.display = '';
+
+            renderBrowse();
+        }
+
+        // ---- Upload fallback ----
+        function setupUpload() {
+            const zone = document.getElementById('upload-zone');
+            const fileInput = document.getElementById('file-input');
+
+            zone.addEventListener('click', () => fileInput.click());
+            zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('dragover'); });
+            zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+            zone.addEventListener('drop', e => {
+                e.preventDefault();
+                zone.classList.remove('dragover');
+                if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
             });
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files.length) handleFile(fileInput.files[0]);
+            });
+        }
 
-        // Browse
+        function handleFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    let data;
+                    if (file.name.endsWith('.csv')) {
+                        data = parseCSV(e.target.result);
+                    } else {
+                        data = JSON.parse(e.target.result);
+                    }
+                    allPapers = Array.isArray(data) ? data : (data.papers || []);
+                    if (allPapers.length === 0) {
+                        alert('No papers found in the file.');
+                        return;
+                    }
+                    dataSource = 'upload';
+                    showPapers();
+                } catch (err) {
+                    alert('Error parsing file: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function parseCSV(text) {
+            const lines = text.trim().split('\n');
+            if (lines.length < 2) return [];
+            const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+            return lines.slice(1).map(line => {
+                const values = line.match(/(".*?"|[^,]+)/g) || [];
+                const obj = {};
+                headers.forEach((h, i) => {
+                    let v = (values[i] || '').trim().replace(/^"|"$/g, '');
+                    if (h === 'authors') {
+                        try { v = JSON.parse(v); } catch { v = v.split(';').map(a => a.trim()); }
+                    }
+                    if (h === 'year') v = parseInt(v) || v;
+                    obj[h] = v;
+                });
+                return obj;
+            });
+        }
+
+        // ---- Browse ----
         function renderBrowse() {
             renderBrowseTabs();
             renderBrowseCards();
@@ -484,8 +685,8 @@
                     ? paper.authors.slice(0, 3).join(', ') + (paper.authors.length > 3 ? ' +' + (paper.authors.length - 3) : '')
                     : (paper.authors || '');
 
-                const noteKey = 'envseis-notes-' + (paper.id || i);
-                const hasNote = !!localStorage.getItem(noteKey);
+                const paperId = paper.id || '';
+                const hasNote = noteCache[paperId] && noteCache[paperId].status === 'found';
 
                 const card = document.createElement('div');
                 card.className = 'browse-card';
@@ -495,7 +696,10 @@
                 card.innerHTML =
                     '<div class="bc-header">' +
                         '<span class="bc-cat">' + escapeHtml(catName) + '</span>' +
-                        '<span class="bc-year">' + (paper.year || '?') + '</span>' +
+                        '<div class="bc-meta">' +
+                            '<span class="bc-id">' + escapeHtml(paperId) + '</span>' +
+                            '<span class="bc-year">' + (paper.year || '?') + '</span>' +
+                        '</div>' +
                     '</div>' +
                     '<div class="bc-title">' + escapeHtml(paper.title || 'Untitled') + '</div>' +
                     '<div class="bc-authors">' + escapeHtml(authors) + '</div>' +
@@ -510,9 +714,73 @@
             });
         }
 
-        // Detail Modal
+        // ---- Fetch .md note from learning/ folder ----
+        function fetchNote(paperId) {
+            return new Promise((resolve) => {
+                if (!paperId) { resolve(null); return; }
+
+                // Check cache first
+                if (noteCache[paperId]) {
+                    resolve(noteCache[paperId].status === 'found' ? noteCache[paperId].content : null);
+                    return;
+                }
+
+                // Only try fetching if data came from git
+                if (dataSource !== 'git') {
+                    resolve(null);
+                    return;
+                }
+
+                fetch('learning/' + paperId + '.md')
+                    .then(res => {
+                        if (!res.ok) throw new Error('not found');
+                        return res.text();
+                    })
+                    .then(text => {
+                        noteCache[paperId] = { status: 'found', content: text };
+                        resolve(text);
+                    })
+                    .catch(() => {
+                        noteCache[paperId] = { status: 'missing', content: null };
+                        resolve(null);
+                    });
+            });
+        }
+
+        // ---- Lightweight Markdown renderer (no external deps) ----
+        function renderMarkdown(md) {
+            if (!md) return '';
+            let html = escapeHtml(md);
+
+            // Code blocks (``` ... ```)
+            html = html.replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>');
+            // Inline code
+            html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+            // Headers
+            html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+            html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+            html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+            // Bold and italic
+            html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+            // Blockquote
+            html = html.replace(/^&gt; (.+)$/gm, '<blockquote>$1</blockquote>');
+            // Unordered list items
+            html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+            // Wrap consecutive <li> in <ul>
+            html = html.replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
+            // Links
+            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+            // Paragraphs: wrap remaining text lines
+            html = html.replace(/^(?!<[hupbol]|$)(.+)$/gm, '<p>$1</p>');
+            // Clean up empty lines
+            html = html.replace(/\n{2,}/g, '\n');
+
+            return html;
+        }
+
+        // ---- Detail Modal ----
         let currentModalPaper = null;
-        let noteSaveTimer = null;
 
         function openLearnModal(paper) {
             currentModalPaper = paper;
@@ -526,17 +794,10 @@
             catEl.style.color = color;
 
             document.getElementById('lm-year').textContent = paper.year || '';
+            document.getElementById('lm-id').textContent = paper.id || '';
             document.getElementById('lm-title').textContent = paper.title || 'Untitled';
             document.getElementById('lm-authors').textContent = Array.isArray(paper.authors) ? paper.authors.join(', ') : (paper.authors || '');
             document.getElementById('lm-journal').textContent = paper.journal || '';
-
-            const summaryEl = document.getElementById('lm-summary');
-            if (paper.summary && paper.summary.trim()) {
-                summaryEl.textContent = paper.summary;
-                summaryEl.style.display = '';
-            } else {
-                summaryEl.style.display = 'none';
-            }
 
             const doiLink = document.getElementById('lm-doi-link');
             if (paper.url) {
@@ -546,51 +807,59 @@
                 doiLink.style.display = 'none';
             }
 
-            // Load note from localStorage
-            const noteKey = 'envseis-notes-' + (paper.id || '');
-            const savedNote = localStorage.getItem(noteKey) || '';
-            let noteData = '';
-            try {
-                const parsed = JSON.parse(savedNote);
-                noteData = parsed.note || '';
-            } catch { noteData = savedNote; }
-            document.getElementById('lm-note').value = noteData;
-            document.getElementById('lm-note-saved').classList.remove('visible');
+            // Load note
+            const noteContent = document.getElementById('lm-note-content');
+            const paperId = paper.id || '';
+
+            if (dataSource === 'git' && paperId) {
+                noteContent.innerHTML = '<div class="lm-note-loading">Loading notes...</div>';
+                fetchNote(paperId).then(md => {
+                    if (md) {
+                        noteContent.innerHTML =
+                            '<div class="lm-note-source">From <code>learning/' + escapeHtml(paperId) + '.md</code></div>' +
+                            '<div class="lm-note-rendered">' + renderMarkdown(md) + '</div>';
+                        // Update card indicator
+                        updateNoteIndicator(paperId, true);
+                    } else {
+                        noteContent.innerHTML =
+                            '<div class="lm-note-empty">' +
+                                'No notes yet. Create <code>learning/' + escapeHtml(paperId) + '.md</code> in your repo.' +
+                            '</div>';
+                    }
+                });
+            } else {
+                noteContent.innerHTML =
+                    '<div class="lm-note-empty">' +
+                        'Notes are available when papers are loaded from the repository.<br>' +
+                        'Add your papers to <code>learning/papers.json</code> and notes as <code>learning/{id}.md</code>.' +
+                    '</div>';
+            }
 
             modal.classList.add('open');
             document.body.style.overflow = 'hidden';
+        }
+
+        function updateNoteIndicator(paperId, hasNote) {
+            // Find the card with this paperId and update indicator
+            document.querySelectorAll('.browse-card').forEach(card => {
+                const idEl = card.querySelector('.bc-id');
+                if (idEl && idEl.textContent === paperId) {
+                    const indicator = card.querySelector('.bc-note-indicator');
+                    if (indicator) {
+                        indicator.classList.toggle('has-note', hasNote);
+                    }
+                }
+            });
         }
 
         function closeLearnModal() {
             document.getElementById('learn-modal').classList.remove('open');
             document.body.style.overflow = '';
             currentModalPaper = null;
-            renderBrowseCards();
         }
 
         document.querySelector('.learn-modal-close').addEventListener('click', closeLearnModal);
         document.querySelector('.learn-modal-backdrop').addEventListener('click', closeLearnModal);
-
-        // Auto-save notes to localStorage
-        document.getElementById('lm-note').addEventListener('input', () => {
-            clearTimeout(noteSaveTimer);
-            noteSaveTimer = setTimeout(() => {
-                if (!currentModalPaper) return;
-                const noteKey = 'envseis-notes-' + (currentModalPaper.id || '');
-                const noteVal = document.getElementById('lm-note').value.trim();
-                if (noteVal) {
-                    localStorage.setItem(noteKey, JSON.stringify({
-                        note: noteVal,
-                        updatedAt: new Date().toISOString()
-                    }));
-                } else {
-                    localStorage.removeItem(noteKey);
-                }
-                const savedEl = document.getElementById('lm-note-saved');
-                savedEl.classList.add('visible');
-                setTimeout(() => savedEl.classList.remove('visible'), 1500);
-            }, 500);
-        });
 
         // Escape to close modal
         document.addEventListener('keydown', (e) => {
@@ -601,7 +870,7 @@
 
         function escapeHtml(str) {
             if (!str) return '';
-            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         }
     })();
     </script>
