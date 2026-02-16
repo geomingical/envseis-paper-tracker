@@ -5,14 +5,14 @@
       "name": "Landslide & Mass Movement",
       "icon": "mountain",
       "color": "#c0613a",
-      "count": 184
+      "count": 190
     },
     {
       "key": "debris-flow",
       "name": "Debris Flow & Lahar",
       "icon": "droplets",
       "color": "#b5651d",
-      "count": 60
+      "count": 61
     },
     {
       "key": "glacier",
@@ -33,14 +33,14 @@
       "name": "Hydrology & Groundwater",
       "icon": "droplet",
       "color": "#4a6e8a",
-      "count": 135
+      "count": 136
     },
     {
       "key": "volcano",
       "name": "Volcano",
       "icon": "flame",
       "color": "#b33a3a",
-      "count": 43
+      "count": 45
     },
     {
       "key": "methods",
@@ -7587,6 +7587,32 @@
       "semanticScholarId": ""
     },
     {
+      "id": "colombero-2021",
+      "title": "Seismic Noise Parameters as Indicators of Reversible Modifications in Slope Stability: A Review",
+      "authors": [
+        "C. Colombero",
+        "D. Jongmans",
+        "Sylvain Fiolleau",
+        "J. Valentin",
+        "L. Baillet",
+        "É. Larose",
+        "G. Bièvre"
+      ],
+      "year": 2021,
+      "category": "landslide",
+      "categories": [
+        "landslide",
+        "hydrology"
+      ],
+      "journal": "Surveys in Geophysics",
+      "doi": "10.1007/s10712-021-09632-w",
+      "url": "https://doi.org/10.1007/s10712-021-09632-w",
+      "abstract": "Continuous ambient seismic monitoring of potentially unstable sites is increasingly attracting the attention of researchers for precursor recognition and early warning purposes. Twelve cases of long-term continuous noise monitoring have been reported in the literature between 2012 and 2020. Only in a few cases rupture was achieved and irreversible drops in resonance frequency values or shear wave velocity extracted from noise recordings were documented. On the other hand, all monitored sites showed clear reversible fluctuations of the seismic parameters on a daily and seasonal scale due to changes in external weather conditions (air temperature and precipitation). A quantitative comparison of these reversible modifications is used to gain insight into the mechanisms driving the site seismic response. Six possible mechanisms were identified, including three temperature-driven mechanisms (temperature control on fracture opening/closing, superficial stress conditions and bulk rigidity), one precipitation-driven mechanism (water infiltration effect) and two mechanisms sensitive to both temperature and precipitation (ice formation and clay behavior). The reversible variations in seismic parameters under the meteorological constraints are synthesized and compared to the irreversible changes observed prior to failure in different geological conditions.",
+      "summary": "This review examines how seismic noise parameters serve as indicators of reversible modifications in slope stability. The authors synthesize studies showing that changes in seismic velocities, resonance frequencies, and spectral properties of ambient noise can detect seasonal and transient variations in slope conditions. The findings highlight the potential of passive seismic monitoring as a non-invasive tool for slope stability assessment and early warning.",
+      "citationCount": 39,
+      "semanticScholarId": "2df41be9e3b1656568145878939b01e7c793bc36"
+    },
+    {
       "id": "clare-2021",
       "title": "Seismic and Acoustic Monitoring of Submarine Landslides: Ongoing Challenges, Recent Successes and Future Opportunities",
       "authors": [
@@ -8468,6 +8494,28 @@
       "summary": "We detect basal icequakes beneath an ∼3-km-wide seismic sensor network installed on the Whillans Ice Plain (WIP) in West Antarctica, and we use S-wave back-projection to detect and locate thousands of basal icequakes occurring over 14 and 21 days in January 2014 and 2015, respectively. We detect basal icequakes beneath an ∼3-km-wide seismic sensor network installed on the Whillans Ice Plain (WIP) in West Antarctica, and we use S-wave back-projection to detect and locate thousands of basal icequakes occurring over 14 and 21 days in January 2014 and 2015, respectively. We find flow-parallel streaks of basal icequakes beneath the WIP, which we conjecture are related to the presence of mega-scale glacial lineations (MSGLs) indicated by ice-penetrating radar, with at least one streak originating in a local trough adjacent to a MSGL. Our results also suggest that evolving subglacial geomorphology can impact basal traction by reorganizing the spatial distribution of basal materials with varying mechanical properties.",
       "citationCount": 15,
       "semanticScholarId": "f8632989a28d018ea51d64c3a152afd4e8a2025c"
+    },
+    {
+      "id": "walsh-2020b",
+      "title": "Improving the Amplitude Source Location (ASL) Method Using Multicomponent Seismic Data: An Assessment with Active Source Seismic Data",
+      "authors": [
+        "Braden Walsh",
+        "J. Procter",
+        "A. Jolly"
+      ],
+      "year": 2020,
+      "category": "landslide",
+      "categories": [
+        "landslide",
+        "volcano"
+      ],
+      "journal": "Bulletin of the Seismological Society of America",
+      "doi": "10.1785/0120190063",
+      "url": "https://doi.org/10.1785/0120190063",
+      "abstract": "The amplitude source location (ASL) method has been applied to locate volcanic and mass movement seismic sources using single-component seismic data. This study assesses whether using multicomponent (three-component) seismic data can improve ASL performance. Using active source experiments, the authors demonstrate that incorporating horizontal components alongside the vertical component improves source location accuracy.",
+      "summary": "This study assesses whether multicomponent seismic data can improve the amplitude source location (ASL) method. The authors use active source seismic experiments to compare ASL results from single-component versus three-component data. Results demonstrate that incorporating horizontal components improves location accuracy, providing a practical enhancement for volcanic and mass movement seismic monitoring.",
+      "citationCount": 3,
+      "semanticScholarId": "8e8674ebcb9a3ada9a8dbd824cba566ab676215e"
     },
     {
       "id": "zhang-2020b",
@@ -9779,6 +9827,31 @@
       "semanticScholarId": "0d41779719868614607e1a483a7dad266e370716"
     },
     {
+      "id": "walsh-2019",
+      "title": "Geophysical examination of the 27 April 2016 Whakaari/White Island, New Zealand, eruption and its implications for vent physiognomies and eruptive dynamics",
+      "authors": [
+        "Braden Walsh",
+        "J. Procter",
+        "I. Lokmer",
+        "J. Thun",
+        "T. Hurst",
+        "B. Christenson",
+        "A. Jolly"
+      ],
+      "year": 2019,
+      "category": "volcano",
+      "categories": [
+        "volcano"
+      ],
+      "journal": "Earth, Planets and Space",
+      "doi": "10.1186/s40623-019-1003-0",
+      "url": "https://doi.org/10.1186/s40623-019-1003-0",
+      "abstract": "At approximately 09:36 UTC on 27 April 2016, a phreatic eruption occurred on Whakaari Island (White Island) producing an eruption sequence that contained multiple eruptive pulses determined to have occurred over the first 30 min, with a continuing tremor signal lasting ~ 2 h after the pulsing sequence. To investigate the eruption dynamics, we used a combination of cross-correlation and coherence methods with acoustic data. To estimate locations for the eruptive pulses, seismic data were collected and eruption vent locations were inferred through the use of an amplitude source location method. We also investigated volcanic acoustic-seismic ratios for comparing inferred initiation depths of each pulse. Initial results show vent locations for the eruptive pulses were found to have possibly come from two separate locations only ~ 50 m apart. These results compare favorably with acoustic lag time analysis. After error analysis, eruption sources are shown to conceivably come from a single vent, and differences in vent locations may not be constrained. Both vent location scenarios show that the eruption pulses gradually increase in strength with time, and that pulses 1, 3, 4, and 5 possibly came from a deeper source than pulses 2 and 6. We show herein that the characteristics and locations of volcanic eruptions can be better understood through joint analysis combining data from several data sources.",
+      "summary": "This study examines the 27 April 2016 phreatic eruption at Whakaari/White Island, New Zealand using seismic and acoustic data. The authors use cross-correlation, coherence analysis, and the amplitude source location method to determine eruption vent locations and characterize individual eruptive pulses. Results show multiple pulses originated from locations approximately 50 m apart with varying source depths, demonstrating that joint seismic-acoustic analysis can reveal eruption vent dynamics.",
+      "citationCount": 20,
+      "semanticScholarId": "640a4ed0cbee603369354c33fc6f333217c740cc"
+    },
+    {
       "id": "lipovsky-2019",
       "title": "Glacier sliding, seismicity and sediment entrainment",
       "authors": [
@@ -10722,6 +10795,26 @@
       "summary": "This study addresses the problem of accurately locating seismic events related to slow-moving landslides. A new automated method called APOLoc is introduced for locating these endogenous seismic sources using nearby seismological arrays. The APOLoc method uses automatic P-wave arrival picking based on optimizing inter-trace correlations. Testing on the Super-Sauze landslide suggests APOLoc can reduce epicenter errors compared to other location methods.",
       "citationCount": 7,
       "semanticScholarId": "0e878e2ebc94a38188054e36e73469c2ecc4b893"
+    },
+    {
+      "id": "gualtieri-2018",
+      "title": "Broad-band seismic analysis and modeling of the 2015 Taan Fjord, Alaska landslide using Instaseis",
+      "authors": [
+        "L. Gualtieri",
+        "G. Ekström"
+      ],
+      "year": 2018,
+      "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
+      "journal": "Geophysical Journal International",
+      "doi": "10.1093/GJI/GGY086",
+      "url": "https://doi.org/10.1093/GJI/GGY086",
+      "abstract": "This study presents a broad-band seismic analysis and modeling of the 2015 Taan Fjord, Alaska landslide using Instaseis, a tool for efficient computation of synthetic seismograms. The massive landslide generated seismic waves detected globally, and the authors use full-waveform modeling to characterize the source properties including the force history and dynamics of the landslide.",
+      "summary": "This study analyzes the seismic signals generated by the 2015 Taan Fjord, Alaska landslide using broad-band seismic data and Instaseis synthetic seismograms. The authors model the landslide source to extract force history and dynamic parameters. The results demonstrate that full-waveform seismic analysis can effectively characterize large landslide events and constrain their source properties from teleseismic recordings.",
+      "citationCount": 38,
+      "semanticScholarId": "fb957fab052e025edbb2a3989185b48be58c00b7"
     },
     {
       "id": "salerno-2018",
@@ -12222,6 +12315,27 @@
       "semanticScholarId": "a615810385db28d1cd2c670f180fbc05a8c07cb7"
     },
     {
+      "id": "walsh-2016",
+      "title": "Seismic analysis of the 13 October 2012 Te Maari, New Zealand, lake breakout lahar: Insights into flow dynamics and the implications on mass flow monitoring",
+      "authors": [
+        "Braden Walsh",
+        "A. Jolly",
+        "J. Procter"
+      ],
+      "year": 2016,
+      "category": "debris-flow",
+      "categories": [
+        "debris-flow"
+      ],
+      "journal": "Journal of Volcanology and Geothermal Research",
+      "doi": "10.1016/J.JVOLGEORES.2016.06.004",
+      "url": "https://doi.org/10.1016/J.JVOLGEORES.2016.06.004",
+      "abstract": "",
+      "summary": "This study analyzes the seismic signals from the 13 October 2012 Te Maari lake breakout lahar at Tongariro, New Zealand. The authors use seismic data to characterize flow dynamics including velocity, discharge, and flow behavior along the lahar path. The results provide insights into lahar monitoring using seismic methods and demonstrate the implications for real-time mass flow warning systems.",
+      "citationCount": 22,
+      "semanticScholarId": "f3fb505b1c2ef360a87f9aae9d478184436cf0db"
+    },
+    {
       "id": "illien-2016",
       "title": "Seismic and Climatic Forcing of Landslide Rates After the 2015 Gorkha Earthquake, Nepal",
       "authors": [
@@ -13404,6 +13518,28 @@
       "semanticScholarId": "223e5d7084d6449a45769c82b757fc96877f2052"
     },
     {
+      "id": "yamada-2013",
+      "title": "Dynamic landslide processes revealed by broadband seismic records",
+      "authors": [
+        "M. Yamada",
+        "H. Kumagai",
+        "Y. Matsushi",
+        "T. Matsuzawa"
+      ],
+      "year": 2013,
+      "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
+      "journal": "Geophysical Research Letters",
+      "doi": "10.1002/grl.50437",
+      "url": "https://doi.org/10.1002/grl.50437",
+      "abstract": "",
+      "summary": "This study reveals dynamic landslide processes through analysis of broadband seismic records. The authors use waveform inversion of long-period seismic data to extract the force history of landslides, constraining their acceleration, velocity, and trajectory. The results demonstrate that broadband seismology can resolve detailed temporal evolution of landslide dynamics, providing critical information for hazard assessment.",
+      "citationCount": 103,
+      "semanticScholarId": "a7030940ea816440eef9b069475f714a775a256a"
+    },
+    {
       "id": "gimbert-2013",
       "title": "Exploring the mechanics of water flow and bedload sediment transport and their interplay with river topography using seismic observations acquired along the 'Les Bossons' river (France)",
       "authors": [
@@ -13425,6 +13561,25 @@
       "summary": "This study likely investigates water flow and sediment movement in a river system. The research appears to focus on the interactions between these processes and the shape of the riverbed. Seismic data collected along the 'Les Bossons' river in France was probably used for this purpose. The study's findings could potentially improve understanding of river dynamics.",
       "citationCount": 1,
       "semanticScholarId": "31d34d82c095c1c8cf4b04b0b27e6bcb5246022b"
+    },
+    {
+      "id": "allstadt-2013",
+      "title": "Extracting source characteristics and dynamics of the August 2010 Mount Meager landslide from broadband seismograms",
+      "authors": [
+        "K. Allstadt"
+      ],
+      "year": 2013,
+      "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
+      "journal": "Journal of Geophysical Research: Earth Surface",
+      "doi": "10.1002/jgrf.20110",
+      "url": "https://doi.org/10.1002/jgrf.20110",
+      "abstract": "",
+      "summary": "This study extracts source characteristics and dynamics of the August 2010 Mount Meager landslide from broadband seismograms. The author uses long-period seismic waveform inversion to determine the force history and trajectory of the landslide. The analysis reveals details of the landslide dynamics including acceleration, velocity, and runout path, demonstrating the power of seismological methods for characterizing large mass movements.",
+      "citationCount": 175,
+      "semanticScholarId": "06fcd9713f0c334dafd6be173465134e910331db"
     },
     {
       "id": "schmandt-2013",
@@ -14186,6 +14341,27 @@
       "semanticScholarId": "8f1b4e8336adce98252d36311277a4659e42e074"
     },
     {
+      "id": "brodsky-2003",
+      "title": "Landslide basal friction as measured by seismic waves",
+      "authors": [
+        "E. Brodsky",
+        "E. Gordeev",
+        "H. Kanamori"
+      ],
+      "year": 2003,
+      "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
+      "journal": "Geophysical Research Letters",
+      "doi": "10.1029/2003GL018485",
+      "url": "https://doi.org/10.1029/2003GL018485",
+      "abstract": "This study measures landslide basal friction using seismic waves. The authors analyze long-period seismic signals generated by large landslides to infer the frictional forces at the base of the sliding mass. The method provides quantitative estimates of basal friction that are fundamental to understanding landslide dynamics and runout prediction.",
+      "summary": "This study develops a method to measure landslide basal friction from seismic wave analysis. The authors use long-period seismic recordings of large landslides to invert for the time-dependent force history, from which basal friction coefficients are derived. The results provide direct seismological constraints on landslide dynamics and demonstrate that seismic waves can reveal fundamental mechanical properties of mass movements.",
+      "citationCount": 128,
+      "semanticScholarId": "812cddebaa025097d3eac6c9542eb6cee2b3af95"
+    },
+    {
       "id": "konstantinou-2002",
       "title": "Deterministic non-linear source processes of volcanic tremor signals accompanying the 1996 Vatnajökull eruption, central Iceland",
       "authors": [
@@ -14402,11 +14578,11 @@
     }
   ],
   "meta": {
-    "totalPapers": 587,
+    "totalPapers": 595,
     "yearRange": [
       1982,
       2026
     ],
-    "generatedAt": "2026-02-16T20:25:56.881401"
+    "generatedAt": "2026-02-16T20:31:48.288273"
   }
 }
