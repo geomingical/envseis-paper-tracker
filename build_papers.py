@@ -132,6 +132,15 @@ TOPIC_RULES = [
     ("other", []),  # catch-all
 ]
 
+# ── Manual category overrides (DOI → [categories]) ──
+# Use when auto-classification gets the primary category wrong.
+CATEGORY_OVERRIDES = {
+    "10.1029/JB087iB07p05422": [
+        "landslide",
+        "volcano",
+    ],  # Kanamori & Given 1982 — landslide single-force source
+}
+
 TOPIC_META = {
     "landslide": {
         "name": "Landslide & Mass Movement",
@@ -162,6 +171,10 @@ TOPIC_META = {
 
 def classify(paper: dict) -> list[str]:
     """Return list of matching topic keys (first = primary). Always at least one."""
+    doi = (paper.get("externalIds") or {}).get("DOI", "")
+    if doi and doi in CATEGORY_OVERRIDES:
+        return CATEGORY_OVERRIDES[doi]
+
     text = ((paper.get("title") or "") + " " + (paper.get("abstract") or "")).lower()
     matched = []
     for topic_key, keywords in TOPIC_RULES:
@@ -170,7 +183,7 @@ def classify(paper: dict) -> list[str]:
         for kw in keywords:
             if kw in text:
                 matched.append(topic_key)
-                break  # one match per category is enough
+                break
     return matched if matched else ["other"]
 
 

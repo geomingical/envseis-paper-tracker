@@ -5,7 +5,7 @@
       "name": "Landslide & Mass Movement",
       "icon": "mountain",
       "color": "#c0613a",
-      "count": 183
+      "count": 184
     },
     {
       "key": "debris-flow",
@@ -14293,8 +14293,9 @@
         "J. Given"
       ],
       "year": 1982,
-      "category": "volcano",
+      "category": "landslide",
       "categories": [
+        "landslide",
         "volcano"
       ],
       "journal": "Journal of Geophysical Research",
@@ -14406,6 +14407,6 @@
       1982,
       2026
     ],
-    "generatedAt": "2026-02-16T20:18:17.165958"
+    "generatedAt": "2026-02-16T20:25:56.881401"
   }
 }
