@@ -5,7 +5,7 @@
       "name": "Landslide & Mass Movement",
       "icon": "mountain",
       "color": "#c0613a",
-      "count": 190
+      "count": 193
     },
     {
       "key": "debris-flow",
@@ -10979,6 +10979,28 @@
       "semanticScholarId": "faed6d032284bf36a76d886538be03440f9ba55b"
     },
     {
+      "id": "yamada-2018",
+      "title": "Estimation of dynamic friction and movement history of large landslides",
+      "authors": [
+        "M. Yamada",
+        "A. Mangeney",
+        "Y. Matsushi",
+        "T. Matsuzawa"
+      ],
+      "year": 2018,
+      "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
+      "journal": "Landslides",
+      "doi": "10.1007/s10346-018-1002-4",
+      "url": "https://doi.org/10.1007/s10346-018-1002-4",
+      "abstract": "",
+      "summary": "This study develops a method for estimating dynamic friction coefficients and reconstructing the complete movement history of large landslides using seismic waveform inversion combined with numerical runout simulation. The authors apply this approach to multiple historical landslides, comparing seismically-derived force histories with shallow-water numerical models to constrain friction parameters. The results provide a framework for understanding landslide mobility and estimating runout distances from seismic observations alone.",
+      "citationCount": 52,
+      "semanticScholarId": "b3aa9bcb8beb5b66f48642c65c9b0d2bf40e97d1"
+    },
+    {
       "id": "kuo-2018",
       "title": "Evaluating critical rainfall conditions for large-scale landslides by detecting event times from seismic records",
       "authors": [
@@ -12167,6 +12189,28 @@
       "summary": "The last decade witnessed an explosion in yearly number of publications on passive glacier seismology. The seismic signals from a wide range of glacier‐related processes fill a broad band of frequencies (from 10−3 to 102 Hz) and moment magnitudes (from M–3 to M7) providing a fresh and unprecedented view on fundamental processes in the cryosphere. New insights into basal motion, iceberg calving, glacier, iceberg, and sea ice dynamics, and precursory signs of unstable glaciers and ice structural changes are being discovered with seismological techniques. In this review we discuss seismic sources in the cryosphere as well as research challenges for the near future.",
       "citationCount": 134,
       "semanticScholarId": "d2cb3e3ed4015e85697988f229424d6a2be79b1c"
+    },
+    {
+      "id": "yamada-2016",
+      "title": "Estimation of dynamic friction of the Akatani landslide from seismic waveform inversion and numerical simulation",
+      "authors": [
+        "M. Yamada",
+        "A. Mangeney",
+        "Y. Matsushi",
+        "L. Moretti"
+      ],
+      "year": 2016,
+      "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
+      "journal": "Geophysical Journal International",
+      "doi": "10.1093/GJI/GGW216",
+      "url": "https://doi.org/10.1093/GJI/GGW216",
+      "abstract": "",
+      "summary": "This study estimates the dynamic friction coefficient of the 2011 Akatani landslide in the Kii Peninsula, Japan, by combining seismic waveform inversion with numerical simulation of the landslide flow. The authors use broadband seismic records to derive the force history acting on the Earth during the landslide, then calibrate a depth-averaged numerical model to match the observed seismic signals and deposit geometry. The results constrain the effective basal friction to a low value, providing insight into the high mobility of this deep-seated catastrophic landslide.",
+      "citationCount": 36,
+      "semanticScholarId": "b9c2b7f898decb1338b973312b7640fe6f2714ab"
     },
     {
       "id": "herwijnen-2016",
@@ -13885,6 +13929,28 @@
       "semanticScholarId": "7ed7230705b1be2a0be8b47d054cfdc1ddc3702b"
     },
     {
+      "id": "yamada-2012",
+      "title": "Seismic recordings of landslides caused by Typhoon Talas (2011), Japan",
+      "authors": [
+        "M. Yamada",
+        "Y. Matsushi",
+        "M. Chigira",
+        "J. Mori"
+      ],
+      "year": 2012,
+      "category": "landslide",
+      "categories": [
+        "landslide"
+      ],
+      "journal": "Geophysical Research Letters",
+      "doi": "10.1029/2012GL052174",
+      "url": "https://doi.org/10.1029/2012GL052174",
+      "abstract": "",
+      "summary": "This study analyzes seismic recordings of deep-seated landslides triggered by Typhoon Talas in September 2011 in the Kii Peninsula, Japan. The authors identify coherent long-period seismic signals associated with multiple large landslides and use waveform inversion to estimate the force histories and trajectories of these events. The results demonstrate that seismic networks can detect and characterize rainfall-induced landslides in near real-time, providing critical timing and location information for disaster response.",
+      "citationCount": 94,
+      "semanticScholarId": "98b3fd56bad2f4b7b049071f17371cebc1d130a8"
+    },
+    {
       "id": "guthrie-2012",
       "title": "The 6 August 2010 Mount Meager rock slide-debris flow, Coast Mountains, British Columbia: characteristics, dynamics, and implications for hazard and risk assessment",
       "authors": [
@@ -14578,11 +14644,11 @@
     }
   ],
   "meta": {
-    "totalPapers": 595,
+    "totalPapers": 598,
     "yearRange": [
       1982,
       2026
     ],
-    "generatedAt": "2026-02-16T20:31:48.288273"
+    "generatedAt": "2026-02-16T20:55:44.498152"
   }
 }
