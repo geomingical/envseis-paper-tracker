@@ -142,18 +142,6 @@ envseis-paper-tracker/
 
 ---
 
-## Regenerating `papers.json`
-
-If you have the source data (`environmental_seismology_papers_v17_filtered.json`), you can regenerate the database:
-
-```bash
-python3 build_papers.py
-```
-
-This classifies papers into 8 categories and outputs `papers.json`.
-
----
-
 ## License
 
 Open source. Built for the environmental seismology research community.
